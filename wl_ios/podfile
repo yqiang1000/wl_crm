@@ -5,45 +5,45 @@ workspace ‘Wangli’
 project 'Wangli/Wangli.xcodeproj'
 
 target 'Wangli' do
-#    pod 'Masonry', '~> 1.0.2'
-#    pod 'MJRefresh', '~> 3.1.15.1'
-#    pod 'JSONModel', '~> 1.7.0'
-#    pod 'BFKit', '~> 1.5.3'
-#    pod 'SVProgressHUD', '~> 2.2.5'
-#    pod 'SAMKeychain'
-#    pod 'TZImagePickerController', '~> 1.7.9'
-#    pod 'AMap3DMap','~> 6.1.0'    #3D地图SDK
-#    pod 'AMapSearch','~> 6.1.0'   #地图SDK搜索功能
-#    pod 'AMapLocation','~> 2.6.0' #定位SDK
-##    pod 'AMapFoundation', '~> 1.4.3' 高德地图基础库，自动导入
-#    pod 'XZMRefresh'
-#
-#    ####################### 腾讯云需要 #######################
-#    pod 'MBProgressHUD'
-#    pod 'MMLayout'
-##    pod 'SDWebImage', '~> 5.0'
-#    pod 'AFNetworking', '~> 3.1.0', :subspecs => ['Reachability', 'Serialization', 'Security', 'NSURLSession']
-#
-#    pod 'ReactiveObjC'
-#    pod 'TXIMSDK_TUIKit_iOS'
-#    pod 'TXLiteAVSDK_TRTC', '~> 6.8.8002' #最新的6.9.8341版本提示不支持bitcode
-#    ####################### 腾讯云需要 #######################
-#    pod 'YYModel'
-#
-#    #    友盟统计
-##    pod 'UMCCommon'
-##    pod 'UMCAnalytics'
-##    pod 'UMCSecurityPlugins'
-#    # 七牛云
-#    pod 'Qiniu', '~> 7.1.0'
-#    pod 'MLLabel', '~> 1.10.5'
-#    pod 'ActionSheetPicker-3.0'
-#    pod 'TTGTagCollectionView', '~> 1.6.1'
-#    pod 'Bugly'
-#    pod 'FSCalendar', '~> 2.7.9'
-##    pod 'WebViewJavascriptBridge', '~> 6.0.3'
-#    use_frameworks!
-#    pod 'Charts', '~>3.0.4'
+    pod 'Masonry', '~> 1.0.2'
+    pod 'MJRefresh', '~> 3.1.15.1'
+    pod 'JSONModel', '~> 1.7.0'
+    pod 'BFKit', '~> 1.5.3'
+    pod 'SVProgressHUD', '~> 2.2.5'
+    pod 'SAMKeychain'
+    pod 'TZImagePickerController', '~> 1.7.9'
+    pod 'AMap3DMap','~> 6.1.0'    #3D地图SDK
+    pod 'AMapSearch','~> 6.1.0'   #地图SDK搜索功能
+    pod 'AMapLocation','~> 2.6.0' #定位SDK
+#    pod 'AMapFoundation', '~> 1.4.3' 高德地图基础库，自动导入
+    pod 'XZMRefresh'
+
+    ####################### 腾讯云需要 #######################
+    pod 'MBProgressHUD'
+    pod 'MMLayout'
+#    pod 'SDWebImage', '~> 5.0'
+    pod 'AFNetworking', '~> 3.1.0', :subspecs => ['Reachability', 'Serialization', 'Security', 'NSURLSession']
+
+    pod 'ReactiveObjC'
+    pod 'TXIMSDK_TUIKit_iOS'
+    pod 'TXLiteAVSDK_TRTC', '~> 6.8.8002' #最新的6.9.8341版本提示不支持bitcode
+    ####################### 腾讯云需要 #######################
+    pod 'YYModel'
+
+    #    友盟统计
+#    pod 'UMCCommon'
+#    pod 'UMCAnalytics'
+#    pod 'UMCSecurityPlugins'
+    # 七牛云
+    pod 'Qiniu', '~> 7.1.0'
+    pod 'MLLabel', '~> 1.10.5'
+    pod 'ActionSheetPicker-3.0'
+    pod 'TTGTagCollectionView', '~> 1.6.1'
+    pod 'Bugly'
+    pod 'FSCalendar', '~> 2.7.9'
+#    pod 'WebViewJavascriptBridge', '~> 6.0.3'
+    use_frameworks!
+    pod 'Charts', '~>3.0.4'
     project 'Wangli/Wangli.xcodeproj'
 end
 

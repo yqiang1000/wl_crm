@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06087F2DE6BD8E558953B070 /* Pods_Wangli.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2102B86B958F53BC834E405C /* Pods_Wangli.framework */; };
 		47062980247D7DF100A56E04 /* NSUserDefaults+YQCategorys.m in Sources */ = {isa = PBXBuildFile; fileRef = 47062978247D7DF100A56E04 /* NSUserDefaults+YQCategorys.m */; };
 		47062981247D7DF100A56E04 /* NSString+YQCategorys.m in Sources */ = {isa = PBXBuildFile; fileRef = 4706297C247D7DF100A56E04 /* NSString+YQCategorys.m */; };
 		47062982247D7DF100A56E04 /* UIFont+YQCategorys.m in Sources */ = {isa = PBXBuildFile; fileRef = 4706297E247D7DF100A56E04 /* UIFont+YQCategorys.m */; };
@@ -811,7 +812,6 @@
 		47EAA0E4247B75C900A0C60E /* Custom360DevelopViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EAA0E1247B75C900A0C60E /* Custom360DevelopViewCtrl.m */; };
 		47EAA0E5247B75C900A0C60E /* DevelopCommonCreateViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EAA0E2247B75C900A0C60E /* DevelopCommonCreateViewCtrl.m */; };
 		47EAA0E7247B787100A0C60E /* SwitftTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EAA0E6247B787100A0C60E /* SwitftTest.swift */; };
-		759AB486A202B57601CD094C /* libPods-Wangli.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3BD09DE5047B1BC39A835D8 /* libPods-Wangli.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -833,6 +833,7 @@
 
 /* Begin PBXFileReference section */
 		1B9D55ACE7E1B60890C65703 /* Pods-Wangli.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wangli.debug.xcconfig"; path = "Target Support Files/Pods-Wangli/Pods-Wangli.debug.xcconfig"; sourceTree = "<group>"; };
+		2102B86B958F53BC834E405C /* Pods_Wangli.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wangli.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47062977247D7DF000A56E04 /* UIFont+YQCategorys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+YQCategorys.h"; sourceTree = "<group>"; };
 		47062978247D7DF100A56E04 /* NSUserDefaults+YQCategorys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+YQCategorys.m"; sourceTree = "<group>"; };
 		47062979247D7DF100A56E04 /* YQCategorys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQCategorys.h; sourceTree = "<group>"; };
@@ -2444,7 +2445,6 @@
 		47EAA0E3247B75C900A0C60E /* Custom360DevelopViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Custom360DevelopViewCtrl.h; sourceTree = "<group>"; };
 		47EAA0E6247B787100A0C60E /* SwitftTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitftTest.swift; sourceTree = "<group>"; };
 		67C27638A0BB0C809C6FBDF5 /* Pods-Wangli.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wangli.release.xcconfig"; path = "Target Support Files/Pods-Wangli/Pods-Wangli.release.xcconfig"; sourceTree = "<group>"; };
-		F3BD09DE5047B1BC39A835D8 /* libPods-Wangli.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Wangli.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2455,7 +2455,7 @@
 				47EA961F247B6A3500A0C60E /* iflyMSC.framework in Frameworks */,
 				47EA9E9C247B6AC500A0C60E /* lame.framework in Frameworks */,
 				47EA9620247B6A3500A0C60E /* JhtVerificationCodeView.framework in Frameworks */,
-				759AB486A202B57601CD094C /* libPods-Wangli.a in Frameworks */,
+				06087F2DE6BD8E558953B070 /* Pods_Wangli.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2490,7 +2490,7 @@
 			isa = PBXGroup;
 			children = (
 				4706298A247D8D3000A56E04 /* AFNetworking.framework */,
-				F3BD09DE5047B1BC39A835D8 /* libPods-Wangli.a */,
+				2102B86B958F53BC834E405C /* Pods_Wangli.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -5979,6 +5979,8 @@
 				47EA958F247B676100A0C60E /* Frameworks */,
 				47EA9590247B676100A0C60E /* Resources */,
 				47710BCC247F84F600475D18 /* Run Script */,
+				69B9CBC58BA1EB3231853BFF /* [CP] Embed Pods Frameworks */,
+				030B9C310D3381F112CB31C5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -6110,6 +6112,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		030B9C310D3381F112CB31C5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Wangli/Pods-Wangli-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Wangli/Pods-Wangli-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Wangli/Pods-Wangli-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		47710BCC247F84F600475D18 /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -6127,6 +6146,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nAPP_PATH=\"${TARGET_BUILD_DIR}/${WRAPPER_NAME}\"  \n\n# This script loops through the frameworks embedded in the application and  \n\n# removes unused architectures.  \n\n find \"$APP_PATH\" -name '*.framework' -type d | while read -r FRAMEWORK  \n do  \n FRAMEWORK_EXECUTABLE_NAME=$(defaults read \"$FRAMEWORK/Info.plist\" CFBundleExecutable)  \n FRAMEWORK_EXECUTABLE_PATH=\"$FRAMEWORK/$FRAMEWORK_EXECUTABLE_NAME\"  \n echo \"Executable is $FRAMEWORK_EXECUTABLE_PATH\"  \n\n EXTRACTED_ARCHS=()  \n\n for ARCH in $ARCHS  \n do  \n echo \"Extracting $ARCH from $FRAMEWORK_EXECUTABLE_NAME\"  \n lipo -extract \"$ARCH\" \"$FRAMEWORK_EXECUTABLE_PATH\" -o \"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\"  \n EXTRACTED_ARCHS+=(\"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\")  \n done  \n\n echo \"Merging extracted architectures: ${ARCHS}\"  \n lipo -o \"$FRAMEWORK_EXECUTABLE_PATH-merged\" -create \"${EXTRACTED_ARCHS[@]}\"  \n rm \"${EXTRACTED_ARCHS[@]}\"  \n\n echo \"Replacing original executable with thinned version\"  \n rm \"$FRAMEWORK_EXECUTABLE_PATH\"  \n mv \"$FRAMEWORK_EXECUTABLE_PATH-merged\" \"$FRAMEWORK_EXECUTABLE_PATH\"  \n\n done\n";
+		};
+		69B9CBC58BA1EB3231853BFF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Wangli/Pods-Wangli-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Wangli/Pods-Wangli-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Wangli/Pods-Wangli-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 		CD4655584BE2819C2C647A0E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
