@@ -1,0 +1,26 @@
+${PODS_ROOT}/Target Support Files/Pods-Wangli/Pods-Wangli-frameworks.sh
+${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework
+${BUILT_PRODUCTS_DIR}/ActionSheetPicker-3.0/ActionSheetPicker_3_0.framework
+${BUILT_PRODUCTS_DIR}/BFKit/BFKit.framework
+${BUILT_PRODUCTS_DIR}/Charts/Charts.framework
+${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework
+${BUILT_PRODUCTS_DIR}/HappyDNS/HappyDNS.framework
+${BUILT_PRODUCTS_DIR}/ISVImageScrollView/ISVImageScrollView.framework
+${BUILT_PRODUCTS_DIR}/JSONModel/JSONModel.framework
+${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework
+${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework
+${BUILT_PRODUCTS_DIR}/MLLabel/MLLabel.framework
+${BUILT_PRODUCTS_DIR}/MMLayout/MMLayout.framework
+${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework
+${BUILT_PRODUCTS_DIR}/Qiniu/Qiniu.framework
+${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework
+${BUILT_PRODUCTS_DIR}/SAMKeychain/SAMKeychain.framework
+${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework
+${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework
+${BUILT_PRODUCTS_DIR}/TTGTagCollectionView/TTGTagCollectionView.framework
+${BUILT_PRODUCTS_DIR}/TXIMSDK_TUIKit_iOS/TXIMSDK_TUIKit_iOS.framework
+${PODS_ROOT}/TXIMSDK_iOS/ImSDK.framework
+${BUILT_PRODUCTS_DIR}/TZImagePickerController/TZImagePickerController.framework
+${BUILT_PRODUCTS_DIR}/Toast/Toast.framework
+${BUILT_PRODUCTS_DIR}/XZMRefresh/XZMRefresh.framework
+${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework

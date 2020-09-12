@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>id</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>基本资料</string>
+		<key>viewCtrl</key>
+		<string>Custom360BasicViewCtrl</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>1</integer>
+		<key>title</key>
+		<string>人事组织</string>
+		<key>viewCtrl</key>
+		<string>Custom360PersonnelOrgViewCtrl</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>2</integer>
+		<key>title</key>
+		<string>门店信息</string>
+		<key>viewCtrl</key>
+		<string>Custom360StoreViewCtrl</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>3</integer>
+		<key>title</key>
+		<string>经销商</string>
+		<key>viewCtrl</key>
+		<string>Custom360DealerViewCtrl</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>4</integer>
+		<key>title</key>
+		<string>系统信息</string>
+		<key>viewCtrl</key>
+		<string>Custom360SystemViewCtrl</string>
+	</dict>
+</array>
+</plist>

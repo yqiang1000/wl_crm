@@ -1,0 +1,6 @@
+framework module Pods_Wangli {
+  umbrella header "Pods-Wangli-umbrella.h"
+
+  export *
+  module * { export * }
+}
