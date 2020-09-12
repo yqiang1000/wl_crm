@@ -2546,6 +2546,14 @@
                              success:(void (^)(id responseObject))success
                              failure:(void (^)(NSError *error))fail;
 
+
+/** 所有获取 当日实际发货量和当月累计发货量 */
+- (void)GET_SAP_SALES_BY_BRAND_AND_YEAR_TYPE:(NSString *)type
+                                       param:(NSDictionary *)param
+                                     success:(void (^)(id responseObject))success
+                                     failure:(void (^)(NSError *error))fail;
+
+
 /** 获取品牌列表 */
 - (void)getBrandPageParam:(NSDictionary *)param
                   success:(void (^)(id responseObject))success

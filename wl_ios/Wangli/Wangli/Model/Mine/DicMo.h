@@ -30,4 +30,8 @@
 @property (nonatomic, assign) BOOL cached;
 @property (nonatomic, copy) NSString <Optional> *type;
 
+// 扩展属性
+@property (nonatomic, copy) NSString *extendValue1;
+@property (nonatomic, copy) NSString *extendValue2;
+
 @end
