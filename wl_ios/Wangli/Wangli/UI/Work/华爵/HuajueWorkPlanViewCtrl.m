@@ -164,6 +164,7 @@
     rowMoPro.inputType = K_SHORT_TEXT;
     rowMoPro.rightContent = @"请选择";
     rowMoPro.editAble = self.createDate;
+    rowMoPro.mutiAble = YES;
     rowMoPro.key = @"province";
     if (self.model) rowMoPro.strValue = STRING(self.model.province);
     [self.arrData addObject:rowMoPro];
@@ -444,6 +445,8 @@
             NSDictionary *dic = responseData[i];
             DicMo *dicMo = [[DicMo alloc] init];
             dicMo.key = [NSString stringWithFormat:@"%@-%@", dic[@"province"], dic[@"brand"][@"brandName"]];
+            dicMo.extendValue1 = STRING(dic[@"province"]);
+            dicMo.extendValue2 = STRING(dic[@"brand"][@"brandName"]);
             CGFloat valueF = [dic[@"salesTarget"] floatValue];
             dicMo.value = [Utils getPriceFrom:valueF];
             [self.arrProvince addObject:dicMo];
@@ -1122,10 +1125,107 @@
 
 - (void)listSelectViewCtrl:(ListSelectViewCtrl *)listSelectViewCtrl selectIndex:(NSInteger)index indexPath:(NSIndexPath *)indexPath selectMo:(ListSelectMo *)selectMo {
     CommonRowMo *rowMo = self.arrData[indexPath.row];
+    DicMo *dicMo = [self.selectArr objectAtIndex:index];
+    rowMo.m_obj = dicMo;
+    rowMo.strValue = selectMo.moText;
+    [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+}
+
+// 自动带出当日实际发货量 && 当月累计发货量
+- (void)getSapData:(NSMutableArray *)provinceData {
+    NSMutableDictionary *param = [NSMutableDictionary new];
+    NSMutableArray *arrProvince = [NSMutableArray new];
+    NSMutableArray *arrBrand = [NSMutableArray new];
+    for (DicMo *selectMo in provinceData) {
+        [arrProvince addObject:@{@"provinceName":STRING(selectMo.extendValue1)}];
+        [arrBrand addObject:@{@"brandName":STRING(selectMo.extendValue2)}];
+    }
+    [param setObject:arrProvince forKey:@"provinceSet"];
+    [param setObject:arrBrand forKey:@"brandSet"];
+    
+    [[JYUserApi sharedInstance] GET_SAP_SALES_BY_BRAND_AND_YEAR_Param:param success:^(id responseObject) {
+        [self dealWithSapData:responseObject];
+    } failure:^(NSError *error) {
+        [Utils dismissHUD];
+        [Utils showToastMessage:STRING(error.userInfo[@"message"])];
+    }];
+}
+
+- (void)dealWithSapData:(NSArray *)responseObject {
+    CommonRowMo *dailyMo = nil;
+    CommonRowMo *monthMo = nil;
+    NSInteger count = 0;
+    for (int i = 0; i < self.arrData.count; i++) {
+        CommonRowMo *tmpRowMo = self.arrData[i];
+        if ([tmpRowMo.key isEqualToString:@"actualShipment"]) {
+            dailyMo = tmpRowMo;
+            count++;
+        } else if ([tmpRowMo.key isEqualToString:@"cumulativeShipments"]) {
+            monthMo = tmpRowMo;
+            count++;
+        }
+        if (count==2) {
+            break;
+        }
+    }
+    
+    CGFloat cumulativeSalesForTheMonthValue = 0;
+    CGFloat actualSalesValue = 0;
+    for (NSDictionary *dic in responseObject) {
+        cumulativeSalesForTheMonthValue += [dic[@"cumulativeSalesForTheMonth"] floatValue];
+        actualSalesValue += [dic[@"actualSales"] floatValue];
+    }
+    dailyMo.strValue = [Utils getPriceFrom:actualSalesValue];
+    dailyMo.m_obj = dailyMo.strValue;
+    dailyMo.value = dailyMo.strValue;
+    
+    monthMo.strValue = [Utils getPriceFrom:cumulativeSalesForTheMonthValue];
+    monthMo.m_obj = monthMo.strValue;
+    monthMo.value = monthMo.strValue;
+    
+    [self dealWithSum];
+}
+
+//// 自动带出当日实际发货量
+//- (void)getDailyDeveliveryDataProvinceName:(NSString *)provinceName {
+//    CommonRowMo *dailyMo = nil;
+//    for (int i = 0; i < self.arrData.count; i++) {
+//        CommonRowMo *tmpRowMo = self.arrData[i];
+//        if ([tmpRowMo.key isEqualToString:@"actualShipment"]) {
+//            dailyMo = tmpRowMo;
+//            break;
+//        }
+//    }
+//    [[JYUserApi sharedInstance] getDailyDeveliveryByWorkType:@"retail-channel" provinceName:provinceName param:nil success:^(id responseObject) {
+//        CGFloat todayDeliveryTotal = [responseObject[@"todayDeliveryTotal"] floatValue];
+//        dailyMo.strValue = [Utils getPriceFrom:todayDeliveryTotal];
+//        dailyMo.m_obj = dailyMo.strValue;
+//        dailyMo.value = dailyMo.strValue;
+//        [self dealWithSum];
+//    } failure:^(NSError *error) {
+//        [Utils dismissHUD];
+//        [Utils showToastMessage:STRING(error.userInfo[@"message"])];
+//    }];
+//}
+
+// 多选方法，会覆盖单选方法
+- (void)listSelectViewCtrl:(ListSelectViewCtrl *)listSelectViewCtrl selectIndexPaths:(NSArray *)selectIndexPaths indexPath:(NSIndexPath *)indexPath {
+    CommonRowMo *rowMo = self.arrData[indexPath.row];
     if ([rowMo.key isEqualToString:@"province"]) {
         // 省份
-        DicMo *dicMo = [self.selectArr objectAtIndex:index];
-        rowMo.strValue = dicMo.key;
+        NSString *valueStr = @"";
+        NSMutableArray *multipleValue = [NSMutableArray new];
+        for (int i = 0; i < selectIndexPaths.count; i++) {
+            NSIndexPath *tmpIndexPath = selectIndexPaths[i];
+            ListSelectMo *tmpMo = [self.selectShowArr objectAtIndex:tmpIndexPath.row];
+            [multipleValue addObject:self.selectArr[tmpIndexPath.row]];
+            valueStr = [valueStr stringByAppendingString:STRING(tmpMo.moKey)];
+            if (i < selectIndexPaths.count - 1) {
+                valueStr = [valueStr stringByAppendingString:@","];
+            }
+        }
+        rowMo.m_objs = multipleValue;
+        rowMo.strValue = valueStr;
         
         // 目标
         CommonRowMo *targetRowMo = nil;
@@ -1138,8 +1238,15 @@
                 break;
             }
         }
-        targetRowMo.strValue = dicMo.value;
-        targetRowMo.value = dicMo.value;
+        
+        CGFloat targetValue = 0;
+        for (DicMo *tmpDicMo in multipleValue) {
+            targetValue += tmpDicMo.value.integerValue;
+        }
+        
+        targetRowMo.strValue = [Utils getPriceFrom:targetValue];
+        targetRowMo.value = targetRowMo.strValue;
+        
         [self.tableView reloadRowsAtIndexPaths:@[indexPath, [NSIndexPath indexPathForRow:targetIndex inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
         
         // 用户
@@ -1155,7 +1262,7 @@
         JYUserMo *modelUserMo = [[JYUserMo alloc] initWithDictionary:self.model.operator error:nil];
         
         // 如果修改，选择省份之后，累计发货量用 detail 里的值
-        if (self.model && ([dicMo.key isEqualToString:self.model.province] && userMo.id == modelUserMo.id)) {
+        if (self.model && ([rowMo.key isEqualToString:self.model.province] && userMo.id == modelUserMo.id)) {
             CommonRowMo *sumRowMo = nil;
             NSInteger sumIndex = 0;
             for (int i = 0; i < self.arrData.count; i++) {
@@ -1172,56 +1279,27 @@
             [self.tableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:sumIndex inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
             [self dealWithSum];
         } else {
-            [self getMonthTotalSum];
+//            [self getMonthTotalSum];
         }
-        [self getDailyDeveliveryDataProvinceName:rowMo.strValue];
+        // 逻辑更改：从sap获取品牌的两个值
+        [self getSapData:rowMo.m_objs];
     } else {
-        DicMo *dicMo = [self.selectArr objectAtIndex:index];
-        rowMo.m_obj = dicMo;
-        rowMo.strValue = selectMo.moText;
+        NSString *valueStr = @"";
+        NSMutableArray *multipleValue = [NSMutableArray new];
+        for (int i = 0; i < selectIndexPaths.count; i++) {
+            NSIndexPath *tmpIndexPath = selectIndexPaths[i];
+            ListSelectMo *tmpMo = [self.selectShowArr objectAtIndex:tmpIndexPath.row];
+            [multipleValue addObject:self.selectArr[tmpIndexPath.row]];
+            valueStr = [valueStr stringByAppendingString:STRING(tmpMo.moText)];
+            if (i < selectIndexPaths.count - 1) {
+                valueStr = [valueStr stringByAppendingString:@","];
+            }
+        }
+        CommonRowMo *rowMo = self.arrData[indexPath.row];
+        rowMo.m_objs = multipleValue;
+        rowMo.strValue = valueStr;
         [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }
-}
-
-// 自动带出当日实际发货量
-- (void)getDailyDeveliveryDataProvinceName:(NSString *)provinceName {
-    CommonRowMo *dailyMo = nil;
-    for (int i = 0; i < self.arrData.count; i++) {
-        CommonRowMo *tmpRowMo = self.arrData[i];
-        if ([tmpRowMo.key isEqualToString:@"actualShipment"]) {
-            dailyMo = tmpRowMo;
-            break;
-        }
-    }
-    [[JYUserApi sharedInstance] getDailyDeveliveryByWorkType:@"retail-channel" provinceName:provinceName param:nil success:^(id responseObject) {
-        CGFloat todayDeliveryTotal = [responseObject[@"todayDeliveryTotal"] floatValue];
-        dailyMo.strValue = [Utils getPriceFrom:todayDeliveryTotal];
-        dailyMo.m_obj = dailyMo.strValue;
-        dailyMo.value = dailyMo.strValue;
-        [self dealWithSum];
-    } failure:^(NSError *error) {
-        [Utils dismissHUD];
-        [Utils showToastMessage:STRING(error.userInfo[@"message"])];
-    }];
-}
-
-// 多选方法，会覆盖单选方法
-- (void)listSelectViewCtrl:(ListSelectViewCtrl *)listSelectViewCtrl selectIndexPaths:(NSArray *)selectIndexPaths indexPath:(NSIndexPath *)indexPath {
-    NSString *valueStr = @"";
-    NSMutableArray *multipleValue = [NSMutableArray new];
-    for (int i = 0; i < selectIndexPaths.count; i++) {
-        NSIndexPath *tmpIndexPath = selectIndexPaths[i];
-        ListSelectMo *tmpMo = [self.selectShowArr objectAtIndex:tmpIndexPath.row];
-        [multipleValue addObject:self.selectArr[tmpIndexPath.row]];
-        valueStr = [valueStr stringByAppendingString:STRING(tmpMo.moText)];
-        if (i < selectIndexPaths.count - 1) {
-            valueStr = [valueStr stringByAppendingString:@","];
-        }
-    }
-    CommonRowMo *rowMo = self.arrData[indexPath.row];
-    rowMo.m_objs = multipleValue;
-    rowMo.strValue = valueStr;
-    [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
 }
 
 #pragma mark - MemberSelectViewCtrlDelegate
