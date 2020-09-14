@@ -3651,10 +3651,9 @@ static JYUserApi *userApi = nil;
                                          param:(NSDictionary *)param
                                        success:(void (^)(id responseObject))success
                                        failure:(void (^)(NSError *error))fail {
-    NSMutableDictionary *params = [self baseParams];
+    NSMutableDictionary *params = [NSMutableDictionary new];
     if (param.count > 0) [params addEntriesFromDictionary:param];
-    NSString *urlStr = [NSString stringWithFormat:@"%@/%@", NENG_CHENG_SUM_ACCUMULATEVISIT, province];
-    [ApiTool postWithUrl:[urlStr stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]] andParams:params success:success failure:fail];
+    [ApiTool postWithUrl:NENG_CHENG_SUM_ACCUMULATEVISIT andParams:params success:success failure:fail];
 }
 
 /** 获取能诚单个走访客户详情 */
