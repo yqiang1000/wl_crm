@@ -1236,7 +1236,6 @@
         }
         rowMo.m_objs = multipleValue;
         rowMo.strValue = valueStr;
-        [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
         
         // 目标
         CommonRowMo *targetRowMo = nil;
