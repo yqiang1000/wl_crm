@@ -3751,15 +3751,23 @@ static JYUserApi *userApi = nil;
     [ApiTool postWithUrl:[urlStr stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]] andParams:params success:success failure:fail];
 }
 
-
 /** 所有获取 当日实际发货量和当月累计发货量 */
-- (void)GET_SAP_SALES_BY_BRAND_AND_YEAR_TYPE:(NSString *)type
+- (void)GET_SAP_SALES_BY_BRAND_AND_YEAR_Param:(NSDictionary *)param
+                                     success:(void (^)(id responseObject))success
+                                      failure:(void (^)(NSError *error))fail {
+    NSMutableDictionary *params = [NSMutableDictionary new];
+    if (param.count > 0) [params addEntriesFromDictionary:param];
+    [ApiTool postWithUrl:GET_SAP_SALES_BY_BRAND_AND_YEAR andParams:params success:success failure:fail];
+}
+
+/** 具体某个 当日实际发货量和当月累计发货量 */
+- (void)GET_SAP_SALES_BY_BRAND_AND_YEAR_Type:(NSString *)type
                                        param:(NSDictionary *)param
                                      success:(void (^)(id responseObject))success
                                      failure:(void (^)(NSError *error))fail {
     NSMutableDictionary *params = [NSMutableDictionary new];
     if (param.count > 0) [params addEntriesFromDictionary:param];
-    [ApiTool postWithUrl:[NSString stringWithFormat:GET_SAP_SALES_BY_BRAND_AND_YEAR, type] andParams:params success:success failure:fail];
+    [ApiTool postWithUrl:[NSString stringWithFormat:GET_SAP_SALES_BY_BRAND_AND_YEAR_TYPE, type] andParams:params success:success failure:fail];
 }
 
 

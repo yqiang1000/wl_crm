@@ -1193,7 +1193,7 @@
     [param setObject:arrProvince forKey:@"provinceSet"];
     [param setObject:arrBrand forKey:@"brandSet"];
 
-    [[JYUserApi sharedInstance] GET_SAP_SALES_BY_BRAND_AND_YEAR_TYPE:@"retail-channel" param:param success:^(id responseObject) {
+    [[JYUserApi sharedInstance] GET_SAP_SALES_BY_BRAND_AND_YEAR_Type:@"_GC/LFIMG_" param:param success:^(id responseObject) {
         [self dealWithSapData:responseObject];
     } failure:^(NSError *error) {
         [Utils dismissHUD];
@@ -1330,7 +1330,7 @@
             [self.tableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:sumIndex inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
             [self dealWithSum];
         } else {
-            [self getMonthTotalSum];
+//            [self getMonthTotalSum];
         }
         
         // 逻辑更改：从sap获取品牌的两个值
