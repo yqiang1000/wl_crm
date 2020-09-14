@@ -384,7 +384,15 @@
         }
     }
     
-    [[JYUserApi sharedInstance] getChannelDevelopSumAccumulateVisitProvince:STRING(provinceRowMo.strValue) param:@{@"id":@(userMo.id)} success:^(id responseObject) {
+    NSMutableDictionary *param = [NSMutableDictionary new];
+    NSMutableArray *arrProvince = [NSMutableArray new];
+    for (DicMo *selectMo in provinceRowMo.m_objs) {
+        [arrProvince addObject:@{@"provinceName":STRING(selectMo.extendValue1)}];
+    }
+    [param setObject:arrProvince forKey:@"provinceSet"];
+    [param setObject:@[] forKey:@"brandSet"];
+    
+    [[JYUserApi sharedInstance] getChannelDevelopSumAccumulateVisitProvince:nil param:param success:^(id responseObject) {
         CGFloat sumActualShipment = [STRING(responseObject[@"sumAccumulateVisit"]) floatValue];
         sumRowMo.strValue = [Utils getPriceFrom:sumActualShipment];
         sumRowMo.value = [NSString stringWithFormat:@"%f", sumActualShipment];

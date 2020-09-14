@@ -157,6 +157,7 @@
     rowMoPro.inputType = K_SHORT_TEXT;
     rowMoPro.rightContent = @"请选择";
     rowMoPro.editAble = self.createDate;
+    rowMoPro.mutiAble = YES;
     rowMoPro.key = @"province";
     if (self.model) rowMoPro.strValue = STRING(self.model.province);
     [self.arrData addObject:rowMoPro];
@@ -345,6 +346,7 @@
             NSDictionary *dic = responseData[i];
             DicMo *dicMo = [[DicMo alloc] init];
             dicMo.key = STRING(dic[@"province"]);
+            dicMo.extendValue1 = STRING(dic[@"province"]);
             CGFloat valueF = [dic[@"salesTarget"] floatValue];
             dicMo.value = [Utils getPriceFrom:valueF];
             [self.arrProvince addObject:dicMo];
@@ -380,7 +382,15 @@
         }
     }
     
-    [[JYUserApi sharedInstance] getSumActuallShipmentDirectSaleProvince:STRING(provinceRowMo.strValue) param:@{@"id":@(userMo.id)} success:^(id responseObject) {
+    NSMutableDictionary *param = [NSMutableDictionary new];
+    NSMutableArray *arrProvince = [NSMutableArray new];
+    for (DicMo *selectMo in provinceRowMo.m_objs) {
+        [arrProvince addObject:@{@"provinceName":STRING(selectMo.extendValue1)}];
+    }
+    [param setObject:arrProvince forKey:@"provinceSet"];
+    [param setObject:@[] forKey:@"brandSet"];
+
+    [[JYUserApi sharedInstance] getSumActuallShipmentDirectSaleProvince:nil param:param success:^(id responseObject) {
         CGFloat sumActualShipment = [STRING(responseObject[@"sumActualReceivedPayments"]) floatValue];
         sumRowMo.strValue = [Utils getPriceFrom:sumActualShipment];
         sumRowMo.value = [NSString stringWithFormat:@"%f", sumActualShipment];
@@ -972,10 +982,84 @@
 
 - (void)listSelectViewCtrl:(ListSelectViewCtrl *)listSelectViewCtrl selectIndex:(NSInteger)index indexPath:(NSIndexPath *)indexPath selectMo:(ListSelectMo *)selectMo {
     CommonRowMo *rowMo = self.arrData[indexPath.row];
+//    if ([rowMo.key isEqualToString:@"province"]) {
+//        // 省份
+//        DicMo *dicMo = [self.selectArr objectAtIndex:index];
+//        rowMo.strValue = dicMo.key;
+//
+//        // 目标
+//        CommonRowMo *targetRowMo = nil;
+//        NSInteger targetIndex = 0;
+//        for (int i = 0; i < self.arrData.count; i++) {
+//            CommonRowMo *tmpRowMo = self.arrData[i];
+//            if ([tmpRowMo.key isEqualToString:@"monthReceivedPayments"]) {
+//                targetRowMo = tmpRowMo;
+//                targetIndex = i;
+//                break;
+//            }
+//        }
+//        targetRowMo.strValue = dicMo.value;
+//        targetRowMo.value = dicMo.value;
+//        [self.tableView reloadRowsAtIndexPaths:@[indexPath, [NSIndexPath indexPathForRow:targetIndex inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
+//
+//        // 用户
+//        CommonRowMo *userRowMo = nil;
+//        for (int i = 0; i < self.arrData.count; i++) {
+//            CommonRowMo *tmpRowMo = self.arrData[i];
+//            if ([tmpRowMo.key isEqualToString:@"operator"]) {
+//                userRowMo = tmpRowMo;
+//                break;
+//            }
+//        }
+//        JYUserMo *userMo = (JYUserMo *)userRowMo.m_obj;
+//        JYUserMo *modelUserMo = [[JYUserMo alloc] initWithDictionary:self.model.operator error:nil];
+//
+//        // 如果修改，选择省份之后，累计发货量用 detail 里的值
+//        if (self.model && ([dicMo.key isEqualToString:self.model.province] && userMo.id == modelUserMo.id)) {
+//            CommonRowMo *sumRowMo = nil;
+//            NSInteger sumIndex = 0;
+//            for (int i = 0; i < self.arrData.count; i++) {
+//                CommonRowMo *tmpRowMo = self.arrData[i];
+//                if ([tmpRowMo.key isEqualToString:@"accumulatePayments"]) {
+//                    sumRowMo = tmpRowMo;
+//                    sumIndex = i;
+//                    break;
+//                }
+//            }
+//            sumRowMo.strValue = [Utils getPriceFrom:self.model.accumulatePayments];
+//            sumRowMo.m_obj = [Utils getPriceFrom:self.model.accumulatePayments];
+//            sumRowMo.value = [Utils getPriceFrom:self.model.accumulatePayments];
+//            [self.tableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:sumIndex inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
+//            [self dealWithSum];
+//        } else {
+//            [self getMonthTotalSum];
+//        }
+//    } else {
+        DicMo *dicMo = [self.selectArr objectAtIndex:index];
+        rowMo.m_obj = dicMo;
+        rowMo.strValue = selectMo.moText;
+        [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+//    }
+}
+
+// 多选方法，会覆盖单选方法
+- (void)listSelectViewCtrl:(ListSelectViewCtrl *)listSelectViewCtrl selectIndexPaths:(NSArray *)selectIndexPaths indexPath:(NSIndexPath *)indexPath {
+    CommonRowMo *rowMo = self.arrData[indexPath.row];
     if ([rowMo.key isEqualToString:@"province"]) {
         // 省份
-        DicMo *dicMo = [self.selectArr objectAtIndex:index];
-        rowMo.strValue = dicMo.key;
+        NSString *valueStr = @"";
+        NSMutableArray *multipleValue = [NSMutableArray new];
+        for (int i = 0; i < selectIndexPaths.count; i++) {
+            NSIndexPath *tmpIndexPath = selectIndexPaths[i];
+            ListSelectMo *tmpMo = [self.selectShowArr objectAtIndex:tmpIndexPath.row];
+            [multipleValue addObject:self.selectArr[tmpIndexPath.row]];
+            valueStr = [valueStr stringByAppendingString:STRING(tmpMo.moKey)];
+            if (i < selectIndexPaths.count - 1) {
+                valueStr = [valueStr stringByAppendingString:@","];
+            }
+        }
+        rowMo.m_objs = multipleValue;
+        rowMo.strValue = valueStr;
         
         // 目标
         CommonRowMo *targetRowMo = nil;
@@ -988,8 +1072,14 @@
                 break;
             }
         }
-        targetRowMo.strValue = dicMo.value;
-        targetRowMo.value = dicMo.value;
+        
+        CGFloat targetValue = 0;
+        for (DicMo *tmpDicMo in multipleValue) {
+            targetValue += tmpDicMo.value.integerValue;
+        }
+        
+        targetRowMo.strValue = [Utils getPriceFrom:targetValue];
+        targetRowMo.value = targetRowMo.strValue;
         [self.tableView reloadRowsAtIndexPaths:@[indexPath, [NSIndexPath indexPathForRow:targetIndex inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
         
         // 用户
@@ -1005,7 +1095,7 @@
         JYUserMo *modelUserMo = [[JYUserMo alloc] initWithDictionary:self.model.operator error:nil];
         
         // 如果修改，选择省份之后，累计发货量用 detail 里的值
-        if (self.model && ([dicMo.key isEqualToString:self.model.province] && userMo.id == modelUserMo.id)) {
+        if (self.model && ([rowMo.key isEqualToString:self.model.province] && userMo.id == modelUserMo.id)) {
             CommonRowMo *sumRowMo = nil;
             NSInteger sumIndex = 0;
             for (int i = 0; i < self.arrData.count; i++) {
@@ -1025,30 +1115,22 @@
             [self getMonthTotalSum];
         }
     } else {
-        DicMo *dicMo = [self.selectArr objectAtIndex:index];
-        rowMo.m_obj = dicMo;
-        rowMo.strValue = selectMo.moText;
+        NSString *valueStr = @"";
+        NSMutableArray *multipleValue = [NSMutableArray new];
+        for (int i = 0; i < selectIndexPaths.count; i++) {
+            NSIndexPath *tmpIndexPath = selectIndexPaths[i];
+            ListSelectMo *tmpMo = [self.selectShowArr objectAtIndex:tmpIndexPath.row];
+            [multipleValue addObject:self.selectArr[tmpIndexPath.row]];
+            valueStr = [valueStr stringByAppendingString:STRING(tmpMo.moText)];
+            if (i < selectIndexPaths.count - 1) {
+                valueStr = [valueStr stringByAppendingString:@","];
+            }
+        }
+        CommonRowMo *rowMo = self.arrData[indexPath.row];
+        rowMo.m_objs = multipleValue;
+        rowMo.strValue = valueStr;
         [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }
-}
-
-// 多选方法，会覆盖单选方法
-- (void)listSelectViewCtrl:(ListSelectViewCtrl *)listSelectViewCtrl selectIndexPaths:(NSArray *)selectIndexPaths indexPath:(NSIndexPath *)indexPath {
-    NSString *valueStr = @"";
-    NSMutableArray *multipleValue = [NSMutableArray new];
-    for (int i = 0; i < selectIndexPaths.count; i++) {
-        NSIndexPath *tmpIndexPath = selectIndexPaths[i];
-        ListSelectMo *tmpMo = [self.selectShowArr objectAtIndex:tmpIndexPath.row];
-        [multipleValue addObject:self.selectArr[tmpIndexPath.row]];
-        valueStr = [valueStr stringByAppendingString:STRING(tmpMo.moText)];
-        if (i < selectIndexPaths.count - 1) {
-            valueStr = [valueStr stringByAppendingString:@","];
-        }
-    }
-    CommonRowMo *rowMo = self.arrData[indexPath.row];
-    rowMo.m_objs = multipleValue;
-    rowMo.strValue = valueStr;
-    [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
 }
 
 #pragma mark - MemberSelectViewCtrlDelegate

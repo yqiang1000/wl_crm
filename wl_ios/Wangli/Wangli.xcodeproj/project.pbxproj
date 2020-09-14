@@ -202,6 +202,10 @@
 		47B09213250C6D0500D86689 /* ApiTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B0920B250C6D0400D86689 /* ApiTool.m */; };
 		47B09214250C6D0500D86689 /* BaseApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B0920D250C6D0500D86689 /* BaseApi.m */; };
 		47B09215250C6D0500D86689 /* QiNiuUploadHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B0920E250C6D0500D86689 /* QiNiuUploadHelper.m */; };
+		47D0527B250D13E4004125FF /* ReportingProjectItemViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D05276250D13E3004125FF /* ReportingProjectItemViewCtrl.m */; };
+		47D0527C250D13E4004125FF /* MarketWorkPlanViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D05277250D13E4004125FF /* MarketWorkPlanViewCtrl.m */; };
+		47D0527D250D13E4004125FF /* UnfulFilledProjectViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D05279250D13E4004125FF /* UnfulFilledProjectViewCtrl.m */; };
+		47D0527E250D13E4004125FF /* MarketEngineerItemViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D0527A250D13E4004125FF /* MarketEngineerItemViewCtrl.m */; };
 		47EA95A0247B676100A0C60E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47EA959E247B676100A0C60E /* Main.storyboard */; };
 		47EA95A2247B676300A0C60E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47EA95A1247B676300A0C60E /* Assets.xcassets */; };
 		47EA95A5247B676300A0C60E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47EA95A3247B676300A0C60E /* LaunchScreen.storyboard */; };
@@ -332,10 +336,6 @@
 		47EA9E0C247B6AC400A0C60E /* DirectWorkPlanViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EA9759247B6AC100A0C60E /* DirectWorkPlanViewCtrl.m */; };
 		47EA9E0D247B6AC400A0C60E /* MuMenWorkPlanViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EA975C247B6AC100A0C60E /* MuMenWorkPlanViewCtrl.m */; };
 		47EA9E0E247B6AC400A0C60E /* JinMuMenWorkPlanViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EA975E247B6AC100A0C60E /* JinMuMenWorkPlanViewCtrl.m */; };
-		47EA9E0F247B6AC400A0C60E /* MarketEngineerItemViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EA9761247B6AC100A0C60E /* MarketEngineerItemViewCtrl.m */; };
-		47EA9E10247B6AC400A0C60E /* ReportingProjectItemViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EA9762247B6AC100A0C60E /* ReportingProjectItemViewCtrl.m */; };
-		47EA9E11247B6AC400A0C60E /* UnfulFilledProjectViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EA9766247B6AC100A0C60E /* UnfulFilledProjectViewCtrl.m */; };
-		47EA9E12247B6AC400A0C60E /* MarketWorkPlanViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EA9768247B6AC100A0C60E /* MarketWorkPlanViewCtrl.m */; };
 		47EA9E13247B6AC400A0C60E /* JYReportingProjectItemViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EA976C247B6AC100A0C60E /* JYReportingProjectItemViewCtrl.m */; };
 		47EA9E14247B6AC400A0C60E /* JYWorkItemViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EA976E247B6AC100A0C60E /* JYWorkItemViewCtrl.m */; };
 		47EA9E15247B6AC400A0C60E /* JYVisitViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EA9772247B6AC100A0C60E /* JYVisitViewCtrl.m */; };
@@ -1232,6 +1232,14 @@
 		47B0920D250C6D0500D86689 /* BaseApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseApi.m; sourceTree = "<group>"; };
 		47B0920E250C6D0500D86689 /* QiNiuUploadHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QiNiuUploadHelper.m; sourceTree = "<group>"; };
 		47B0920F250C6D0500D86689 /* QiNiuUploadHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QiNiuUploadHelper.h; sourceTree = "<group>"; };
+		47D05273250D13E3004125FF /* MarketWorkPlanViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarketWorkPlanViewCtrl.h; sourceTree = "<group>"; };
+		47D05274250D13E3004125FF /* MarketEngineerItemViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarketEngineerItemViewCtrl.h; sourceTree = "<group>"; };
+		47D05275250D13E3004125FF /* UnfulFilledProjectViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnfulFilledProjectViewCtrl.h; sourceTree = "<group>"; };
+		47D05276250D13E3004125FF /* ReportingProjectItemViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportingProjectItemViewCtrl.m; sourceTree = "<group>"; };
+		47D05277250D13E4004125FF /* MarketWorkPlanViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarketWorkPlanViewCtrl.m; sourceTree = "<group>"; };
+		47D05278250D13E4004125FF /* ReportingProjectItemViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportingProjectItemViewCtrl.h; sourceTree = "<group>"; };
+		47D05279250D13E4004125FF /* UnfulFilledProjectViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnfulFilledProjectViewCtrl.m; sourceTree = "<group>"; };
+		47D0527A250D13E4004125FF /* MarketEngineerItemViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarketEngineerItemViewCtrl.m; sourceTree = "<group>"; };
 		47EA9592247B676100A0C60E /* Wangli.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wangli.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47EA959F247B676100A0C60E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		47EA95A1247B676300A0C60E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -1483,14 +1491,6 @@
 		47EA975C247B6AC100A0C60E /* MuMenWorkPlanViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MuMenWorkPlanViewCtrl.m; sourceTree = "<group>"; };
 		47EA975E247B6AC100A0C60E /* JinMuMenWorkPlanViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JinMuMenWorkPlanViewCtrl.m; sourceTree = "<group>"; };
 		47EA975F247B6AC100A0C60E /* JinMuMenWorkPlanViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JinMuMenWorkPlanViewCtrl.h; sourceTree = "<group>"; };
-		47EA9761247B6AC100A0C60E /* MarketEngineerItemViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarketEngineerItemViewCtrl.m; sourceTree = "<group>"; };
-		47EA9762247B6AC100A0C60E /* ReportingProjectItemViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportingProjectItemViewCtrl.m; sourceTree = "<group>"; };
-		47EA9763247B6AC100A0C60E /* UnfulFilledProjectViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnfulFilledProjectViewCtrl.h; sourceTree = "<group>"; };
-		47EA9764247B6AC100A0C60E /* MarketWorkPlanViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarketWorkPlanViewCtrl.h; sourceTree = "<group>"; };
-		47EA9765247B6AC100A0C60E /* MarketEngineerItemViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarketEngineerItemViewCtrl.h; sourceTree = "<group>"; };
-		47EA9766247B6AC100A0C60E /* UnfulFilledProjectViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnfulFilledProjectViewCtrl.m; sourceTree = "<group>"; };
-		47EA9767247B6AC100A0C60E /* ReportingProjectItemViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportingProjectItemViewCtrl.h; sourceTree = "<group>"; };
-		47EA9768247B6AC100A0C60E /* MarketWorkPlanViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarketWorkPlanViewCtrl.m; sourceTree = "<group>"; };
 		47EA976B247B6AC100A0C60E /* JYReportingProjectItemViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYReportingProjectItemViewCtrl.h; sourceTree = "<group>"; };
 		47EA976C247B6AC100A0C60E /* JYReportingProjectItemViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYReportingProjectItemViewCtrl.m; sourceTree = "<group>"; };
 		47EA976E247B6AC100A0C60E /* JYWorkItemViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYWorkItemViewCtrl.m; sourceTree = "<group>"; };
@@ -3856,14 +3856,14 @@
 		47EA9760247B6AC100A0C60E /* 市场 */ = {
 			isa = PBXGroup;
 			children = (
-				47EA9761247B6AC100A0C60E /* MarketEngineerItemViewCtrl.m */,
-				47EA9762247B6AC100A0C60E /* ReportingProjectItemViewCtrl.m */,
-				47EA9763247B6AC100A0C60E /* UnfulFilledProjectViewCtrl.h */,
-				47EA9764247B6AC100A0C60E /* MarketWorkPlanViewCtrl.h */,
-				47EA9765247B6AC100A0C60E /* MarketEngineerItemViewCtrl.h */,
-				47EA9766247B6AC100A0C60E /* UnfulFilledProjectViewCtrl.m */,
-				47EA9767247B6AC100A0C60E /* ReportingProjectItemViewCtrl.h */,
-				47EA9768247B6AC100A0C60E /* MarketWorkPlanViewCtrl.m */,
+				47D05274250D13E3004125FF /* MarketEngineerItemViewCtrl.h */,
+				47D0527A250D13E4004125FF /* MarketEngineerItemViewCtrl.m */,
+				47D05273250D13E3004125FF /* MarketWorkPlanViewCtrl.h */,
+				47D05277250D13E4004125FF /* MarketWorkPlanViewCtrl.m */,
+				47D05278250D13E4004125FF /* ReportingProjectItemViewCtrl.h */,
+				47D05276250D13E3004125FF /* ReportingProjectItemViewCtrl.m */,
+				47D05275250D13E3004125FF /* UnfulFilledProjectViewCtrl.h */,
+				47D05279250D13E4004125FF /* UnfulFilledProjectViewCtrl.m */,
 			);
 			path = "市场";
 			sourceTree = "<group>";
@@ -6219,6 +6219,7 @@
 				4753F5A0247CF61100440063 /* TopTabBarView.m in Sources */,
 				47EA9DD2247B6AC400A0C60E /* TrendsSampleViewCtrl.m in Sources */,
 				47EA9EA9247B6AC500A0C60E /* BusinessVisitActiveViewCtrl.m in Sources */,
+				47D0527E250D13E4004125FF /* MarketEngineerItemViewCtrl.m in Sources */,
 				47EA9F7C247B6AC500A0C60E /* MarketActivityMo.m in Sources */,
 				47EA9DBF247B6AC400A0C60E /* TrendsQuoteTableView.m in Sources */,
 				47EA9E73247B6AC500A0C60E /* ReplyTableView.m in Sources */,
@@ -6269,7 +6270,6 @@
 				4753F4F3247CF61100440063 /* UICollectionView+SideRefresh.m in Sources */,
 				47EA9DDB247B6AC400A0C60E /* TrendsMoreView.m in Sources */,
 				4753F50E247CF61100440063 /* JXCategoryImageCell.m in Sources */,
-				47EA9E0F247B6AC400A0C60E /* MarketEngineerItemViewCtrl.m in Sources */,
 				47EA9FD6247B6AC500A0C60E /* QueryAddressMo.m in Sources */,
 				47EA9FB7247B6AC500A0C60E /* BondInfoMo.m in Sources */,
 				47EA9F32247B6AC500A0C60E /* LongCommonCell.m in Sources */,
@@ -6385,7 +6385,6 @@
 				47EA9FC7247B6AC500A0C60E /* DevelopLaboratoryMo.m in Sources */,
 				47EA9E31247B6AC400A0C60E /* SignHistoryCell.m in Sources */,
 				47EA9DE1247B6AC400A0C60E /* TrendsCreateClueViewCtrl.m in Sources */,
-				47EA9E12247B6AC400A0C60E /* MarketWorkPlanViewCtrl.m in Sources */,
 				47EA9DE8247B6AC400A0C60E /* DepartmentSelectViewCtrl.m in Sources */,
 				47EA9F31247B6AC500A0C60E /* MyTextFieldCell.m in Sources */,
 				47062982247D7DF100A56E04 /* UIFont+YQCategorys.m in Sources */,
@@ -6406,6 +6405,7 @@
 				47EA9DAD247B6AC400A0C60E /* TrendsBusinessCell.m in Sources */,
 				47EA9E24247B6AC400A0C60E /* SignHistoryViewCtrl.m in Sources */,
 				47EA9FAC247B6AC500A0C60E /* ContractMo.m in Sources */,
+				47D0527C250D13E4004125FF /* MarketWorkPlanViewCtrl.m in Sources */,
 				47EA9F54247B6AC500A0C60E /* ProducePageStatusViewCtrl.m in Sources */,
 				47EA9DC7247B6AC400A0C60E /* TrendsContractCell.m in Sources */,
 				47EA9DC1247B6AC400A0C60E /* TrendsQuoteCollectionCell.m in Sources */,
@@ -6485,6 +6485,7 @@
 				47EA9E47247B6AC500A0C60E /* TabUsedViewController.m in Sources */,
 				4753F4F6247CF61100440063 /* SideRefreshEmptyFooter.m in Sources */,
 				47EA9E64247B6AC500A0C60E /* DevelopPageStandardViewCtrl.m in Sources */,
+				47D0527B250D13E4004125FF /* ReportingProjectItemViewCtrl.m in Sources */,
 				4753F5D0247CF71B00440063 /* CountrySelectViewCtrl.m in Sources */,
 				47EA9FE2247B6AC500A0C60E /* PurchaseCatalogMo.m in Sources */,
 				47EA9E6F247B6AC500A0C60E /* LinkManOfficeViewCtrl.m in Sources */,
@@ -6628,7 +6629,6 @@
 				47EA9ED4247B6AC500A0C60E /* RiskTotalCollectionView.m in Sources */,
 				47EA9F93247B6AC500A0C60E /* RetailChannelItemsMo.m in Sources */,
 				47EA9EB8247B6AC500A0C60E /* YXTabConfigMo.m in Sources */,
-				47EA9E11247B6AC400A0C60E /* UnfulFilledProjectViewCtrl.m in Sources */,
 				4753F5AE247CF61100440063 /* MGSwipeTableCell.m in Sources */,
 				47EA9FF6247B6AC500A0C60E /* RiskFollowMo.m in Sources */,
 				47EA9FE1247B6AC500A0C60E /* PurchaseEvaluationMo.m in Sources */,
@@ -6809,6 +6809,7 @@
 				47EA9EE3247B6AC500A0C60E /* CreateContractViewCtrl.m in Sources */,
 				47EA9FC1247B6AC500A0C60E /* WeightMo.m in Sources */,
 				47EA9E8B247B6AC500A0C60E /* CostTypeBarView.m in Sources */,
+				47D0527D250D13E4004125FF /* UnfulFilledProjectViewCtrl.m in Sources */,
 				47EA9FF0247B6AC500A0C60E /* AddressMo.m in Sources */,
 				47EA9E21247B6AC400A0C60E /* LockSetViewCtrl.m in Sources */,
 				4753F67B247CF7F300440063 /* HelpListTableView.m in Sources */,
@@ -6904,7 +6905,6 @@
 				4753F5D3247CF71B00440063 /* TabAddView.m in Sources */,
 				4753F58E247CF61100440063 /* NSNumber+ShortCut.m in Sources */,
 				47EA9FCB247B6AC500A0C60E /* DealerMo.m in Sources */,
-				47EA9E10247B6AC400A0C60E /* ReportingProjectItemViewCtrl.m in Sources */,
 				47EA9EC4247B6AC500A0C60E /* RecordVoiceCell.m in Sources */,
 				47EA9E48247B6AC500A0C60E /* CreateTaskViewCtrl.m in Sources */,
 				4753F50C247CF61100440063 /* JXCategoryTitleView.m in Sources */,

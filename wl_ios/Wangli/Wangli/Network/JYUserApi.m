@@ -3570,8 +3570,7 @@ static JYUserApi *userApi = nil;
                                          failure:(void (^)(NSError *error))fail {
     NSMutableDictionary *params = [NSMutableDictionary new];
     if (param.count > 0) [params addEntriesFromDictionary:param];
-    NSString *urlStr = [NSString stringWithFormat:CHANNEL_DEVELOPMENT_SUM_ACCUMULATEVISIT, STRING(province)];
-    [ApiTool postWithUrl:[urlStr stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]] andParams:params success:success failure:fail];
+    [ApiTool postWithUrl:CHANNEL_DEVELOPMENT_SUM_ACCUMULATEVISIT andParams:params success:success failure:fail];
 }
 
 
@@ -3633,8 +3632,7 @@ static JYUserApi *userApi = nil;
                                         failure:(void (^)(NSError *error))fail {
     NSMutableDictionary *params = [NSMutableDictionary new];
     if (param.count > 0) [params addEntriesFromDictionary:param];
-    NSString *urlStr = [NSString stringWithFormat:WORK_SUM_ACTUAL_SHIPMENT_DIRECT_SALE, province];
-    [ApiTool postWithUrl:[urlStr stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]] andParams:params success:success failure:fail];
+    [ApiTool postWithUrl:WORK_SUM_ACTUAL_SHIPMENT_DIRECT_SALE andParams:params success:success failure:fail];
 }
 
 #pragma mark - 能诚计划
