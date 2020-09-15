@@ -2528,6 +2528,11 @@
                       success:(void (^)(id responseObject))success
                       failure:(void (^)(NSError *error))fail;
 
+/** 通用工作计划获取 当月累计销售额和当日实际销售额 */
+- (void)GET_SAP_SALES_BY_WORK_PLAN_Param:(NSDictionary *)param
+                                 success:(void (^)(id responseObject))success
+                                 failure:(void (^)(NSError *error))fail;
+
 #pragma mark - 获取省份
 /** 获取省份 */
 - (void)getProvincePageByParam:(NSDictionary *)param

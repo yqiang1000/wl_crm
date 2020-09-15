@@ -3726,6 +3726,15 @@ static JYUserApi *userApi = nil;
     [ApiTool getWithUrl:[NSString stringWithFormat:JIN_MU_ITEM, detailId] andParams:params success:success failure:fail];
 }
 
+/** 通用工作计划获取 当月累计销售额和当日实际销售额 */
+- (void)GET_SAP_SALES_BY_WORK_PLAN_Param:(NSDictionary *)param
+                                 success:(void (^)(id responseObject))success
+                                 failure:(void (^)(NSError *error))fail {
+    NSMutableDictionary *params = [NSMutableDictionary new];
+    if (param.count > 0) [params addEntriesFromDictionary:param];
+    [ApiTool postWithUrl:GET_SAP_SALES_BY_WORK_PLAN andParams:params success:success failure:fail];
+}
+
 #pragma mark - 获取省份
 /** 获取省份 */
 - (void)getProvincePageByParam:(NSDictionary *)param
@@ -3948,10 +3957,9 @@ static JYUserApi *userApi = nil;
                                          param:(NSDictionary *)param
                                        success:(void (^)(id responseObject))success
                                        failure:(void (^)(NSError *error))fail {
-    NSMutableDictionary *params = [self baseParams];
+    NSMutableDictionary *params = [NSMutableDictionary new];
     if (param.count > 0) [params addEntriesFromDictionary:param];
-    NSString *urlStr = [NSString stringWithFormat:@"%@/%@", WORKPLAN_SUM_ACCUMULATEVISIT, province];
-    [ApiTool postWithUrl:[urlStr stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]] andParams:params success:success failure:fail];
+    [ApiTool postWithUrl:WORKPLAN_SUM_ACCUMULATEVISIT andParams:params success:success failure:fail];
 }
 
 /** 获取当月累计发货量 */
