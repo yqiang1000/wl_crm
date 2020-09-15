@@ -263,6 +263,7 @@
 
 - (void)clickRightButton:(UIButton *)sender {
     JYWorkPlanViewCtrl *vc = [[JYWorkPlanViewCtrl alloc] init];
+    vc.yesterdayData = YES;
     vc.hidesBottomBarWhenPushed = YES;
     vc.workType = self.workType;
     vc.title = self.title;

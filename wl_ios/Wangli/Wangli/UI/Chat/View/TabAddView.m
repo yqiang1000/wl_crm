@@ -238,6 +238,7 @@ typedef void(^CancelBlock)(TabAddView *obj);
     }
     else {
         JYWorkPlanViewCtrl *tmpVC = [[JYWorkPlanViewCtrl alloc] init];
+        tmpVC.yesterdayData = YES;
         if ([tmpDic.value isEqualToString:@"action:7180"]) tmpVC.workType = JYWorkTypeJinMuMen;
         if ([tmpDic.value isEqualToString:@"action:7190"]) tmpVC.workType = JYWorkTypeMuMen;
         if ([tmpDic.value isEqualToString:@"action:7200"]) tmpVC.workType = JYWorkTypeLvMuMen;
