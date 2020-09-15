@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DirectWorkPlanViewCtrl : BaseViewCtrl
 
+// 是否获取昨日数据，YES：获取，NO 不获取，默认 NO
+@property (nonatomic, assign) BOOL yesterdayData;
 @property (nonatomic, strong) DirectSalesEngineeringMo *model;
 
 @end

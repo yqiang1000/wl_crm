@@ -256,6 +256,7 @@
 
 - (void)clickRightButton:(UIButton *)sender {
     MarketWorkPlanViewCtrl *vc = [[MarketWorkPlanViewCtrl alloc] init];
+    vc.yesterdayData = YES;
     vc.hidesBottomBarWhenPushed = YES;
     vc.title = @"市场工程部计划";
     __weak typeof(self) weakself = self;

@@ -218,6 +218,7 @@ typedef void(^CancelBlock)(TabAddView *obj);
         vc = tmpVC;
     } else if ([tmpDic.value isEqualToString:@"action:7130"]) {    // 市场
         MarketWorkPlanViewCtrl *tmpVC = [[MarketWorkPlanViewCtrl alloc] init];
+        tmpVC.yesterdayData = YES;
         vc = tmpVC;
     } else if ([tmpDic.value isEqualToString:@"action:7140"]) {    // 战略
         StrategicWorkPlanViewCtrl *tmpVC = [[StrategicWorkPlanViewCtrl alloc] init];
