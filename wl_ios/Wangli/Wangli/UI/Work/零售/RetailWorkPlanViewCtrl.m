@@ -126,7 +126,8 @@
         self.createDate = YES;
         self.beforeDate = self.handleDate = self.afterDate = NO;
         self.rightBtn.hidden = NO;
-        [self configRowMosAAA];
+        [self configRowMos];
+        self.model = nil;
         [self.tableView reloadData];
     } failure:^(NSError *error) {
         [Utils dismissHUD];
@@ -183,241 +184,6 @@
         self.rightBtn.hidden = NO;
     }
     [self configRowMos];
-}
-
-- (void)configRowMosAAA {
-    [self.arrData removeAllObjects];
-    self.arrData = nil;
-    
-    CommonRowMo *rowMo0 = [[CommonRowMo alloc] init];
-    rowMo0.rowType = K_INPUT_OPERATOR;
-    rowMo0.leftContent = @"业务员";
-    rowMo0.inputType = K_SHORT_TEXT;
-    rowMo0.rightContent = @"请选择";
-    rowMo0.key = @"operator";
-    NSError *error = nil;
-    if (self.model) {
-        JYUserMo *userMo = [[JYUserMo alloc] initWithDictionary:self.model.operator error:&error];
-        rowMo0.m_obj = userMo;
-        rowMo0.strValue = self.model.operator[@"name"];
-    } else {
-        rowMo0.m_obj = TheUser.userMo;
-        rowMo0.strValue = TheUser.userMo.name;
-    }
-    rowMo0.editAble = NO;
-    [self.arrData addObject:rowMo0];
-    
-    CommonRowMo *rowMoPro = [[CommonRowMo alloc] init];
-    rowMoPro.rowType = K_INPUT_TEXT;
-    rowMoPro.leftContent = @"省份";
-    rowMoPro.inputType = K_SHORT_TEXT;
-    rowMoPro.rightContent = @"请选择";
-    rowMoPro.editAble = self.createDate;
-    rowMoPro.mutiAble = YES;
-    rowMoPro.key = @"province";
-    if (self.model) rowMoPro.strValue = STRING(self.model.province);
-    [self.arrData addObject:rowMoPro];
-    
-    CommonRowMo *rowMo1 = [[CommonRowMo alloc] init];
-    rowMo1.rowType = K_INPUT_TEXT;
-    rowMo1.leftContent = @"当月销售目标";
-    rowMo1.inputType = K_SHORT_TEXT;
-    rowMo1.rightContent = @"自动带出";
-    rowMo1.editAble = NO;
-    rowMo1.key = @"salesTarget";
-    if (self.model) {
-        rowMo1.strValue = [Utils getPriceFrom:self.model.salesTarget];
-        rowMo1.m_obj = [Utils getPriceFrom:self.model.salesTarget];
-        rowMo1.value = [Utils getPriceFrom:self.model.salesTarget];
-    }
-    [self.arrData addObject:rowMo1];
-    
-    CommonRowMo *rowMo2 = [[CommonRowMo alloc] init];
-    rowMo2.rowType = K_INPUT_TEXT;
-    rowMo2.leftContent = @"当月累计发货量";
-    rowMo2.inputType = K_SHORT_TEXT;
-    rowMo2.rightContent = @"自动带出";
-    rowMo2.editAble = NO;
-    rowMo2.key = @"cumulativeShipments";
-    if (self.model) {
-        rowMo2.strValue = [Utils getPriceFrom:self.model.cumulativeShipments];
-        rowMo2.m_obj = [Utils getPriceFrom:self.model.cumulativeShipments];
-        rowMo2.value = [Utils getPriceFrom:self.model.cumulativeShipments];
-    }
-    [self.arrData addObject:rowMo2];
-    
-    CommonRowMo *rowMo3 = [[CommonRowMo alloc] init];
-    rowMo3.rowType = K_INPUT_TEXT;
-    rowMo3.leftContent = @"当日预计发货量";
-    rowMo3.inputType = K_SHORT_TEXT;
-    rowMo3.rightContent = @"请输入";
-    rowMo3.editAble = self.beforeDate || self.createDate;
-    rowMo3.keyBoardType = K_DOUBLE;
-    rowMo3.key = @"projectedShipment";
-    if (self.model.projectedShipment > 0) {
-        rowMo3.strValue = [Utils getPriceFrom:self.model.projectedShipment];
-        rowMo3.m_obj = [Utils getPriceFrom:self.model.projectedShipment];
-        rowMo3.value = [Utils getPriceFrom:self.model.projectedShipment];
-    }
-    [self.arrData addObject:rowMo3];
-    
-    CommonRowMo *rowMo4 = [[CommonRowMo alloc] init];
-    rowMo4.rowType = K_INPUT_TEXT;
-    rowMo4.leftContent = @"当日实际发货量";
-    rowMo4.inputType = K_SHORT_TEXT;
-    rowMo4.rightContent = @"自动带出";
-    rowMo4.editAble = NO;//self.beforeDate || self.createDate;
-    rowMo4.keyBoardType = K_DOUBLE;
-    rowMo4.key = @"actualShipment";
-    if (self.model.actualShipment) {
-        rowMo4.strValue = [Utils getPriceFrom:self.model.actualShipment];
-        rowMo4.m_obj = [Utils getPriceFrom:self.model.actualShipment];
-        rowMo4.value = [Utils getPriceFrom:self.model.actualShipment];
-    }
-    [self.arrData addObject:rowMo4];
-    
-    CommonRowMo *rowMo5 = [[CommonRowMo alloc] init];
-    rowMo5.rowType = K_INPUT_TEXT;
-    rowMo5.leftContent = @"月目标完成率(%)";
-    rowMo5.inputType = K_SHORT_TEXT;
-    rowMo5.rightContent = @"自动计算";
-    rowMo5.editAble = NO;
-    rowMo5.key = @"ompletionRate";
-    if (self.model.ompletionRate > 0) {
-        rowMo5.strValue = [Utils getPriceFrom:self.model.ompletionRate];
-        rowMo5.m_obj = [Utils getPriceFrom:self.model.ompletionRate];
-        rowMo5.value = [Utils getPriceFrom:self.model.ompletionRate];
-    }
-    [self.arrData addObject:rowMo5];
-    
-    CommonRowMo *rowMo6 = [[CommonRowMo alloc] init];
-    rowMo6.rowType = K_INPUT_TEXT;
-    rowMo6.leftContent = @"走访市场";
-    rowMo6.inputType = K_SHORT_TEXT;
-    rowMo6.rightContent = @"请选择";
-    rowMo6.editAble = self.beforeDate || self.createDate;
-    rowMo6.key = @"address";
-    if (self.model) {
-        _arrAddIds = nil;
-        _arrAddNames = nil;
-        NSString *address = @"";
-        if (self.model.provinceName.length > 0) address = [address stringByAppendingString:self.model.provinceName];
-        if (self.model.cityName.length > 0) address = [address stringByAppendingString:self.model.cityName];
-        if (self.model.areaName.length > 0) address = [address stringByAppendingString:self.model.areaName];
-        rowMo6.strValue = STRING(address);
-        self.arrAddIds = @[STRING(_model.provinceNumber), STRING(_model.cityNumber), STRING(_model.areaNumber)];
-        self.arrAddNames = @[STRING(_model.provinceName), STRING(_model.cityName), STRING(_model.areaName)];
-
-    }
-    [self.arrData addObject:rowMo6];
-    
-    CommonRowMo *rowMo7 = [[CommonRowMo alloc] init];
-    rowMo7.rowType = K_INPUT_TEXT;
-    rowMo7.leftContent = @"预计走访客户";
-    rowMo7.inputType = K_SHORT_TEXT;
-    rowMo7.rightContent = @"自动带出";
-    rowMo7.editAble = NO;
-    rowMo7.key = @"expectVisit";
-    if (self.model) {
-        rowMo7.strValue = [NSString stringWithFormat:@"%ld", (long)self.model.expectVisit];
-    }
-    [self.arrData addObject:rowMo7];
-    
-    CommonRowMo *rowMo8 = [[CommonRowMo alloc] init];
-    rowMo8.rowType = K_INPUT_TEXT;
-    rowMo8.leftContent = @"实际走访客户";
-    rowMo8.inputType = K_SHORT_TEXT;
-    rowMo8.rightContent = @"自动带出";
-    rowMo8.editAble = NO;
-    rowMo8.key = @"actualVisit";
-    if (self.model) {
-        rowMo8.strValue = [NSString stringWithFormat:@"%ld", (long)self.model.actualVisit];
-    }
-    [self.arrData addObject:rowMo8];
-    
-    CommonRowMo *rowMo9 = [[CommonRowMo alloc] init];
-    rowMo9.rowType = K_INPUT_TEXT;
-    rowMo9.leftContent = @"售后未处理事项";
-    rowMo9.inputType = K_LONG_TEXT;
-    rowMo9.rightContent = @"请输入";
-    rowMo9.editAble = self.handleDate;
-    // 如果新建为空，之后可为空可不为空
-    rowMo9.nullAble = YES;
-    rowMo9.key = @"afterSaleUnprocessed";
-    rowMo9.strValue = self.model.afterSaleUnprocessed;
-    [self.arrData addObject:rowMo9];
-    
-    CommonRowMo *rowMo10 = [[CommonRowMo alloc] init];
-    rowMo10.rowType = K_INPUT_TEXT;
-    rowMo10.leftContent = @"活动";
-    rowMo10.inputType = K_SHORT_TEXT;
-    rowMo10.rightContent = @"请输入";
-    rowMo10.editAble = !self.afterDate;
-    rowMo10.nullAble = YES;
-    rowMo10.key = @"activity";
-    rowMo10.strValue = self.model.activity;
-    [self.arrData addObject:rowMo10];
-    
-    CommonRowMo *rowMo11 = [[CommonRowMo alloc] init];
-    rowMo11.rowType = K_INPUT_TOGGLEBUTTON;
-    rowMo11.leftContent = @"活动是否完成";
-    rowMo11.inputType = K_SHORT_TEXT;
-    rowMo11.rightContent = @"请输入";
-    rowMo11.editAble = self.handleDate;
-    rowMo11.key = @"finish";
-    rowMo11.defaultValue = self.model.finish;
-    rowMo11.strValue = self.model.finish ? @"YES" : @"NO";
-    [self.arrData addObject:rowMo11];
-    
-//    NSDate *today = [NSDate date];
-//    NSDate *nextDay = [NSDate dateWithTimeInterval:24*60*60 sinceDate:today];//后一天
-    CommonRowMo *rowMoPlanDate = [[CommonRowMo alloc] init];
-    rowMoPlanDate.rowType = K_DATE_SELECT;
-    rowMoPlanDate.leftContent = @"计划工作日期";
-    rowMoPlanDate.inputType = K_SHORT_TEXT;
-    rowMoPlanDate.rightContent = @"请输入";
-    rowMoPlanDate.pattern = @"yyyy-MM-dd";
-    rowMoPlanDate.editAble = YES;
-    rowMoPlanDate.key = @"workPlanDate";
-    rowMoPlanDate.strValue = self.model?self.model.workPlanDate:@"";//[nextDay stringWithFormat:rowMoPlanDate.pattern];
-    [self.arrData addObject:rowMoPlanDate];
-    
-    CommonRowMo *rowMo12 = [[CommonRowMo alloc] init];
-    rowMo12.rowType = K_DATE_SELECT;
-    rowMo12.leftContent = @"填写日期";
-    rowMo12.inputType = K_SHORT_TEXT;
-    rowMo12.rightContent = @"请输入";
-    rowMo12.pattern = @"yyyy-MM-dd";
-    rowMo12.editAble = YES;
-    rowMo12.key = @"date";
-    rowMo12.strValue = self.model?self.model.date:@"";//[today stringWithFormat:rowMo12.pattern];
-    [self.arrData addObject:rowMo12];
-    
-    CommonRowMo *rowMo13 = [[CommonRowMo alloc] init];
-    rowMo13.rowType = K_INPUT_TEXT;
-    rowMo13.leftContent = @"其他";
-    rowMo13.inputType = K_LONG_TEXT;
-    rowMo13.rightContent = @"请输入";
-    rowMo13.editAble = !self.afterDate;
-    rowMo13.nullAble = YES;
-    rowMo13.key = @"remark";
-    rowMo13.strValue = self.model.remark;
-    [self.arrData addObject:rowMo13];
-    
-    self.attRowMo.attachments = (NSMutableArray<QiniuFileMo *><QiniuFileMo,Optional> *)self.model.attachments;
-    if (self.model.finish) [self.arrData addObject:self.attRowMo];
-    
-    [_arrMembers removeAllObjects];
-    _arrMembers = nil;
-    error = nil;
-    for (int i = 0; i < self.model.retailChannelItems.count; i++) {
-        NSDictionary *dic = self.model.retailChannelItems[i];
-        RetailChannelItemsMo *tmpMo = [[RetailChannelItemsMo alloc] initWithDictionary:dic error:&error];
-        [self.arrMembers addObject:tmpMo];
-        [self loadAttachement:tmpMo];
-    }
-    self.model = nil;
-    [self getProvinceList];
 }
 
 - (void)configRowMos {
@@ -540,6 +306,8 @@
         if (self.model.cityName.length > 0) address = [address stringByAppendingString:self.model.cityName];
         if (self.model.areaName.length > 0) address = [address stringByAppendingString:self.model.areaName];
         rowMo6.strValue = STRING(address);
+        self.arrAddIds = @[STRING(_model.provinceNumber), STRING(_model.cityNumber), STRING(_model.areaNumber)];
+        self.arrAddNames = @[STRING(_model.provinceName), STRING(_model.cityName), STRING(_model.areaName)];
     }
     [self.arrData addObject:rowMo6];
     
@@ -609,7 +377,7 @@
     rowMoPlanDate.inputType = K_SHORT_TEXT;
     rowMoPlanDate.rightContent = @"请输入";
     rowMoPlanDate.pattern = @"yyyy-MM-dd";
-    rowMoPlanDate.editAble = self.model?NO:YES;
+    rowMoPlanDate.editAble = self.yesterdayData?YES:(self.model?NO:YES);
     rowMoPlanDate.key = @"workPlanDate";
     rowMoPlanDate.strValue = self.model?self.model.workPlanDate:@"";//[nextDay stringWithFormat:rowMoPlanDate.pattern];
     [self.arrData addObject:rowMoPlanDate];
@@ -620,7 +388,7 @@
     rowMo12.inputType = K_SHORT_TEXT;
     rowMo12.rightContent = @"请输入";
     rowMo12.pattern = @"yyyy-MM-dd";
-    rowMo12.editAble = self.model?NO:YES;
+    rowMo12.editAble = self.yesterdayData?YES:(self.model?NO:YES);
     rowMo12.key = @"date";
     rowMo12.strValue = self.model?self.model.date:@"";//[today stringWithFormat:rowMo12.pattern];
     [self.arrData addObject:rowMo12];
