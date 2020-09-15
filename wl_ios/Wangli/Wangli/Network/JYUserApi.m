@@ -3974,5 +3974,30 @@ static JYUserApi *userApi = nil;
     [ApiTool postWithUrl:[urlStr stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]] andParams:params success:success failure:fail];
 }
 
+
+/** 获取昨日数据 */
+- (void)getYesterdayWorkDataWorkType:(NSString *)workType
+                               param:(NSDictionary *)param
+                             success:(void (^)(id responseObject))success
+                             failure:(void (^)(NSError *error))fail {
+    NSMutableDictionary *params = [NSMutableDictionary new];
+    if (param.count > 0) [params addEntriesFromDictionary:param];
+    NSString *urlStr = [NSString stringWithFormat:GET_INFO_YESTERDAY, workType];
+    [ApiTool postWithUrl:[urlStr stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]] andParams:params success:success failure:fail];
+}
+
+/** 获取昨日数据通用 */
+- (void)getYesterdayWorkDataCommonWorkType:(NSString *)workType
+                                     param:(NSDictionary *)param
+                                   success:(void (^)(id responseObject))success
+                                   failure:(void (^)(NSError *error))fail {
+    NSMutableDictionary *params = [NSMutableDictionary new];
+    if (param.count > 0) [params addEntriesFromDictionary:param];
+    NSString *urlStr = [NSString stringWithFormat:GET_INFO_YESTERDAY_COMMON, workType];
+    [ApiTool postWithUrl:[urlStr stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]] andParams:params success:success failure:fail];
+}
+
+
+
 @end
 

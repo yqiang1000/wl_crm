@@ -2668,4 +2668,16 @@
                                  success:(void (^)(id responseObject))success
                                  failure:(void (^)(NSError *error))fail;
 
+/** 获取昨日数据 */
+- (void)getYesterdayWorkDataWorkType:(NSString *)workType
+                               param:(NSDictionary *)param
+                             success:(void (^)(id responseObject))success
+                             failure:(void (^)(NSError *error))fail;
+
+/** 获取昨日数据通用 */
+- (void)getYesterdayWorkDataCommonWorkType:(NSString *)workType
+                                     param:(NSDictionary *)param
+                                   success:(void (^)(id responseObject))success
+                                   failure:(void (^)(NSError *error))fail;
+
 @end

@@ -11,41 +11,41 @@
 
 //#if DEBUG
 //
-//#define DOMAIN_NAME                     @"http://uat-crm.chinawangli.com:9090%@"
-//#define H5_URL                          @"http://uat-crm.chinawangli.com:9098/#"
-//
-//#define CREATE_ORDER_URL                @"http://uat-crm.chinawangli.com:9098/#/orderonline?"
-//#define ORDER_LIST_URL                  @"http://uat-crm.chinawangli.com:9098/#/orderlist?"
-//#define ORDER_DETAIL_URL                @"http://uat-crm.chinawangli.com:9098/#/orderHelper?"
-//#define TASK_DETAIL_URL                 @"http://uat-crm.chinawangli.com:9098/#/task-detail?"
-//#define TASK_REMIND_URL                 @"http://uat-crm.chinawangli.com:9098/#/remindtask?"
-//#define TASK_HANDLE_URL                 @"http://uat-crm.chinawangli.com:9098/#/handletask?"
-//#define FOREIGN_URL                     @"http://uat-crm.chinawangli.com:9098/#/foreignorder?"
-//#define NOTICE_URL                      @"http://uat-crm.chinawangli.com:9098/#/policynotice?"
-//#define CREDIT_URL                      @"http://uat-crm.chinawangli.com:9098/#/creditArrears?"
-//#define BARCODE_SEARCH                  @"http://uat-crm.chinawangli.com:9098/#/barcodeSearch?"
-//#define TRACKING_TRANSACTION            @"http://uat-crm.chinawangli.com:9098/#/transactionTracking?"
-//#define CLERRK_360                      @"http://uat-crm.chinawangli.com:9098/#/clerk360?"
-//#define VISIT_RECEPTION_DETAIL          @"http://uat-crm.chinawangli.com:9098/#/customer-reception-detail?"
+#define DOMAIN_NAME                     @"http://uat-crm.chinawangli.com:9090%@"
+#define H5_URL                          @"http://uat-crm.chinawangli.com:9098/#"
+
+#define CREATE_ORDER_URL                @"http://uat-crm.chinawangli.com:9098/#/orderonline?"
+#define ORDER_LIST_URL                  @"http://uat-crm.chinawangli.com:9098/#/orderlist?"
+#define ORDER_DETAIL_URL                @"http://uat-crm.chinawangli.com:9098/#/orderHelper?"
+#define TASK_DETAIL_URL                 @"http://uat-crm.chinawangli.com:9098/#/task-detail?"
+#define TASK_REMIND_URL                 @"http://uat-crm.chinawangli.com:9098/#/remindtask?"
+#define TASK_HANDLE_URL                 @"http://uat-crm.chinawangli.com:9098/#/handletask?"
+#define FOREIGN_URL                     @"http://uat-crm.chinawangli.com:9098/#/foreignorder?"
+#define NOTICE_URL                      @"http://uat-crm.chinawangli.com:9098/#/policynotice?"
+#define CREDIT_URL                      @"http://uat-crm.chinawangli.com:9098/#/creditArrears?"
+#define BARCODE_SEARCH                  @"http://uat-crm.chinawangli.com:9098/#/barcodeSearch?"
+#define TRACKING_TRANSACTION            @"http://uat-crm.chinawangli.com:9098/#/transactionTracking?"
+#define CLERRK_360                      @"http://uat-crm.chinawangli.com:9098/#/clerk360?"
+#define VISIT_RECEPTION_DETAIL          @"http://uat-crm.chinawangli.com:9098/#/customer-reception-detail?"
 
 //#else
 
-#define DOMAIN_NAME                     @"http://crm.chinawangli.com:9096%@"
-#define H5_URL                          @"http://crm.chinawangli.com:9098/#"
-
-#define CREATE_ORDER_URL                @"http://crm.chinawangli.com:9098/#/orderonline?"
-#define ORDER_LIST_URL                  @"http://crm.chinawangli.com:9098/#/orderlist?"
-#define ORDER_DETAIL_URL                @"http://crm.chinawangli.com:9098/#/orderHelper?"
-#define TASK_DETAIL_URL                 @"http://crm.chinawangli.com:9098/#/task-detail?"
-#define TASK_REMIND_URL                 @"http://crm.chinawangli.com:9098/#/remindtask?"
-#define TASK_HANDLE_URL                 @"http://crm.chinawangli.com:9098/#/handletask?"
-#define FOREIGN_URL                     @"http://crm.chinawangli.com:9098/#/foreignorder?"
-#define NOTICE_URL                      @"http://crm.chinawangli.com:9098/#/policynotice?"
-#define CREDIT_URL                      @"http://crm.chinawangli.com:9098/#/creditArrears?"
-#define BARCODE_SEARCH                  @"http://crm.chinawangli.com:9098/#/barcodeSearch?"
-#define TRACKING_TRANSACTION            @"http://crm.chinawangli.com:9098/#/transactionTracking?"
-#define CLERRK_360                      @"http://crm.chinawangli.com:9098/#/clerk360?"
-#define VISIT_RECEPTION_DETAIL          @"http://crm.chinawangli.com:9098/#/customer-reception-detail?"
+//#define DOMAIN_NAME                     @"http://crm.chinawangli.com:9096%@"
+//#define H5_URL                          @"http://crm.chinawangli.com:9098/#"
+//
+//#define CREATE_ORDER_URL                @"http://crm.chinawangli.com:9098/#/orderonline?"
+//#define ORDER_LIST_URL                  @"http://crm.chinawangli.com:9098/#/orderlist?"
+//#define ORDER_DETAIL_URL                @"http://crm.chinawangli.com:9098/#/orderHelper?"
+//#define TASK_DETAIL_URL                 @"http://crm.chinawangli.com:9098/#/task-detail?"
+//#define TASK_REMIND_URL                 @"http://crm.chinawangli.com:9098/#/remindtask?"
+//#define TASK_HANDLE_URL                 @"http://crm.chinawangli.com:9098/#/handletask?"
+//#define FOREIGN_URL                     @"http://crm.chinawangli.com:9098/#/foreignorder?"
+//#define NOTICE_URL                      @"http://crm.chinawangli.com:9098/#/policynotice?"
+//#define CREDIT_URL                      @"http://crm.chinawangli.com:9098/#/creditArrears?"
+//#define BARCODE_SEARCH                  @"http://crm.chinawangli.com:9098/#/barcodeSearch?"
+//#define TRACKING_TRANSACTION            @"http://crm.chinawangli.com:9098/#/transactionTracking?"
+//#define CLERRK_360                      @"http://crm.chinawangli.com:9098/#/clerk360?"
+//#define VISIT_RECEPTION_DETAIL          @"http://crm.chinawangli.com:9098/#/customer-reception-detail?"
 
 
 //#endif
@@ -533,7 +533,7 @@
 #define CHANNEL_DEVELOPMENT_CREATE              @"/api/channel-development/create"
 #define CHANNEL_DEVELOPMENT_UPDATE              @"/api/channel-development/update"
 #define CHANNEL_DEVELOPMENT_DETAIL              @"/api/channel-development/detail/%lld"
-#define CHANNEL_DEVELOPMENT_SUM_ACCUMULATEVISIT @"/api/channel-development/sum-accumulateVisit/%@"
+#define CHANNEL_DEVELOPMENT_SUM_ACCUMULATEVISIT @"/api/channel-development/sum-accumulateVisit"
 
 #define API_DATE_TODAY                          @"/api/date/today"
 
@@ -550,7 +550,7 @@
 #define HUA_JUE_SUM_ACTUALSHIPMENT              @"/api/hua-jue/sum-actualShipment"
 
 #define WORK_SUM_ACTUAL_SHIPMENT                @"/api/%@/sum-actualShipment/%@"
-#define WORK_SUM_ACTUAL_SHIPMENT_DIRECT_SALE    @"/api/direct-sales-engineering/sum-actualReceivedPayments/%@"
+#define WORK_SUM_ACTUAL_SHIPMENT_DIRECT_SALE    @"/api/direct-sales-engineering/sum-actualReceivedPayments"
 #define BRAND_PAGE                              @"/api/brand/page"
 #define FIND_CAREFUL_AREA                       @"/api/member/find-careful-area"
 #define JINMU_DETAIL                            @"/api/jin-mu/detail/%lld"
@@ -577,6 +577,36 @@
 #define WORKPLAN_ITEM                           @"/api/attachment/list/WORK_PLAN_ITEM/%lld"
 #define WORKPLAN_SUM_ACCUMULATEVISIT            @"/api/workPlan/sum-accumulateVisit"
 #define WORKPLAN_SUM_ACTUAL_SHIPMENT            @"/api/workPlan/sum-actualShipment"
+
+
+
+
+// 所有获取 当日实际发货量和当月累计发货量
+#define GET_SAP_SALES_BY_BRAND_AND_YEAR         @"/api/retail-channel/getSapSalesByBrandAdnYear"
+//零售渠道部计划-获取-当月累计发货量--当日实际发货量       /api/SapDataController/getSapSalesByBrandAdnYear/_LS/LFIMG_
+//战略工程部计划-获取-当月累计销售额--实际销售额          /api/SapDataController/getSapSalesByBrandAdnYear/_GC/KWERT_
+//市场工程部计划-获取-当月累计发货量--当日实际发货量       /api/SapDataController/getSapSalesByBrandAdnYear/_GC/LFIMG_
+#define GET_SAP_SALES_BY_BRAND_AND_YEAR_TYPE    @"/api/SapDataController/getSapSalesByBrandAdnYear/%@"
+
+// 通用计划 获取当月累计销售额和当日实际销售额
+#define GET_SAP_SALES_BY_WORK_PLAN              @"/api/workPlan/getSapSalesByBrandAdnYear"
+
+
+// 获取昨日数据
+#define WORKTYPE_RETAIL_CHANNEL                 @"retail-channel"       // 零售
+#define WORKTYPE_MARKET_ENGINEERING             @"market-engineering"   // 市场
+#define WORKTYPE_NENG_CHENG                     @"neng-cheng"           // 能诚
+#define WORKTYPE_HUA_JUE                        @"hua-jue"              // 华爵
+
+#define WORKTYPE_GOLDWOOD                       @"GOLDWOOD"             // 金木们
+#define WORKTYPE_ZHINENG                        @"HYZNG"                // 智能锁
+#define WORKTYPE_ALD                            @"ALD"                  // 铝木们
+#define WORKTYPE_CERART                         @"CERART"               // 铜艺
+#define WORKTYPE_TIMBER                         @"TIMBER"               // 木们
+
+#define GET_INFO_YESTERDAY                      @"/api/%@/getInfo"
+#define GET_INFO_YESTERDAY_COMMON               @"/api/workPlan/getInfo/%@"
+
 
 @interface URLConfig : NSObject
 
