@@ -256,6 +256,7 @@
 
 - (void)clickRightButton:(UIButton *)sender {
     StrategicWorkPlanViewCtrl *vc = [[StrategicWorkPlanViewCtrl alloc] init];
+    vc.yesterdayData = YES;
     vc.hidesBottomBarWhenPushed = YES;
     vc.title = @"战略工程部计划";
     __weak typeof(self) weakself = self;

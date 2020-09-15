@@ -258,6 +258,7 @@
 - (void)clickRightButton:(UIButton *)sender {
     NengchengWorkPlanViewCtrl *vc = [[NengchengWorkPlanViewCtrl alloc] init];
     vc.hidesBottomBarWhenPushed = YES;
+    vc.yesterdayData = YES;
     vc.title = @"能诚销售人员计划";
     __weak typeof(self) weakself = self;
     vc.updateSuccess = ^(id obj) {

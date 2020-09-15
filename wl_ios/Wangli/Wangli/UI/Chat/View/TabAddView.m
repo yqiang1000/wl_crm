@@ -221,15 +221,18 @@ typedef void(^CancelBlock)(TabAddView *obj);
         vc = tmpVC;
     } else if ([tmpDic.value isEqualToString:@"action:7140"]) {    // 战略
         StrategicWorkPlanViewCtrl *tmpVC = [[StrategicWorkPlanViewCtrl alloc] init];
+        tmpVC.yesterdayData = YES;
         vc = tmpVC;
     } else if ([tmpDic.value isEqualToString:@"action:7150"]) {   // 直营
         DirectWorkPlanViewCtrl *tmpVC = [[DirectWorkPlanViewCtrl alloc] init];
         vc = tmpVC;
     }  else if ([tmpDic.value isEqualToString:@"action:7160"]) {  // 能成
         NengchengWorkPlanViewCtrl *tmpVC = [[NengchengWorkPlanViewCtrl alloc] init];
+        tmpVC.yesterdayData = YES;
         vc = tmpVC;
     } else if ([tmpDic.value isEqualToString:@"action:7170"]) {   // 华爵
         HuajueWorkPlanViewCtrl *tmpVC = [[HuajueWorkPlanViewCtrl alloc] init];
+        tmpVC.yesterdayData = YES;
         vc = tmpVC;
     }
     else {

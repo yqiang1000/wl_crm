@@ -66,6 +66,10 @@
         [self ccanEdit];
     }
     
+    if (self.yesterdayData) {
+        [self getYesterDayDataWorkType];
+    }
+    
     // 监听键盘高度变化
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onKeyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onKeyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
@@ -84,6 +88,29 @@
         make.left.right.bottom.equalTo(self.view);
     }];
 }
+
+
+- (void)getYesterDayDataWorkType {
+    [Utils showHUDWithStatus:nil];
+    NSString *yesterdayStr = [[Utils getDateDayOffset:-1 mydate:[NSDate date]]  stringWithFormat:@"yyyy-MM-dd"];
+    [[JYUserApi sharedInstance] getYesterdayWorkDataWorkType:WORKYTPE_STR_ENGIN param:@{@"loginOperator":@(TheUser.userMo.id), @"yesterday":yesterdayStr} success:^(id responseObject) {
+        [Utils dismissHUD];
+        NSError *error = nil;
+        self.model = [[StrategicEngineeringMo alloc] initWithDictionary:responseObject error:&error];
+        self.createDate = YES;
+        self.beforeDate = self.handleDate = self.afterDate = NO;
+        self.rightBtn.hidden = NO;
+        [self configRowMos];
+        self.model = nil;
+        [self.tableView reloadData];
+    } failure:^(NSError *error) {
+        [Utils dismissHUD];
+        [self configRowMos];
+        [self.tableView reloadData];
+        [Utils showToastMessage:STRING(error.userInfo[@"message"])];
+    }];
+}
+
 
 - (void)getDetailModel {
     [Utils showHUDWithStatus:nil];
@@ -251,6 +278,8 @@
         if (self.model.cityName.length > 0) address = [address stringByAppendingString:self.model.cityName];
         if (self.model.areaName.length > 0) address = [address stringByAppendingString:self.model.areaName];
         rowMo6.strValue = STRING(address);
+        self.arrAddIds = @[STRING(_model.provinceNumber), STRING(_model.cityNumber), STRING(_model.areaNumber)];
+        self.arrAddNames = @[STRING(_model.provinceName), STRING(_model.cityName), STRING(_model.areaName)];
     }
     [self.arrData addObject:rowMo6];
     
@@ -290,7 +319,7 @@
     rowMoPlanDate.inputType = K_SHORT_TEXT;
     rowMoPlanDate.rightContent = @"请输入";
     rowMoPlanDate.pattern = @"yyyy-MM-dd";
-    rowMoPlanDate.editAble = self.model?NO:YES;
+    rowMoPlanDate.editAble = self.yesterdayData?YES:(self.model?NO:YES);
     rowMoPlanDate.key = @"workPlanDate";
     rowMoPlanDate.strValue = self.model?self.model.workPlanDate:@"";//[nextDay stringWithFormat:rowMoPlanDate.pattern];
     [self.arrData addObject:rowMoPlanDate];
@@ -301,7 +330,7 @@
     rowMo12.inputType = K_SHORT_TEXT;
     rowMo12.rightContent = @"请输入";
     rowMo12.pattern = @"yyyy-MM-dd";
-    rowMo12.editAble = self.model?NO:YES;
+    rowMo12.editAble = self.yesterdayData?YES:(self.model?NO:YES);
     rowMo12.key = @"date";
     rowMo12.strValue = self.model?self.model.date:@"";//[today stringWithFormat:rowMo12.pattern];
     [self.arrData addObject:rowMo12];

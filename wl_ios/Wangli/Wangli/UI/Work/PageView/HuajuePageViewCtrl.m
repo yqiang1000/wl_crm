@@ -257,6 +257,7 @@
 
 - (void)clickRightButton:(UIButton *)sender {
     HuajueWorkPlanViewCtrl *vc = [[HuajueWorkPlanViewCtrl alloc] init];
+    vc.yesterdayData = YES;
     vc.hidesBottomBarWhenPushed = YES;
     vc.title = @"华爵销售人员计划";
     __weak typeof(self) weakself = self;
