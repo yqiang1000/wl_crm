@@ -257,6 +257,7 @@
 
 - (void)clickRightButton:(UIButton *)sender {
     RetailWorkPlanViewCtrl *vc = [[RetailWorkPlanViewCtrl alloc] init];
+    vc.yesterdayData = YES;
     vc.hidesBottomBarWhenPushed = YES;
     vc.title = @"零售工作计划";
     __weak typeof(self) weakself = self;

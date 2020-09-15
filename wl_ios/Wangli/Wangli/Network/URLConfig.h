@@ -597,6 +597,8 @@
 #define WORKTYPE_MARKET_ENGINEERING             @"market-engineering"   // 市场
 #define WORKTYPE_NENG_CHENG                     @"neng-cheng"           // 能诚
 #define WORKTYPE_HUA_JUE                        @"hua-jue"              // 华爵
+#define WORKYTPE_STR_ENGIN                      @"strategic-engineering"// 战略
+#define WORKYTPE_DIRECT_SALES                   @"direct-sales-engineering"// 直营
 
 #define WORKTYPE_GOLDWOOD                       @"GOLDWOOD"             // 金木们
 #define WORKTYPE_ZHINENG                        @"HYZNG"                // 智能锁
