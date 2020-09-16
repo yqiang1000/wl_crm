@@ -259,6 +259,7 @@
 - (void)clickRightButton:(UIButton *)sender {
     DevelopWorkPlanViewCtrl *vc = [[DevelopWorkPlanViewCtrl alloc] init];
     vc.hidesBottomBarWhenPushed = YES;
+    vc.yesterdayData = YES;
     vc.title = @"渠道工作计划";
     __weak typeof(self) weakself = self;
     vc.updateSuccess = ^(id obj) {

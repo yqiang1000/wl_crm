@@ -599,6 +599,7 @@
 #define WORKTYPE_HUA_JUE                        @"hua-jue"              // 华爵
 #define WORKYTPE_STR_ENGIN                      @"strategic-engineering"// 战略
 #define WORKYTPE_DIRECT_SALES                   @"direct-sales-engineering"// 直营
+#define WORKYTPE_CHANNEL_DEVELOPMENT            @"channel-development"  // 渠道
 
 #define WORKTYPE_GOLDWOOD                       @"GOLDWOOD"             // 金木们
 #define WORKTYPE_ZHINENG                        @"HYZNG"                // 智能锁
