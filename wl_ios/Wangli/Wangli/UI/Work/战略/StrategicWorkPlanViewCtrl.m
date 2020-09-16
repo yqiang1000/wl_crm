@@ -210,7 +210,7 @@
     rowMo2.leftContent = @"当月累计销售额(万元)";
     rowMo2.inputType = K_SHORT_TEXT;
     rowMo2.rightContent = @"自动带出";
-    rowMo2.editAble = NO;
+    rowMo2.editAble = self.yesterdayData?YES:NO;
     rowMo2.keyBoardType = K_DOUBLE;
     rowMo2.key = @"cumulativeShipments";
     if (self.model) {
