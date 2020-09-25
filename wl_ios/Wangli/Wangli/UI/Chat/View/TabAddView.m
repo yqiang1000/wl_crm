@@ -227,6 +227,7 @@ typedef void(^CancelBlock)(TabAddView *obj);
         vc = tmpVC;
     } else if ([tmpDic.value isEqualToString:@"action:7150"]) {   // 直营
         DirectWorkPlanViewCtrl *tmpVC = [[DirectWorkPlanViewCtrl alloc] init];
+        tmpVC.yesterdayData = YES;
         vc = tmpVC;
     }  else if ([tmpDic.value isEqualToString:@"action:7160"]) {  // 能成
         NengchengWorkPlanViewCtrl *tmpVC = [[NengchengWorkPlanViewCtrl alloc] init];

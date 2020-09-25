@@ -92,7 +92,7 @@
 - (void)getYesterDayDataWorkType {
     [Utils showHUDWithStatus:nil];
     NSString *yesterdayStr = [[Utils getDateDayOffset:-1 mydate:[NSDate date]]  stringWithFormat:@"yyyy-MM-dd"];
-    [[JYUserApi sharedInstance] getYesterdayWorkDataWorkType:WORKTYPE_RETAIL_CHANNEL param:@{@"loginOperator":@(TheUser.userMo.id), @"yesterday":yesterdayStr} success:^(id responseObject) {
+    [[JYUserApi sharedInstance] getYesterdayWorkDataWorkType:WORKYTPE_CHANNEL_DEVELOPMENT param:@{@"loginOperator":@(TheUser.userMo.id), @"yesterday":yesterdayStr} success:^(id responseObject) {
         [Utils dismissHUD];
         NSError *error = nil;
         self.model = [[ChannelDevelopmentMo alloc] initWithDictionary:responseObject error:&error];

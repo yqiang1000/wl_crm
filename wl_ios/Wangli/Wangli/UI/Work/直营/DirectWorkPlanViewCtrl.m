@@ -1009,64 +1009,10 @@
 
 - (void)listSelectViewCtrl:(ListSelectViewCtrl *)listSelectViewCtrl selectIndex:(NSInteger)index indexPath:(NSIndexPath *)indexPath selectMo:(ListSelectMo *)selectMo {
     CommonRowMo *rowMo = self.arrData[indexPath.row];
-//    if ([rowMo.key isEqualToString:@"province"]) {
-//        // 省份
-//        DicMo *dicMo = [self.selectArr objectAtIndex:index];
-//        rowMo.strValue = dicMo.key;
-//
-//        // 目标
-//        CommonRowMo *targetRowMo = nil;
-//        NSInteger targetIndex = 0;
-//        for (int i = 0; i < self.arrData.count; i++) {
-//            CommonRowMo *tmpRowMo = self.arrData[i];
-//            if ([tmpRowMo.key isEqualToString:@"monthReceivedPayments"]) {
-//                targetRowMo = tmpRowMo;
-//                targetIndex = i;
-//                break;
-//            }
-//        }
-//        targetRowMo.strValue = dicMo.value;
-//        targetRowMo.value = dicMo.value;
-//        [self.tableView reloadRowsAtIndexPaths:@[indexPath, [NSIndexPath indexPathForRow:targetIndex inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
-//
-//        // 用户
-//        CommonRowMo *userRowMo = nil;
-//        for (int i = 0; i < self.arrData.count; i++) {
-//            CommonRowMo *tmpRowMo = self.arrData[i];
-//            if ([tmpRowMo.key isEqualToString:@"operator"]) {
-//                userRowMo = tmpRowMo;
-//                break;
-//            }
-//        }
-//        JYUserMo *userMo = (JYUserMo *)userRowMo.m_obj;
-//        JYUserMo *modelUserMo = [[JYUserMo alloc] initWithDictionary:self.model.operator error:nil];
-//
-//        // 如果修改，选择省份之后，累计发货量用 detail 里的值
-//        if (self.model && ([dicMo.key isEqualToString:self.model.province] && userMo.id == modelUserMo.id)) {
-//            CommonRowMo *sumRowMo = nil;
-//            NSInteger sumIndex = 0;
-//            for (int i = 0; i < self.arrData.count; i++) {
-//                CommonRowMo *tmpRowMo = self.arrData[i];
-//                if ([tmpRowMo.key isEqualToString:@"accumulatePayments"]) {
-//                    sumRowMo = tmpRowMo;
-//                    sumIndex = i;
-//                    break;
-//                }
-//            }
-//            sumRowMo.strValue = [Utils getPriceFrom:self.model.accumulatePayments];
-//            sumRowMo.m_obj = [Utils getPriceFrom:self.model.accumulatePayments];
-//            sumRowMo.value = [Utils getPriceFrom:self.model.accumulatePayments];
-//            [self.tableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:sumIndex inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
-//            [self dealWithSum];
-//        } else {
-//            [self getMonthTotalSum];
-//        }
-//    } else {
-        DicMo *dicMo = [self.selectArr objectAtIndex:index];
-        rowMo.m_obj = dicMo;
-        rowMo.strValue = selectMo.moText;
-        [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-//    }
+    DicMo *dicMo = [self.selectArr objectAtIndex:index];
+    rowMo.m_obj = dicMo;
+    rowMo.strValue = selectMo.moText;
+    [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
 }
 
 // 多选方法，会覆盖单选方法

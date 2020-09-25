@@ -257,6 +257,7 @@
 
 - (void)clickRightButton:(UIButton *)sender {
     DirectWorkPlanViewCtrl *vc = [[DirectWorkPlanViewCtrl alloc] init];
+    vc.yesterdayData = YES;
     vc.hidesBottomBarWhenPushed = YES;
     vc.title = @"直营工程部计划";
     __weak typeof(self) weakself = self;

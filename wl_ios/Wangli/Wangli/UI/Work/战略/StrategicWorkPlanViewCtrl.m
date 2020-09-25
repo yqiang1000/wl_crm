@@ -378,6 +378,7 @@
             DicMo *dicMo = [[DicMo alloc] init];
             dicMo.key = STRING(dic[@"province"]);
             dicMo.extendValue1 = STRING(dic[@"province"]);
+            dicMo.extendValue2 = STRING(dic[@"brand"][@"brandName"]);
             CGFloat valueF = [dic[@"salesTarget"] floatValue];
             dicMo.value = [Utils getPriceFrom:valueF];
             [self.arrProvince addObject:dicMo];
@@ -1127,11 +1128,14 @@
 - (void)getSapData:(NSMutableArray *)provinceData {
     NSMutableDictionary *param = [NSMutableDictionary new];
     NSMutableArray *arrProvince = [NSMutableArray new];
+    NSMutableArray *arrBrand = [NSMutableArray new];
+
     for (DicMo *selectMo in provinceData) {
         [arrProvince addObject:@{@"provinceName":STRING(selectMo.extendValue1)}];
+        [arrBrand addObject:@{@"brandName":STRING(selectMo.extendValue2)}];
     }
     [param setObject:arrProvince forKey:@"provinceSet"];
-    [param setObject:@[] forKey:@"brandSet"];
+    [param setObject:arrBrand forKey:@"brandSet"];
     
     [[JYUserApi sharedInstance] GET_SAP_SALES_BY_BRAND_AND_YEAR_Type:@"_GC/KWERT_" param:param success:^(id responseObject) {
         [self dealWithSapData:responseObject];
