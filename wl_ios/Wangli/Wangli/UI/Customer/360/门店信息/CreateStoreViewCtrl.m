@@ -270,6 +270,29 @@
             [strongself getAddressConfig:memberRowMo.member];
         };
         [self.navigationController pushViewController:vc animated:YES];
+    } else if ([toDo isEqualToString:@"storeType"] && [selName isEqualToString:@"ListSelectViewCtrl"]) {
+        CommonRowMo *rowMo = self.arrData[indexPath.row];
+        CommonRowMo *passMo = nil;
+        NSInteger passIndex = 0;
+        // 如果市为空，则返回
+        for (int i = 0; i < self.arrData.count; i++) {
+            CommonRowMo *tmpMo = self.arrData[i];
+            if ([tmpMo.key isEqualToString:@"whetherToMonopolize"]) {
+                passMo = tmpMo;
+                passIndex = i;
+                break;
+            }
+        }
+        NSString *typeValue = rowMo.singleValue.value;
+        // 1.从专区店改为专卖店，验收字段自动跳转否
+        // 2.当类型为专卖店时，验收字段不能更改
+        if ([typeValue isEqualToString:@"专卖店"] && passMo != nil) {
+            passMo.defaultValue = NO;
+            passMo.editAble = NO;
+        } else if ([typeValue isEqualToString:@"专区店"] && passMo != nil) {
+            passMo.editAble = YES;
+        }
+        [self.tableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:passIndex inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
     }
 }
 
