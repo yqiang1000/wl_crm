@@ -1240,7 +1240,7 @@
 		47D05278250D13E4004125FF /* ReportingProjectItemViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportingProjectItemViewCtrl.h; sourceTree = "<group>"; };
 		47D05279250D13E4004125FF /* UnfulFilledProjectViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnfulFilledProjectViewCtrl.m; sourceTree = "<group>"; };
 		47D0527A250D13E4004125FF /* MarketEngineerItemViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarketEngineerItemViewCtrl.m; sourceTree = "<group>"; };
-		47EA9592247B676100A0C60E /* Wangli.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wangli.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		47EA9592247B676100A0C60E /* 王力CRM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "王力CRM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		47EA959F247B676100A0C60E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		47EA95A1247B676300A0C60E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47EA95A4247B676300A0C60E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -3172,7 +3172,7 @@
 		47EA9593247B676100A0C60E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				47EA9592247B676100A0C60E /* Wangli.app */,
+				47EA9592247B676100A0C60E /* 王力CRM.app */,
 				47EA95AD247B676300A0C60E /* WangliTests.xctest */,
 				47EA95B8247B676300A0C60E /* WangliUITests.xctest */,
 			);
@@ -5988,7 +5988,7 @@
 			);
 			name = Wangli;
 			productName = Wangli;
-			productReference = 47EA9592247B676100A0C60E /* Wangli.app */;
+			productReference = 47EA9592247B676100A0C60E /* 王力CRM.app */;
 			productType = "com.apple.product-type.application";
 		};
 		47EA95AC247B676300A0C60E /* WangliTests */ = {
@@ -7160,8 +7160,9 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Wangli/WangliDebug.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.5.004;
+				CURRENT_PROJECT_VERSION = 1.5.008;
 				DEVELOPMENT_TEAM = V8J7E6PBM6;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -7178,8 +7179,10 @@
 				);
 				MARKETING_VERSION = 1.02.024;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jiuyi.Wangli001;
-				PRODUCT_NAME = Wangli;
+				PRODUCT_NAME = "王力CRM";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Wangli/UI/Customer/Wangli-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "Wangli-Swift.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -7196,7 +7199,7 @@
 				CODE_SIGN_ENTITLEMENTS = Wangli/WangliRelease.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.5.004;
+				CURRENT_PROJECT_VERSION = 1.5.008;
 				DEVELOPMENT_TEAM = V8J7E6PBM6;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -7213,9 +7216,10 @@
 				);
 				MARKETING_VERSION = 1.02.024;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jiuyi.Wangli001;
-				PRODUCT_NAME = Wangli;
+				PRODUCT_NAME = "王力CRM";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Wangli/UI/Customer/Wangli-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "Wangli-Swift.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

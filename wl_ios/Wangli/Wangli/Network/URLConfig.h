@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "SwitchUrlUtil.h"
 
-//#if DEBUG
-//
+#if DEBUG
+
 #define DOMAIN_NAME                     @"http://uat-crm.chinawangli.com:9090%@"
 #define H5_URL                          @"http://uat-crm.chinawangli.com:9098/#"
 
@@ -28,27 +28,27 @@
 #define CLERRK_360                      @"http://uat-crm.chinawangli.com:9098/#/clerk360?"
 #define VISIT_RECEPTION_DETAIL          @"http://uat-crm.chinawangli.com:9098/#/customer-reception-detail?"
 
-//#else
+#else
 
-//#define DOMAIN_NAME                     @"http://crm.chinawangli.com:9096%@"
-//#define H5_URL                          @"http://crm.chinawangli.com:9098/#"
-//
-//#define CREATE_ORDER_URL                @"http://crm.chinawangli.com:9098/#/orderonline?"
-//#define ORDER_LIST_URL                  @"http://crm.chinawangli.com:9098/#/orderlist?"
-//#define ORDER_DETAIL_URL                @"http://crm.chinawangli.com:9098/#/orderHelper?"
-//#define TASK_DETAIL_URL                 @"http://crm.chinawangli.com:9098/#/task-detail?"
-//#define TASK_REMIND_URL                 @"http://crm.chinawangli.com:9098/#/remindtask?"
-//#define TASK_HANDLE_URL                 @"http://crm.chinawangli.com:9098/#/handletask?"
-//#define FOREIGN_URL                     @"http://crm.chinawangli.com:9098/#/foreignorder?"
-//#define NOTICE_URL                      @"http://crm.chinawangli.com:9098/#/policynotice?"
-//#define CREDIT_URL                      @"http://crm.chinawangli.com:9098/#/creditArrears?"
-//#define BARCODE_SEARCH                  @"http://crm.chinawangli.com:9098/#/barcodeSearch?"
-//#define TRACKING_TRANSACTION            @"http://crm.chinawangli.com:9098/#/transactionTracking?"
-//#define CLERRK_360                      @"http://crm.chinawangli.com:9098/#/clerk360?"
-//#define VISIT_RECEPTION_DETAIL          @"http://crm.chinawangli.com:9098/#/customer-reception-detail?"
+#define DOMAIN_NAME                     @"http://crm.chinawangli.com:9096%@"
+#define H5_URL                          @"http://crm.chinawangli.com:9098/#"
+
+#define CREATE_ORDER_URL                @"http://crm.chinawangli.com:9098/#/orderonline?"
+#define ORDER_LIST_URL                  @"http://crm.chinawangli.com:9098/#/orderlist?"
+#define ORDER_DETAIL_URL                @"http://crm.chinawangli.com:9098/#/orderHelper?"
+#define TASK_DETAIL_URL                 @"http://crm.chinawangli.com:9098/#/task-detail?"
+#define TASK_REMIND_URL                 @"http://crm.chinawangli.com:9098/#/remindtask?"
+#define TASK_HANDLE_URL                 @"http://crm.chinawangli.com:9098/#/handletask?"
+#define FOREIGN_URL                     @"http://crm.chinawangli.com:9098/#/foreignorder?"
+#define NOTICE_URL                      @"http://crm.chinawangli.com:9098/#/policynotice?"
+#define CREDIT_URL                      @"http://crm.chinawangli.com:9098/#/creditArrears?"
+#define BARCODE_SEARCH                  @"http://crm.chinawangli.com:9098/#/barcodeSearch?"
+#define TRACKING_TRANSACTION            @"http://crm.chinawangli.com:9098/#/transactionTracking?"
+#define CLERRK_360                      @"http://crm.chinawangli.com:9098/#/clerk360?"
+#define VISIT_RECEPTION_DETAIL          @"http://crm.chinawangli.com:9098/#/customer-reception-detail?"
 
 
-//#endif
+#endif
 
 // H5地址
 /** 情报消息的跳转url */
