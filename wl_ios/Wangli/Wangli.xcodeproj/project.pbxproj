@@ -112,7 +112,6 @@
 		4753F587247CF61100440063 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4753F47C247CF60E00440063 /* Utils.m */; };
 		4753F589247CF61100440063 /* ScanTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4753F482247CF60E00440063 /* ScanTool.m */; };
 		4753F58A247CF61100440063 /* QMYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4753F483247CF60E00440063 /* QMYViewController.m */; };
-		4753F58B247CF61100440063 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 4753F484247CF60E00440063 /* UIView+Toast.m */; };
 		4753F58C247CF61100440063 /* HPGrowingTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4753F488247CF60F00440063 /* HPGrowingTextView.m */; };
 		4753F58D247CF61100440063 /* HPTextViewInternal.m in Sources */ = {isa = PBXBuildFile; fileRef = 4753F489247CF60F00440063 /* HPTextViewInternal.m */; };
 		4753F58E247CF61100440063 /* NSNumber+ShortCut.m in Sources */ = {isa = PBXBuildFile; fileRef = 4753F48D247CF60F00440063 /* NSNumber+ShortCut.m */; };
@@ -1049,7 +1048,6 @@
 		4753F480247CF60E00440063 /* ScanTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanTool.h; sourceTree = "<group>"; };
 		4753F482247CF60E00440063 /* ScanTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanTool.m; sourceTree = "<group>"; };
 		4753F483247CF60E00440063 /* QMYViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMYViewController.m; sourceTree = "<group>"; };
-		4753F484247CF60E00440063 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
 		4753F485247CF60F00440063 /* UserLocalDataUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserLocalDataUtils.h; sourceTree = "<group>"; };
 		4753F487247CF60F00440063 /* HPTextViewInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPTextViewInternal.h; sourceTree = "<group>"; };
 		4753F488247CF60F00440063 /* HPGrowingTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPGrowingTextView.m; sourceTree = "<group>"; };
@@ -1142,7 +1140,6 @@
 		4753F4E6247CF61000440063 /* ZJScrollPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJScrollPageView.m; sourceTree = "<group>"; };
 		4753F4E7247CF61000440063 /* UIViewController+ZJScrollPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ZJScrollPageController.h"; sourceTree = "<group>"; };
 		4753F4E8247CF61000440063 /* ZJTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJTitleView.h; sourceTree = "<group>"; };
-		4753F4E9247CF61000440063 /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
 		4753F4EA247CF61000440063 /* JYClick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYClick.m; sourceTree = "<group>"; };
 		4753F4EB247CF61000440063 /* EmptyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmptyView.h; sourceTree = "<group>"; };
 		4753F4ED247CF61100440063 /* RadarMapCompleteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadarMapCompleteView.h; sourceTree = "<group>"; };
@@ -5954,8 +5951,6 @@
 				4753F32A247CF60C00440063 /* RestrictionInput.m */,
 				4753F4B3247CF60F00440063 /* TopTabBarView.h */,
 				4753F4B2247CF60F00440063 /* TopTabBarView.m */,
-				4753F4E9247CF61000440063 /* UIView+Toast.h */,
-				4753F484247CF60E00440063 /* UIView+Toast.m */,
 				4753F485247CF60F00440063 /* UserLocalDataUtils.h */,
 				4753F339247CF60D00440063 /* UserLocalDataUtils.m */,
 				4753F3AF247CF60D00440063 /* Utils.h */,
@@ -6301,7 +6296,6 @@
 				47EA9FEB247B6AC500A0C60E /* ProduceCapacityMo.m in Sources */,
 				47EA9E4A247B6AC500A0C60E /* OrgContactViewCtrl.m in Sources */,
 				4753F67D247CF7F300440063 /* JYHelperMessageCell.m in Sources */,
-				4753F58B247CF61100440063 /* UIView+Toast.m in Sources */,
 				4750572F247E47EB00D1DAD0 /* OfflinePushInfoMo.m in Sources */,
 				47EA9FDB247B6AC500A0C60E /* SalesSystemMo.m in Sources */,
 				47EA9E4B247B6AC500A0C60E /* MyContactViewCtrl.m in Sources */,
@@ -7162,7 +7156,7 @@
 				CODE_SIGN_ENTITLEMENTS = Wangli/WangliDebug.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.5.008;
+				CURRENT_PROJECT_VERSION = 1.5.009;
 				DEVELOPMENT_TEAM = V8J7E6PBM6;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -7199,7 +7193,7 @@
 				CODE_SIGN_ENTITLEMENTS = Wangli/WangliRelease.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.5.008;
+				CURRENT_PROJECT_VERSION = 1.5.009;
 				DEVELOPMENT_TEAM = V8J7E6PBM6;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (

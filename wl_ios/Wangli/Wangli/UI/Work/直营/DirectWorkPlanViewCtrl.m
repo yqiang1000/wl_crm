@@ -329,7 +329,7 @@
     rowMo12.pattern = @"yyyy-MM-dd";
     rowMo12.editAble = self.yesterdayData?YES:(self.model?NO:YES);
     rowMo12.key = @"date";
-    rowMo12.strValue = self.model?self.model.date:@"";//[today stringWithFormat:rowMo12.pattern];
+    rowMo12.strValue = self.model.date.length == 0 ? [[NSDate date] stringWithFormat:rowMo12.pattern] : self.model.date;
     [self.arrData addObject:rowMo12];
     
     CommonRowMo *rowMo13 = [[CommonRowMo alloc] init];
