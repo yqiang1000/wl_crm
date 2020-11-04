@@ -7156,8 +7156,8 @@
 				CODE_SIGN_ENTITLEMENTS = Wangli/WangliDebug.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.5.009;
-				DEVELOPMENT_TEAM = V8J7E6PBM6;
+				CURRENT_PROJECT_VERSION = 1.5.010;
+				DEVELOPMENT_TEAM = BNVR43G3C9;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -7172,7 +7172,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.02.024;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jiuyi.Wangli001;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiuyi.Aixu001;
 				PRODUCT_NAME = "王力CRM";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Wangli/UI/Customer/Wangli-Bridging-Header.h";
@@ -7193,7 +7193,7 @@
 				CODE_SIGN_ENTITLEMENTS = Wangli/WangliRelease.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.5.009;
+				CURRENT_PROJECT_VERSION = 1.5.010;
 				DEVELOPMENT_TEAM = V8J7E6PBM6;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (

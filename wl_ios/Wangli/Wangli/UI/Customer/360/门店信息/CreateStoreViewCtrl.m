@@ -284,15 +284,20 @@
             }
         }
         NSString *typeValue = rowMo.singleValue.value;
-        // 1.从专区店改为专卖店，验收字段自动跳转否
-        // 2.当类型为专卖店时，验收字段不能更改
-        if ([typeValue isEqualToString:@"专卖店"] && passMo != nil) {
-            passMo.defaultValue = NO;
-            passMo.editAble = NO;
-        } else if ([typeValue isEqualToString:@"专区店"] && passMo != nil) {
-            passMo.editAble = YES;
+        // 新建的时候不限制。修改的时候遵循以下规则
+        // 1.从专卖店改为专区店，验收字段自动跳转否
+        // 2.当类型为专区店时，验收字段不能更改
+        // 3.是可以改成否，但是否不能改成是
+        // 新建情况
+        if (!self.storeMo) {
+            return;
+        } else {
+            // 修改的情况
+            if ([typeValue isEqualToString:@"专卖店"] && passMo != nil) {
+                passMo.defaultValue = NO;
+            }
+            [self.tableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:passIndex inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
         }
-        [self.tableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:passIndex inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
     }
 }
 
@@ -429,14 +434,20 @@
         if ([tmpMo.key isEqualToString:@"brandName"]) {
             NSString *idStr = @"";
             NSString *nameStr = @"";
-            for (int i = 0; i < tmpMo.m_objs.count; i++) {
-                StoreBandsMo *brandsMo = tmpMo.m_objs[i];
-                idStr = [idStr stringByAppendingString:[NSString stringWithFormat:@"%ld", (long)brandsMo.id]];
-                nameStr = [nameStr stringByAppendingString:STRING(brandsMo.brandName)];
-                if (i < tmpMo.m_objs.count - 1) {
-                    idStr = [idStr stringByAppendingString:@"-"];
-                    nameStr = [nameStr stringByAppendingString:@" "];
+            
+            if (tmpMo.mutiAble) {
+                for (int i = 0; i < tmpMo.m_objs.count; i++) {
+                    StoreBandsMo *brandsMo = tmpMo.m_objs[i];
+                    idStr = [idStr stringByAppendingString:[NSString stringWithFormat:@"%ld", (long)brandsMo.id]];
+                    nameStr = [nameStr stringByAppendingString:STRING(brandsMo.brandName)];
+                    if (i < tmpMo.m_objs.count - 1) {
+                        idStr = [idStr stringByAppendingString:@"-"];
+                        nameStr = [nameStr stringByAppendingString:@" "];
+                    }
                 }
+            } else {
+                idStr = [NSString stringWithFormat:@"%ld", ((StoreBandsMo *)tmpMo.m_obj).id];
+                nameStr = ((StoreBandsMo *)tmpMo.m_obj).brandName;
             }
             [params setObject:STRING(idStr) forKey:@"brandId"];
             [params setObject:STRING(nameStr) forKey:@"brandName"];
@@ -485,14 +496,20 @@
         if ([tmpMo.key isEqualToString:@"brandName"]) {
             NSString *idStr = @"";
             NSString *nameStr = @"";
-            for (int i = 0; i < tmpMo.m_objs.count; i++) {
-                StoreBandsMo *brandsMo = tmpMo.m_objs[i];
-                idStr = [idStr stringByAppendingString:[NSString stringWithFormat:@"%ld", (long)brandsMo.id]];
-                nameStr = [nameStr stringByAppendingString:STRING(brandsMo.brandName)];
-                if (i < tmpMo.m_objs.count - 1) {
-                    idStr = [idStr stringByAppendingString:@"-"];
-                    nameStr = [nameStr stringByAppendingString:@" "];
+            
+            if (tmpMo.mutiAble) {
+                for (int i = 0; i < tmpMo.m_objs.count; i++) {
+                    StoreBandsMo *brandsMo = tmpMo.m_objs[i];
+                    idStr = [idStr stringByAppendingString:[NSString stringWithFormat:@"%ld", (long)brandsMo.id]];
+                    nameStr = [nameStr stringByAppendingString:STRING(brandsMo.brandName)];
+                    if (i < tmpMo.m_objs.count - 1) {
+                        idStr = [idStr stringByAppendingString:@"-"];
+                        nameStr = [nameStr stringByAppendingString:@" "];
+                    }
                 }
+            } else {
+                idStr = [NSString stringWithFormat:@"%ld", ((StoreBandsMo *)tmpMo.m_obj).id];
+                nameStr = ((StoreBandsMo *)tmpMo.m_obj).brandName;
             }
             [params setObject:STRING(idStr) forKey:@"brandId"];
             [params setObject:STRING(nameStr) forKey:@"brandName"];
