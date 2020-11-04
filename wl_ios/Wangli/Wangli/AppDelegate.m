@@ -290,44 +290,44 @@
 
 - (void)jumpTpMainTabBarCtrl {
     
-    NSMutableDictionary *dic = [[NSMutableDictionary alloc] init];
-    TIMLoginParam *param = [[TIMLoginParam alloc] init];
-    param.appidAt3rd = @(SDKAPPID);
-    param.identifier = TheUser.userMo.timIdentifier;
-    param.userSig = TheUser.userMo.tim_signature;
-    
-    [[TIMManager sharedInstance] login:param succ:^{
-        [Utils dismissHUD];
-        AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-        NSData *deviceToken = delegate.deviceToken;
-        if (deviceToken) {
-            TIMTokenParam *param = [[TIMTokenParam alloc] init];
-            /* 用户自己到苹果注册开发者证书，在开发者帐号中下载并生成证书(p12 文件)，将生成的 p12 文件传到腾讯证书管理控制台，控制台会自动生成一个证书 ID，将证书 ID 传入一下 busiId 参数中。*/
-            //企业证书 ID
-            param.busiId = sdkBusiId;
-            [param setToken:deviceToken];
-            [[TIMManager sharedInstance] setToken:param succ:^{
-                NSLog(@"-----> 上传 token 成功 ");
-                //推送声音的自定义化设置
-                TIMAPNSConfig *config = [[TIMAPNSConfig alloc] init];
-                config.openPush = 1;
-                config.c2cSound = @"00.caf";
-                config.groupSound = @"01.caf";
-                [[TIMManager sharedInstance] setAPNS:config succ:^{
-                    NSLog(@"-----> 设置 APNS 成功");
-                } fail:^(int code, NSString *msg) {
-                    NSLog(@"-----> 设置 APNS 失败");
-                }];
-            } fail:^(int code, NSString *msg) {
-                NSLog(@"-----> 上传 token 失败 ");
-            }];
-        }
-        [[NSNotificationCenter defaultCenter] postNotificationName:NOTI_IM_LOGIN_SUCCESS object:nil userInfo:nil];
-        
-    } fail:^(int code, NSString *msg) {
-        [Utils dismissHUD];
-        [Utils showToastMessage:@"IM登陆失败"];
-    }];
+//    NSMutableDictionary *dic = [[NSMutableDictionary alloc] init];
+//    TIMLoginParam *param = [[TIMLoginParam alloc] init];
+//    param.appidAt3rd = @(SDKAPPID);
+//    param.identifier = TheUser.userMo.timIdentifier;
+//    param.userSig = TheUser.userMo.tim_signature;
+//
+//    [[TIMManager sharedInstance] login:param succ:^{
+//        [Utils dismissHUD];
+//        AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+//        NSData *deviceToken = delegate.deviceToken;
+//        if (deviceToken) {
+//            TIMTokenParam *param = [[TIMTokenParam alloc] init];
+//            /* 用户自己到苹果注册开发者证书，在开发者帐号中下载并生成证书(p12 文件)，将生成的 p12 文件传到腾讯证书管理控制台，控制台会自动生成一个证书 ID，将证书 ID 传入一下 busiId 参数中。*/
+//            //企业证书 ID
+//            param.busiId = sdkBusiId;
+//            [param setToken:deviceToken];
+//            [[TIMManager sharedInstance] setToken:param succ:^{
+//                NSLog(@"-----> 上传 token 成功 ");
+//                //推送声音的自定义化设置
+//                TIMAPNSConfig *config = [[TIMAPNSConfig alloc] init];
+//                config.openPush = 1;
+//                config.c2cSound = @"00.caf";
+//                config.groupSound = @"01.caf";
+//                [[TIMManager sharedInstance] setAPNS:config succ:^{
+//                    NSLog(@"-----> 设置 APNS 成功");
+//                } fail:^(int code, NSString *msg) {
+//                    NSLog(@"-----> 设置 APNS 失败");
+//                }];
+//            } fail:^(int code, NSString *msg) {
+//                NSLog(@"-----> 上传 token 失败 ");
+//            }];
+//        }
+//        [[NSNotificationCenter defaultCenter] postNotificationName:NOTI_IM_LOGIN_SUCCESS object:nil userInfo:nil];
+//
+//    } fail:^(int code, NSString *msg) {
+//        [Utils dismissHUD];
+//        [Utils showToastMessage:@"IM登陆失败"];
+//    }];
     
     self.window.rootViewController = [[MainTabBarViewController alloc] init];
     TheUser.isLogin = YES;

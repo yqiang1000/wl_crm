@@ -65,10 +65,10 @@ typedef void(^MoreViewClickBlock)(id obj);
 
 - (void)setUI {
     [self setViewControllers:@[
-        [self configController:@"TabNewChatViewCtrl"
-                         title:@"消息"
-                         image:[UIImage imageNamed:@"tab_news_n"]
-                 selectedImage:[UIImage imageNamed:@"tab_news_s"]],
+//        [self configController:@"TabNewChatViewCtrl"
+//                         title:@"消息"
+//                         image:[UIImage imageNamed:@"tab_news_n"]
+//                 selectedImage:[UIImage imageNamed:@"tab_news_s"]],
         [self configController:@"TabCustomerViewController"
                          title:@"客户"
                          image:[UIImage imageNamed:@"tab_client_n"]
@@ -181,7 +181,7 @@ typedef void(^MoreViewClickBlock)(id obj);
 #pragma mark - UITabBarDelegate
 
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item {
-    NSArray *labels = @[@"消息标签", @"客户标签", @"订单标签", @"常用标签", @"我的标签"];
+    NSArray *labels = @[@"客户标签", @"订单标签", @"常用标签", @"我的标签"];
     NSInteger index = [self.tabBar.items indexOfObject:item];
     if (index < labels.count) {
         [[JYClick shareInstance] event:@"tabTitle" label:labels[index]];
