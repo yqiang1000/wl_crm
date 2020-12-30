@@ -221,7 +221,7 @@
     
     CommonRowMo *rowMo1 = [[CommonRowMo alloc] init];
     rowMo1.rowType = K_INPUT_TEXT;
-    rowMo1.leftContent = @"当月销售目标（樘）";
+    rowMo1.leftContent = @"当月销售目标(樘)";
     rowMo1.inputType = K_SHORT_TEXT;
     rowMo1.rightContent = @"自动带出";
     rowMo1.editAble = NO;
@@ -235,7 +235,7 @@
     
     CommonRowMo *rowMo2 = [[CommonRowMo alloc] init];
     rowMo2.rowType = K_INPUT_TEXT;
-    rowMo2.leftContent = @"当月累计发货量（樘）";
+    rowMo2.leftContent = @"当月累计发货量(樘)";
     rowMo2.inputType = K_SHORT_TEXT;
     rowMo2.rightContent = @"自动带出";
     rowMo2.editAble = NO;
@@ -249,7 +249,7 @@
     
     CommonRowMo *rowMo3 = [[CommonRowMo alloc] init];
     rowMo3.rowType = K_INPUT_TEXT;
-    rowMo3.leftContent = @"当日预计发货量（樘）";
+    rowMo3.leftContent = @"当日预计发货量(樘)";
     rowMo3.inputType = K_SHORT_TEXT;
     rowMo3.rightContent = @"请输入";
     rowMo3.editAble = self.beforeDate || self.createDate;
@@ -264,7 +264,7 @@
     
     CommonRowMo *rowMo4 = [[CommonRowMo alloc] init];
     rowMo4.rowType = K_INPUT_TEXT;
-    rowMo4.leftContent = @"当日实际发货量（樘）";
+    rowMo4.leftContent = @"当日实际发货量(樘)";
     rowMo4.inputType = K_SHORT_TEXT;
     rowMo4.rightContent = @"自动带出";
     rowMo4.editAble = NO;//self.beforeDate || self.createDate;
@@ -279,7 +279,7 @@
     
     CommonRowMo *rowMo5 = [[CommonRowMo alloc] init];
     rowMo5.rowType = K_INPUT_TEXT;
-    rowMo5.leftContent = @"月目标完成率（%）";
+    rowMo5.leftContent = @"月目标完成率(%)";
     rowMo5.inputType = K_SHORT_TEXT;
     rowMo5.rightContent = @"自动计算";
     rowMo5.editAble = NO;
