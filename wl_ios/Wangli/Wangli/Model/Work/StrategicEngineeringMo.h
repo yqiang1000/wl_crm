@@ -27,6 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString <Optional> *lastModifiedBy;  // "管理员",
 @property (nonatomic, copy) NSString <Optional> *areaNumber;  // null,
 @property (nonatomic, copy) NSString <Optional> *remark;  // null,
+@property (nonatomic, copy) NSString <Optional> *remarkCompletion;
 @property (nonatomic, strong) NSMutableArray <Optional> *strategicEngineeringItems;  // [],
 @property (nonatomic, strong) NSDictionary <Optional> *operator;
 @property (nonatomic, copy) NSString <Optional> *createdDate;  // "2019-04-25 14:21:36",

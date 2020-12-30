@@ -40,6 +40,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString <Optional> *areaName;//区域
 @property (nonatomic, copy) NSString <Optional> *areaNumber;
 @property (nonatomic, copy) NSString <Optional> *remark;//其他
+@property (nonatomic, copy) NSString <Optional> *remarkCompletion;
 @property (nonatomic, copy) NSString <Optional> *afterSaleUnprocessed;//售后未处理事项
 @property (nonatomic, copy) NSString <Optional> *activity;//活动
 @property (nonatomic, copy) NSString <Optional> *developmentProvince;//省份

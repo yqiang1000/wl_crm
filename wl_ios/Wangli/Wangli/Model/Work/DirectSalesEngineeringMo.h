@@ -28,6 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSMutableArray <Optional> *directSalesEngineeringItems;  // [],
 @property (nonatomic, copy) NSString <Optional> *areaNumber;  // null,
 @property (nonatomic, copy) NSString <Optional> *remark;  // null,
+@property (nonatomic, copy) NSString <Optional> *remarkCompletion;
 @property (nonatomic, strong) NSDictionary <Optional> *operator;  // ,
 @property (nonatomic, copy) NSString <Optional> *createdDate;  // "2019-04-25 13:59:45",
 @property (nonatomic, copy) NSString <Optional> *cityName;  // null,

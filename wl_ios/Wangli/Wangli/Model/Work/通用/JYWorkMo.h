@@ -39,6 +39,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString <Optional> *activity;//   "b",
 @property (nonatomic, strong) NSMutableArray <Optional> *workPlanUnfulfilledProjects;
 @property (nonatomic, copy) NSString <Optional> *remark;//   "aa",
+@property (nonatomic, copy) NSString <Optional> *remarkCompletion;
 @property (nonatomic, strong) NSDictionary <Optional> *operator;
 @property (nonatomic, strong) NSMutableArray <Optional> *workPlanVisitIntentions;
 @property (nonatomic, strong) NSMutableArray <Optional> *workPlanSignIntentions;
