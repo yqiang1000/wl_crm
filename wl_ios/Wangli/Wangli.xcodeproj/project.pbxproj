@@ -205,6 +205,15 @@
 		47D0527C250D13E4004125FF /* MarketWorkPlanViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D05277250D13E4004125FF /* MarketWorkPlanViewCtrl.m */; };
 		47D0527D250D13E4004125FF /* UnfulFilledProjectViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D05279250D13E4004125FF /* UnfulFilledProjectViewCtrl.m */; };
 		47D0527E250D13E4004125FF /* MarketEngineerItemViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D0527A250D13E4004125FF /* MarketEngineerItemViewCtrl.m */; };
+		47D18DC2259C177400AF367A /* ChannelDevelopPageViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D18DB0259C177200AF367A /* ChannelDevelopPageViewCtrl.m */; };
+		47D18DC3259C177400AF367A /* HuajuePageViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D18DB1259C177200AF367A /* HuajuePageViewCtrl.m */; };
+		47D18DC4259C177400AF367A /* StrategicEngineeringPageViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D18DB2259C177200AF367A /* StrategicEngineeringPageViewCtrl.m */; };
+		47D18DC5259C177400AF367A /* MarketEngineeringPageViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D18DB7259C177300AF367A /* MarketEngineeringPageViewCtrl.m */; };
+		47D18DC6259C177400AF367A /* DirectSalesEngineeringPageViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D18DB8259C177300AF367A /* DirectSalesEngineeringPageViewCtrl.m */; };
+		47D18DC7259C177400AF367A /* NengchengPageViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D18DB9259C177300AF367A /* NengchengPageViewCtrl.m */; };
+		47D18DC8259C177400AF367A /* JinMuMenPageViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D18DBC259C177400AF367A /* JinMuMenPageViewCtrl.m */; };
+		47D18DC9259C177400AF367A /* RetailPageViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D18DBE259C177400AF367A /* RetailPageViewCtrl.m */; };
+		47D18DCA259C177400AF367A /* RetailPageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D18DC0259C177400AF367A /* RetailPageCell.m */; };
 		47EA95A0247B676100A0C60E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47EA959E247B676100A0C60E /* Main.storyboard */; };
 		47EA95A2247B676300A0C60E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47EA95A1247B676300A0C60E /* Assets.xcassets */; };
 		47EA95A5247B676300A0C60E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47EA95A3247B676300A0C60E /* LaunchScreen.storyboard */; };
@@ -317,15 +326,6 @@
 		47EA9DF9247B6AC400A0C60E /* TrendsCreateCircleViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EA972D247B6AC100A0C60E /* TrendsCreateCircleViewCtrl.m */; };
 		47EA9DFA247B6AC400A0C60E /* StrategicWorkPlanViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EA9732247B6AC100A0C60E /* StrategicWorkPlanViewCtrl.m */; };
 		47EA9DFB247B6AC400A0C60E /* StrategicEngineeringItemViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EA9733247B6AC100A0C60E /* StrategicEngineeringItemViewCtrl.m */; };
-		47EA9DFC247B6AC400A0C60E /* StrategicEngineeringPageViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EA9735247B6AC100A0C60E /* StrategicEngineeringPageViewCtrl.m */; };
-		47EA9DFD247B6AC400A0C60E /* JinMuMenPageViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EA9737247B6AC100A0C60E /* JinMuMenPageViewCtrl.m */; };
-		47EA9DFE247B6AC400A0C60E /* ChannelDevelopPageViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EA9738247B6AC100A0C60E /* ChannelDevelopPageViewCtrl.m */; };
-		47EA9DFF247B6AC400A0C60E /* RetailPageViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EA9739247B6AC100A0C60E /* RetailPageViewCtrl.m */; };
-		47EA9E00247B6AC400A0C60E /* MarketEngineeringPageViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EA9742247B6AC100A0C60E /* MarketEngineeringPageViewCtrl.m */; };
-		47EA9E01247B6AC400A0C60E /* NengchengPageViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EA9744247B6AC100A0C60E /* NengchengPageViewCtrl.m */; };
-		47EA9E02247B6AC400A0C60E /* HuajuePageViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EA9745247B6AC100A0C60E /* HuajuePageViewCtrl.m */; };
-		47EA9E03247B6AC400A0C60E /* RetailPageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EA9746247B6AC100A0C60E /* RetailPageCell.m */; };
-		47EA9E05247B6AC400A0C60E /* DirectSalesEngineeringPageViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EA9748247B6AC100A0C60E /* DirectSalesEngineeringPageViewCtrl.m */; };
 		47EA9E06247B6AC400A0C60E /* NengchengItemViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EA974B247B6AC100A0C60E /* NengchengItemViewCtrl.m */; };
 		47EA9E07247B6AC400A0C60E /* NengchengWorkPlanViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EA974C247B6AC100A0C60E /* NengchengWorkPlanViewCtrl.m */; };
 		47EA9E08247B6AC400A0C60E /* DevelopVisitViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EA9750247B6AC100A0C60E /* DevelopVisitViewCtrl.m */; };
@@ -1237,6 +1237,24 @@
 		47D05278250D13E4004125FF /* ReportingProjectItemViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportingProjectItemViewCtrl.h; sourceTree = "<group>"; };
 		47D05279250D13E4004125FF /* UnfulFilledProjectViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnfulFilledProjectViewCtrl.m; sourceTree = "<group>"; };
 		47D0527A250D13E4004125FF /* MarketEngineerItemViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarketEngineerItemViewCtrl.m; sourceTree = "<group>"; };
+		47D18DB0259C177200AF367A /* ChannelDevelopPageViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChannelDevelopPageViewCtrl.m; sourceTree = "<group>"; };
+		47D18DB1259C177200AF367A /* HuajuePageViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HuajuePageViewCtrl.m; sourceTree = "<group>"; };
+		47D18DB2259C177200AF367A /* StrategicEngineeringPageViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StrategicEngineeringPageViewCtrl.m; sourceTree = "<group>"; };
+		47D18DB3259C177300AF367A /* RetailPageViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RetailPageViewCtrl.h; sourceTree = "<group>"; };
+		47D18DB4259C177300AF367A /* JinMuMenPageViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JinMuMenPageViewCtrl.h; sourceTree = "<group>"; };
+		47D18DB5259C177300AF367A /* HuajuePageViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HuajuePageViewCtrl.h; sourceTree = "<group>"; };
+		47D18DB6259C177300AF367A /* DirectSalesEngineeringPageViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectSalesEngineeringPageViewCtrl.h; sourceTree = "<group>"; };
+		47D18DB7259C177300AF367A /* MarketEngineeringPageViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarketEngineeringPageViewCtrl.m; sourceTree = "<group>"; };
+		47D18DB8259C177300AF367A /* DirectSalesEngineeringPageViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectSalesEngineeringPageViewCtrl.m; sourceTree = "<group>"; };
+		47D18DB9259C177300AF367A /* NengchengPageViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NengchengPageViewCtrl.m; sourceTree = "<group>"; };
+		47D18DBA259C177300AF367A /* NengchengPageViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NengchengPageViewCtrl.h; sourceTree = "<group>"; };
+		47D18DBB259C177400AF367A /* StrategicEngineeringPageViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StrategicEngineeringPageViewCtrl.h; sourceTree = "<group>"; };
+		47D18DBC259C177400AF367A /* JinMuMenPageViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JinMuMenPageViewCtrl.m; sourceTree = "<group>"; };
+		47D18DBD259C177400AF367A /* ChannelDevelopPageViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChannelDevelopPageViewCtrl.h; sourceTree = "<group>"; };
+		47D18DBE259C177400AF367A /* RetailPageViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RetailPageViewCtrl.m; sourceTree = "<group>"; };
+		47D18DBF259C177400AF367A /* MarketEngineeringPageViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarketEngineeringPageViewCtrl.h; sourceTree = "<group>"; };
+		47D18DC0259C177400AF367A /* RetailPageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RetailPageCell.m; sourceTree = "<group>"; };
+		47D18DC1259C177400AF367A /* RetailPageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RetailPageCell.h; sourceTree = "<group>"; };
 		47EA9592247B676100A0C60E /* 王力CRM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "王力CRM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		47EA959F247B676100A0C60E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		47EA95A1247B676300A0C60E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -1452,24 +1470,6 @@
 		47EA9731247B6AC100A0C60E /* StrategicWorkPlanViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StrategicWorkPlanViewCtrl.h; sourceTree = "<group>"; };
 		47EA9732247B6AC100A0C60E /* StrategicWorkPlanViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StrategicWorkPlanViewCtrl.m; sourceTree = "<group>"; };
 		47EA9733247B6AC100A0C60E /* StrategicEngineeringItemViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StrategicEngineeringItemViewCtrl.m; sourceTree = "<group>"; };
-		47EA9735247B6AC100A0C60E /* StrategicEngineeringPageViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StrategicEngineeringPageViewCtrl.m; sourceTree = "<group>"; };
-		47EA9736247B6AC100A0C60E /* MarketEngineeringPageViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarketEngineeringPageViewCtrl.h; sourceTree = "<group>"; };
-		47EA9737247B6AC100A0C60E /* JinMuMenPageViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JinMuMenPageViewCtrl.m; sourceTree = "<group>"; };
-		47EA9738247B6AC100A0C60E /* ChannelDevelopPageViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChannelDevelopPageViewCtrl.m; sourceTree = "<group>"; };
-		47EA9739247B6AC100A0C60E /* RetailPageViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RetailPageViewCtrl.m; sourceTree = "<group>"; };
-		47EA973A247B6AC100A0C60E /* NengchengPageViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NengchengPageViewCtrl.h; sourceTree = "<group>"; };
-		47EA973C247B6AC100A0C60E /* RetailPageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RetailPageCell.h; sourceTree = "<group>"; };
-		47EA973D247B6AC100A0C60E /* HuajuePageViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HuajuePageViewCtrl.h; sourceTree = "<group>"; };
-		47EA973E247B6AC100A0C60E /* DirectSalesEngineeringPageViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectSalesEngineeringPageViewCtrl.h; sourceTree = "<group>"; };
-		47EA973F247B6AC100A0C60E /* RetailPageViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RetailPageViewCtrl.h; sourceTree = "<group>"; };
-		47EA9740247B6AC100A0C60E /* JinMuMenPageViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JinMuMenPageViewCtrl.h; sourceTree = "<group>"; };
-		47EA9741247B6AC100A0C60E /* ChannelDevelopPageViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChannelDevelopPageViewCtrl.h; sourceTree = "<group>"; };
-		47EA9742247B6AC100A0C60E /* MarketEngineeringPageViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarketEngineeringPageViewCtrl.m; sourceTree = "<group>"; };
-		47EA9743247B6AC100A0C60E /* StrategicEngineeringPageViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StrategicEngineeringPageViewCtrl.h; sourceTree = "<group>"; };
-		47EA9744247B6AC100A0C60E /* NengchengPageViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NengchengPageViewCtrl.m; sourceTree = "<group>"; };
-		47EA9745247B6AC100A0C60E /* HuajuePageViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HuajuePageViewCtrl.m; sourceTree = "<group>"; };
-		47EA9746247B6AC100A0C60E /* RetailPageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RetailPageCell.m; sourceTree = "<group>"; };
-		47EA9748247B6AC100A0C60E /* DirectSalesEngineeringPageViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectSalesEngineeringPageViewCtrl.m; sourceTree = "<group>"; };
 		47EA974A247B6AC100A0C60E /* NengchengWorkPlanViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NengchengWorkPlanViewCtrl.h; sourceTree = "<group>"; };
 		47EA974B247B6AC100A0C60E /* NengchengItemViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NengchengItemViewCtrl.m; sourceTree = "<group>"; };
 		47EA974C247B6AC100A0C60E /* NengchengWorkPlanViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NengchengWorkPlanViewCtrl.m; sourceTree = "<group>"; };
@@ -3775,24 +3775,24 @@
 		47EA9734247B6AC100A0C60E /* PageView */ = {
 			isa = PBXGroup;
 			children = (
-				47EA9735247B6AC100A0C60E /* StrategicEngineeringPageViewCtrl.m */,
-				47EA9736247B6AC100A0C60E /* MarketEngineeringPageViewCtrl.h */,
-				47EA9737247B6AC100A0C60E /* JinMuMenPageViewCtrl.m */,
-				47EA9738247B6AC100A0C60E /* ChannelDevelopPageViewCtrl.m */,
-				47EA9739247B6AC100A0C60E /* RetailPageViewCtrl.m */,
-				47EA973A247B6AC100A0C60E /* NengchengPageViewCtrl.h */,
-				47EA973C247B6AC100A0C60E /* RetailPageCell.h */,
-				47EA973D247B6AC100A0C60E /* HuajuePageViewCtrl.h */,
-				47EA973E247B6AC100A0C60E /* DirectSalesEngineeringPageViewCtrl.h */,
-				47EA973F247B6AC100A0C60E /* RetailPageViewCtrl.h */,
-				47EA9740247B6AC100A0C60E /* JinMuMenPageViewCtrl.h */,
-				47EA9741247B6AC100A0C60E /* ChannelDevelopPageViewCtrl.h */,
-				47EA9742247B6AC100A0C60E /* MarketEngineeringPageViewCtrl.m */,
-				47EA9743247B6AC100A0C60E /* StrategicEngineeringPageViewCtrl.h */,
-				47EA9744247B6AC100A0C60E /* NengchengPageViewCtrl.m */,
-				47EA9745247B6AC100A0C60E /* HuajuePageViewCtrl.m */,
-				47EA9746247B6AC100A0C60E /* RetailPageCell.m */,
-				47EA9748247B6AC100A0C60E /* DirectSalesEngineeringPageViewCtrl.m */,
+				47D18DBD259C177400AF367A /* ChannelDevelopPageViewCtrl.h */,
+				47D18DB0259C177200AF367A /* ChannelDevelopPageViewCtrl.m */,
+				47D18DB6259C177300AF367A /* DirectSalesEngineeringPageViewCtrl.h */,
+				47D18DB8259C177300AF367A /* DirectSalesEngineeringPageViewCtrl.m */,
+				47D18DB5259C177300AF367A /* HuajuePageViewCtrl.h */,
+				47D18DB1259C177200AF367A /* HuajuePageViewCtrl.m */,
+				47D18DB4259C177300AF367A /* JinMuMenPageViewCtrl.h */,
+				47D18DBC259C177400AF367A /* JinMuMenPageViewCtrl.m */,
+				47D18DBF259C177400AF367A /* MarketEngineeringPageViewCtrl.h */,
+				47D18DB7259C177300AF367A /* MarketEngineeringPageViewCtrl.m */,
+				47D18DBA259C177300AF367A /* NengchengPageViewCtrl.h */,
+				47D18DB9259C177300AF367A /* NengchengPageViewCtrl.m */,
+				47D18DC1259C177400AF367A /* RetailPageCell.h */,
+				47D18DC0259C177400AF367A /* RetailPageCell.m */,
+				47D18DB3259C177300AF367A /* RetailPageViewCtrl.h */,
+				47D18DBE259C177400AF367A /* RetailPageViewCtrl.m */,
+				47D18DBB259C177400AF367A /* StrategicEngineeringPageViewCtrl.h */,
+				47D18DB2259C177200AF367A /* StrategicEngineeringPageViewCtrl.m */,
 			);
 			path = PageView;
 			sourceTree = "<group>";
@@ -6227,6 +6227,7 @@
 				4753F595247CF61100440063 /* NSArray+ShortCut.m in Sources */,
 				4753F504247CF61100440063 /* JXCategoryDotCell.m in Sources */,
 				47EA9EFD247B6AC500A0C60E /* DrawBusinessFunnelView.m in Sources */,
+				47D18DC9259C177400AF367A /* RetailPageViewCtrl.m in Sources */,
 				47EA9630247B6A9D00A0C60E /* TheUserDefine.m in Sources */,
 				4753F511247CF61100440063 /* JXCategoryNumberCell.m in Sources */,
 				470629A9247DFD4E00A56E04 /* BaseTableView.m in Sources */,
@@ -6250,7 +6251,6 @@
 				4753F51B247CF61100440063 /* GKPageScrollView.m in Sources */,
 				47EA9FCF247B6AC500A0C60E /* BusinessInteligenceMo.m in Sources */,
 				47EA9EBC247B6AC500A0C60E /* RecordView.m in Sources */,
-				47EA9E00247B6AC400A0C60E /* MarketEngineeringPageViewCtrl.m in Sources */,
 				47EA9F7F247B6AC500A0C60E /* TrendsReceiptMo.m in Sources */,
 				47EA9F2F247B6AC500A0C60E /* MyButtonCell.m in Sources */,
 				47EA9F76247B6AC500A0C60E /* FilterView.m in Sources */,
@@ -6276,7 +6276,6 @@
 				47EA9F01247B6AC500A0C60E /* Custom360DealerViewCtrl.m in Sources */,
 				47EA9F62247B6AC500A0C60E /* ProduceProductCell.m in Sources */,
 				47EA9DA0247B6AC400A0C60E /* TabOrderCell.m in Sources */,
-				47EA9DFF247B6AC400A0C60E /* RetailPageViewCtrl.m in Sources */,
 				47EA9F88247B6AC500A0C60E /* TrendsFeedMo.m in Sources */,
 				4753F509247CF61100440063 /* JXCategoryTitleImageCellModel.m in Sources */,
 				4753F598247CF61100440063 /* NSObject+Model.m in Sources */,
@@ -6290,7 +6289,6 @@
 				47EA9E67247B6AC500A0C60E /* DevelopTechnicolCell.m in Sources */,
 				4753F5AA247CF61100440063 /* ArrowLayer.m in Sources */,
 				47EA9EEE247B6AC500A0C60E /* ServicePageProblemViewCtrl.m in Sources */,
-				47EA9DFD247B6AC400A0C60E /* JinMuMenPageViewCtrl.m in Sources */,
 				47EA9F26247B6AC500A0C60E /* CommonSelectPageViewCtrl.m in Sources */,
 				47EA9EF4247B6AC500A0C60E /* CreateProblemDescViewCtrl.m in Sources */,
 				47EA9FEB247B6AC500A0C60E /* ProduceCapacityMo.m in Sources */,
@@ -6341,7 +6339,6 @@
 				47EA9EC5247B6AC500A0C60E /* RecordVideoView.m in Sources */,
 				47EA9ED7247B6AC500A0C60E /* Custom360StoreViewCtrl.m in Sources */,
 				47EA9E6D247B6AC500A0C60E /* CreateBusinessViewCtrl.m in Sources */,
-				47EA9E03247B6AC400A0C60E /* RetailPageCell.m in Sources */,
 				47EA9E7A247B6AC500A0C60E /* Custom360PersonnelOrgViewCtrl.m in Sources */,
 				47EA9FE3247B6AC500A0C60E /* PurchaseItemMo.m in Sources */,
 				47EA9F57247B6AC500A0C60E /* CreateProductionDynamicsViewCtrl.m in Sources */,
@@ -6368,6 +6365,7 @@
 				47EA9E2F247B6AC400A0C60E /* TabMineCell.m in Sources */,
 				47EA9E61247B6AC500A0C60E /* DevelopPageLiboratoryViewCtrl.m in Sources */,
 				47EA9F3A247B6AC500A0C60E /* CreateCreditViewCtrl.m in Sources */,
+				47D18DC4259C177400AF367A /* StrategicEngineeringPageViewCtrl.m in Sources */,
 				47EA9F21247B6AC500A0C60E /* PurchaseAccessCell.m in Sources */,
 				4753F5BA247CF61100440063 /* RadarMapView.m in Sources */,
 				47EA9EF3247B6AC500A0C60E /* CreateConsulationViewCtrl.m in Sources */,
@@ -6383,7 +6381,6 @@
 				47EA9F31247B6AC500A0C60E /* MyTextFieldCell.m in Sources */,
 				47062982247D7DF100A56E04 /* UIFont+YQCategorys.m in Sources */,
 				47EA9EA0247B6AC500A0C60E /* PermissionTableView.m in Sources */,
-				47EA9DFE247B6AC400A0C60E /* ChannelDevelopPageViewCtrl.m in Sources */,
 				47EA9DD4247B6AC400A0C60E /* TrendsSampleCell.m in Sources */,
 				47EA9EC9247B6AC500A0C60E /* RelatedInteligenceCell.m in Sources */,
 				47EA9DBA247B6AC400A0C60E /* TrendsReceiptCell.m in Sources */,
@@ -6393,6 +6390,7 @@
 				47EA9EBB247B6AC500A0C60E /* RecordToolBarView.m in Sources */,
 				4753F5A8247CF61100440063 /* NSDate+Extension.m in Sources */,
 				47EA9E0E247B6AC400A0C60E /* JinMuMenWorkPlanViewCtrl.m in Sources */,
+				47D18DC6259C177400AF367A /* DirectSalesEngineeringPageViewCtrl.m in Sources */,
 				47505746247E6AF000D1DAD0 /* CustomListCell.m in Sources */,
 				47EA9FD2247B6AC500A0C60E /* JYVoiceMo.m in Sources */,
 				47EA9FB3247B6AC500A0C60E /* ContenBeansMo.m in Sources */,
@@ -6417,6 +6415,7 @@
 				47EA9DF2247B6AC400A0C60E /* TrendsInteligenceViewCollectionCell.m in Sources */,
 				47EA9EA8247B6AC500A0C60E /* CreateBusinessVisitAnnexViewCtrl.m in Sources */,
 				47EA9EC6247B6AC500A0C60E /* CreateIntelligenceViewCtrl.m in Sources */,
+				47D18DC8259C177400AF367A /* JinMuMenPageViewCtrl.m in Sources */,
 				47EA9F9C247B6AC500A0C60E /* SignInMo.m in Sources */,
 				47EA9F42247B6AC500A0C60E /* ContractPageReconciliationViewCtrl.m in Sources */,
 				47EA9DD3247B6AC400A0C60E /* TrendsSampleCreateViewCtrl.m in Sources */,
@@ -6539,7 +6538,6 @@
 				47EA9EFA247B6AC500A0C60E /* CreateComplaintViewCtrl.m in Sources */,
 				47EA9EB6247B6AC500A0C60E /* YXTabTitleView.m in Sources */,
 				47EA9F9E247B6AC500A0C60E /* ShowTextMo.m in Sources */,
-				47EA9DFC247B6AC400A0C60E /* StrategicEngineeringPageViewCtrl.m in Sources */,
 				47EAA0D9247B756B00A0C60E /* TabCustomerViewController.m in Sources */,
 				47EA9DFB247B6AC400A0C60E /* StrategicEngineeringItemViewCtrl.m in Sources */,
 				47EA9E6E247B6AC500A0C60E /* CreatePersonnelDemandViewCtrl.m in Sources */,
@@ -6569,6 +6567,7 @@
 				47EA9DA1247B6AC400A0C60E /* JYUserMoSelectViewCtrl.m in Sources */,
 				47EA9DF4247B6AC400A0C60E /* TrendsInteligenceTableView.m in Sources */,
 				47EA9F33247B6AC500A0C60E /* MyDefaultCell.m in Sources */,
+				47D18DC5259C177400AF367A /* MarketEngineeringPageViewCtrl.m in Sources */,
 				47EA9F04247B6AC500A0C60E /* DealPlanSearchViewCtrl.m in Sources */,
 				47EA9E7D247B6AC500A0C60E /* CreditDebtTableView.m in Sources */,
 				47EA9E90247B6AC500A0C60E /* AddressPickerView.m in Sources */,
@@ -6588,11 +6587,9 @@
 				47EA9F0D247B6AC500A0C60E /* SalesPageSystemViewCtrl.m in Sources */,
 				47EA9F6A247B6AC500A0C60E /* FilterSecondView.m in Sources */,
 				47EA9F6B247B6AC500A0C60E /* TabCustomerCell.m in Sources */,
-				47EA9E02247B6AC400A0C60E /* HuajuePageViewCtrl.m in Sources */,
 				4753F5B6247CF61100440063 /* ZJScrollSegmentView.m in Sources */,
 				47EA9FBC247B6AC500A0C60E /* RecruitmentMo.m in Sources */,
 				4753F50B247CF61100440063 /* JXCategoryTitleCell.m in Sources */,
-				47EA9E01247B6AC400A0C60E /* NengchengPageViewCtrl.m in Sources */,
 				47EA9E16247B6AC400A0C60E /* JYWorkPlanItemCell.m in Sources */,
 				4750572C247E47BD00D1DAD0 /* SummaryMo.m in Sources */,
 				47EA9DBD247B6AC400A0C60E /* TrendsQuoteViewCtrl.m in Sources */,
@@ -6635,7 +6632,6 @@
 				4753F521247CF61100440063 /* YQAVPlayer.m in Sources */,
 				470629AF247DFD4E00A56E04 /* SwitchUrlViewCtrl.m in Sources */,
 				47EA9FBA247B6AC500A0C60E /* RowMaterialMo.m in Sources */,
-				47EA9E05247B6AC400A0C60E /* DirectSalesEngineeringPageViewCtrl.m in Sources */,
 				47EA9E45247B6AC500A0C60E /* ContactSearchViewCtrl.m in Sources */,
 				47EA9F4A247B6AC500A0C60E /* Custom360ContactViewCtrl.m in Sources */,
 				470629B0247DFD4E00A56E04 /* BaseWebViewCtrl.m in Sources */,
@@ -6714,6 +6710,8 @@
 				47062981247D7DF100A56E04 /* NSString+YQCategorys.m in Sources */,
 				47EA9ECD247B6AC500A0C60E /* CreatePayPlanViewCtrl.m in Sources */,
 				47EA9FC0247B6AC500A0C60E /* CustDeptMo.m in Sources */,
+				47D18DCA259C177400AF367A /* RetailPageCell.m in Sources */,
+				47D18DC2259C177400AF367A /* ChannelDevelopPageViewCtrl.m in Sources */,
 				4753F67A247CF7F300440063 /* HelperItemCell.m in Sources */,
 				4753F507247CF61100440063 /* JXCategoryTitleImageView.m in Sources */,
 				47EA9FBB247B6AC500A0C60E /* CompetitionMo.m in Sources */,
@@ -6799,6 +6797,7 @@
 				47EA9F59247B6AC500A0C60E /* CreateBondInfoViewCtrl.m in Sources */,
 				47EA9DAE247B6AC400A0C60E /* TrendsBusinessCollectionCell.m in Sources */,
 				47EA9FCC247B6AC500A0C60E /* CoastAllMo.m in Sources */,
+				47D18DC3259C177400AF367A /* HuajuePageViewCtrl.m in Sources */,
 				47EA9FD0247B6AC500A0C60E /* BusinessVisitActivityMo.m in Sources */,
 				47EA9EE3247B6AC500A0C60E /* CreateContractViewCtrl.m in Sources */,
 				47EA9FC1247B6AC500A0C60E /* WeightMo.m in Sources */,
@@ -6928,6 +6927,7 @@
 				47EA9F72247B6AC500A0C60E /* JYMemberCollectionView.m in Sources */,
 				470629A8247DFD4E00A56E04 /* BaseNaviView.m in Sources */,
 				4753F51F247CF61100440063 /* GKBaseTableViewController.m in Sources */,
+				47D18DC7259C177400AF367A /* NengchengPageViewCtrl.m in Sources */,
 				47EA9FE8247B6AC500A0C60E /* ProduceCTMMo.m in Sources */,
 				47EA9F15247B6AC500A0C60E /* BrandSelectViewCtrl.m in Sources */,
 				47EA9E75247B6AC500A0C60E /* PersonDemandCell.m in Sources */,

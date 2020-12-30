@@ -12,11 +12,11 @@
 NS_ASSUME_NONNULL_BEGIN
 
 typedef enum : NSUInteger {
-    JYWorkTypeJinMuMen,
-    JYWorkTypeLvMuMen,
-    JYWorkTypeZhiNengSuo,
-    JYWorkTypeTongMuMen,
-    JYWorkTypeMuMen,
+    JYWorkTypeJinMuMen,         // 金木门
+    JYWorkTypeLvMuMen,          // 铝木门
+    JYWorkTypeZhiNengSuo,       // 智能锁
+    JYWorkTypeTongMuMen,        // 铜木门
+    JYWorkTypeMuMen,            // 木门
 } JYWorkType;
 
 @interface JYWorkPlanViewCtrl : BaseViewCtrl

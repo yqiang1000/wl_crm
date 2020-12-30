@@ -228,7 +228,7 @@
     
     CommonRowMo *rowMo1 = [[CommonRowMo alloc] init];
     rowMo1.rowType = K_INPUT_TEXT;
-    rowMo1.leftContent = @"当月销售额目标(万元)";
+    rowMo1.leftContent = @"当月销售额目标(元)";
     rowMo1.inputType = K_SHORT_TEXT;
     rowMo1.rightContent = @"自动带出";
     rowMo1.editAble = NO;
@@ -242,7 +242,7 @@
     
     CommonRowMo *rowMo2 = [[CommonRowMo alloc] init];
     rowMo2.rowType = K_INPUT_TEXT;
-    rowMo2.leftContent = @"当月累计销售额(万元)";
+    rowMo2.leftContent = @"当月累计销售额(元)";
     rowMo2.inputType = K_SHORT_TEXT;
     rowMo2.rightContent = @"自动带出";
     rowMo2.editAble = NO;
@@ -256,7 +256,7 @@
     
     CommonRowMo *rowMo3 = [[CommonRowMo alloc] init];
     rowMo3.rowType = K_INPUT_TEXT;
-    rowMo3.leftContent = @"当日预计销售额(万元)";
+    rowMo3.leftContent = @"当日预计销售额(元)";
     rowMo3.inputType = K_SHORT_TEXT;
     rowMo3.rightContent = @"请输入";
     rowMo3.editAble = self.beforeDate || self.createDate;
@@ -271,7 +271,7 @@
     
     CommonRowMo *rowMo4 = [[CommonRowMo alloc] init];
     rowMo4.rowType = K_INPUT_TEXT;
-    rowMo4.leftContent = @"实际销售额(万元)";
+    rowMo4.leftContent = @"实际销售额(元)";
     rowMo4.inputType = K_SHORT_TEXT;
     rowMo4.rightContent = @"自动带出";
     rowMo4.editAble = NO; //self.beforeDate || self.createDate;
@@ -679,7 +679,7 @@
     }];
 }
 
-/** 获取当月累计销售额(万元) */
+/** 获取当月累计销售额(元) */
 //- (void)getMonthTotalSum {
 //    CommonRowMo *rowMo = self.arrData[0];
 //    JYUserMo *userMo = (JYUserMo *)rowMo.m_obj;
@@ -803,7 +803,7 @@
 //    }];
 //}
 
-/** 销售额(万元)完成率计算 */
+/** 销售额(元)完成率计算 */
 - (void)dealWithSum {
     CommonRowMo *targetMo = nil;
     CommonRowMo *sumMo = nil;
@@ -1636,7 +1636,7 @@
     [self dealWithSum];
 }
 
-// 自动带出当日实际销售额(万元)
+// 自动带出当日实际销售额(元)
 //- (void)getDailyDeveliveryDataProvinceName:(NSString *)provinceName {
 //    CommonRowMo *dailyMo = nil;
 //    for (int i = 0; i < self.arrData.count; i++) {
@@ -1712,7 +1712,7 @@
         JYUserMo *userMo = (JYUserMo *)userRowMo.m_obj;
         JYUserMo *modelUserMo = [[JYUserMo alloc] initWithDictionary:self.model.operator error:nil];
         
-        // 如果修改，选择省份之后，累计销售额(万元)用 detail 里的值
+        // 如果修改，选择省份之后，累计销售额(元)用 detail 里的值
         if (self.model && ([rowMo.key isEqualToString:self.model.province] && userMo.id == modelUserMo.id)) {
             CommonRowMo *sumRowMo = nil;
             NSInteger sumIndex = 0;
@@ -1785,7 +1785,7 @@
         JYUserMo *userMo = (JYUserMo *)userRowMo.m_obj;
         JYUserMo *modelUserMo = [[JYUserMo alloc] initWithDictionary:self.model.operator error:nil];
         
-        // 如果修改，选择省份之后，累计销售额(万元)用 detail 里的值
+        // 如果修改，选择省份之后，累计销售额(元)用 detail 里的值
         if (self.model && ([rowMo.key isEqualToString:self.model.developmentProvince] && userMo.id == modelUserMo.id)) {
             CommonRowMo *sumRowMo = nil;
             NSInteger sumIndex = 0;
