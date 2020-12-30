@@ -191,7 +191,7 @@
     
     CommonRowMo *rowMo1 = [[CommonRowMo alloc] init];
     rowMo1.rowType = K_INPUT_TEXT;
-    rowMo1.leftContent = @"当月开发目标";
+    rowMo1.leftContent = @"当月开发目标（个）";
     rowMo1.inputType = K_SHORT_TEXT;
     rowMo1.rightContent = @"自动带出";
     rowMo1.editAble = NO;
@@ -205,7 +205,7 @@
     
     CommonRowMo *rowMo2 = [[CommonRowMo alloc] init];
     rowMo2.rowType = K_INPUT_TEXT;
-    rowMo2.leftContent = @"当月累计拜访量";
+    rowMo2.leftContent = @"当月累计拜访量（个）";
     rowMo2.inputType = K_SHORT_TEXT;
     rowMo2.rightContent = @"自动带出";
     rowMo2.editAble = NO;
@@ -219,7 +219,7 @@
     
     CommonRowMo *rowMo3 = [[CommonRowMo alloc] init];
     rowMo3.rowType = K_INPUT_TEXT;
-    rowMo3.leftContent = @"当日拜访意向客户";
+    rowMo3.leftContent = @"当日拜访意向客户（个）";
     rowMo3.inputType = K_SHORT_TEXT;
     rowMo3.rightContent = @"自动带出";
     rowMo3.editAble = NO;
@@ -233,7 +233,7 @@
     
     CommonRowMo *rowMo4 = [[CommonRowMo alloc] init];
     rowMo4.rowType = K_INPUT_TEXT;
-    rowMo4.leftContent = @"当日完成拜访";
+    rowMo4.leftContent = @"当日完成拜访（个）";
     rowMo4.inputType = K_SHORT_TEXT;
     rowMo4.rightContent = @"自动带出";
     rowMo4.editAble = NO;
@@ -247,7 +247,7 @@
     
     CommonRowMo *rowMo5 = [[CommonRowMo alloc] init];
     rowMo5.rowType = K_INPUT_TEXT;
-    rowMo5.leftContent = @"月目标完成率(%)";
+    rowMo5.leftContent = @"月目标完成率（%）";
     rowMo5.inputType = K_SHORT_TEXT;
     rowMo5.rightContent = @"自动计算";
     rowMo5.editAble = NO;
