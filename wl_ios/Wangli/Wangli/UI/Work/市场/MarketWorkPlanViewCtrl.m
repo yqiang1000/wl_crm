@@ -338,7 +338,7 @@
     
     CommonRowMo *rowMo13 = [[CommonRowMo alloc] init];
     rowMo13.rowType = K_INPUT_TEXT;
-    rowMo13.leftContent = @"其他";
+    rowMo13.leftContent = @"其他事项";
     rowMo13.inputType = K_LONG_TEXT;
     rowMo13.rightContent = @"请输入";
     rowMo13.editAble = !self.afterDate;;
@@ -346,6 +346,17 @@
     rowMo13.key = @"remark";
     rowMo13.strValue = self.model.remark;
     [self.arrData addObject:rowMo13];
+    
+    CommonRowMo *rowMo131 = [[CommonRowMo alloc] init];
+    rowMo131.rowType = K_INPUT_TEXT;
+    rowMo131.leftContent = @"其他事项完成情况";
+    rowMo131.inputType = K_LONG_TEXT;
+    rowMo131.rightContent = @"请输入";
+    rowMo131.editAble = !self.createDate;
+    rowMo131.nullAble = YES;
+    rowMo131.key = @"remarkCompletion";
+    rowMo131.strValue = self.model.remarkCompletion;
+    [self.arrData addObject:rowMo131];
     
     CommonRowMo *rowMo14 = [[CommonRowMo alloc] init];
     rowMo14.rowType = K_INPUT_TEXT;
@@ -1123,6 +1134,22 @@
     CommonRowMo *rowMo = self.arrData[indexPath.row];
     if ([rowMo.key isEqualToString:@"address"]) {
         
+    } else if ([rowMo.key isEqualToString:@"remark"]) {
+        NSString *result = [Utils saveToValues:(textView.text)];
+        CommonRowMo *targetRowMo = nil;
+        NSInteger index = 0;
+        for (NSInteger i = indexPath.row; i < self.arrData.count; i++) {
+            CommonRowMo *tmpRowMo = self.arrData[i];
+            if ([tmpRowMo.key isEqualToString:@"remarkCompletion"]) {
+                targetRowMo = tmpRowMo;
+                index = i;
+                break;
+            }
+        }
+        if (targetRowMo != nil) {
+            targetRowMo.nullAble = result.length == 0 ? YES : NO;
+            [self.tableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:index inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
+        }
     }
     rowMo.strValue = [Utils saveToValues:(textView.text)];
     [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];

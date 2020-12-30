@@ -26,6 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString <Optional> *date;  // "2019-04-25",
 @property (nonatomic, copy) NSString <Optional> *cityNumber;  // "640100",
 @property (nonatomic, copy) NSString <Optional> *remark;  // null,
+@property (nonatomic, copy) NSString <Optional> *remarkCompletion;
 @property (nonatomic, strong) NSDictionary <Optional> *operator;
 @property (nonatomic, copy) NSString <Optional> *cityName;  // "银川市",
 @property (nonatomic, copy) NSString <Optional> *areaName;  // "市辖区",

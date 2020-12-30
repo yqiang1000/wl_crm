@@ -19,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) CGFloat cumulativeShipments;  // 122,
 @property (nonatomic, assign) CGFloat actualShipment;  // 1,
 @property (nonatomic, copy) NSString <Optional> *remark;  // "其他备注",
+@property (nonatomic, copy) NSString <Optional> *remarkCompletion;
 @property (nonatomic, assign) CGFloat ompletionRate;  // 100.00,
 @property (nonatomic, strong) NSDictionary <Optional> *operator;
 @property (nonatomic, strong) NSMutableArray <Optional> *retailChannelItems;

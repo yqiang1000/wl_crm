@@ -30,6 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString <Optional> *areaNumber;//   "110113",
 @property (nonatomic, copy) NSString <Optional> *activity;//   "活动",
 @property (nonatomic, copy) NSString <Optional> *remark;//   "111",
+@property (nonatomic, copy) NSString <Optional> *remarkCompletion;
 @property (nonatomic, strong) NSDictionary <Optional> *operator;
 @property (nonatomic, copy) NSString <Optional> *cityName;//   "市辖区",
 @property (nonatomic, copy) NSString <Optional> *areaName;//   "顺义区",
