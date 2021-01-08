@@ -11,6 +11,7 @@
 
 @interface RetailItemViewCtrl ()
 
+@property (nonatomic, strong) CommonRowMo *visitRowMo;
 @property (nonatomic, strong) CommonRowMo *contRowMo;
 @property (nonatomic, strong) CommonRowMo *attRowMo;
 
@@ -43,17 +44,8 @@
     rowMo0.member = memberMo;
     [self.arrData addObject:rowMo0];
     
-    CommonRowMo *rowMo1 = [[CommonRowMo alloc] init];
-    rowMo1.rowType = K_INPUT_TOGGLEBUTTON;
-    rowMo1.leftContent = @"是否走访";
-    rowMo1.inputType = K_SHORT_TEXT;
-    rowMo1.rightContent = @"请选择";
-    rowMo1.editAble = self.handleDate;
-    rowMo1.defaultValue = self.itemMo.visit;
-    rowMo1.strValue = self.itemMo.visit ? @"YES" : @"NO";
-    rowMo1.key = @"visit";
-    [self.arrData addObject:rowMo1];
-    
+    [self.arrData addObject:self.visitRowMo];
+
     CommonRowMo *rowMo2 = [[CommonRowMo alloc] init];
     rowMo2.rowType = K_INPUT_TOGGLEBUTTON;
     rowMo2.leftContent = @"是否专卖/专营";
@@ -139,6 +131,11 @@
         }
         [self.tableView reloadData];
     }
+    // 是否走访，是，则附件必填
+    else if ([toDo isEqualToString:@"visit"]) {
+        self.attRowMo.nullAble = !self.visitRowMo.defaultValue;
+        [self.tableView reloadData];
+    }
 }
 
 - (void)createParams:(NSMutableDictionary *)params attachementList:(NSArray *)attachementList {
@@ -189,11 +186,11 @@
     if (!_attRowMo) {
         _attRowMo = [[CommonRowMo alloc] init];
         _attRowMo.rowType = K_FILE_INPUT;
-        _attRowMo.leftContent = @"相关附件";
+        _attRowMo.leftContent = @"上传图片";
         _attRowMo.inputType = K_SHORT_TEXT;
         _attRowMo.key = @"attachments";
         _attRowMo.editAble = self.handleDate;
-        _attRowMo.nullAble = YES;
+        _attRowMo.nullAble = !self.visitRowMo.defaultValue;
     }
     return _attRowMo;
 }
@@ -212,5 +209,22 @@
     }
     return _contRowMo;
 }
+
+- (CommonRowMo *)visitRowMo {
+    if (!_visitRowMo) {
+        _visitRowMo = [[CommonRowMo alloc] init];
+        _visitRowMo.rowType = K_INPUT_TOGGLEBUTTON;
+        _visitRowMo.leftContent = @"是否走访";
+        _visitRowMo.inputType = K_SHORT_TEXT;
+        _visitRowMo.rightContent = @"请选择";
+        _visitRowMo.editAble = self.handleDate;
+        _visitRowMo.defaultValue = self.itemMo.visit;
+        _visitRowMo.strValue = self.itemMo.visit ? @"YES" : @"NO";
+        _visitRowMo.key = @"visit";
+    }
+    return _visitRowMo;
+}
+
+
 
 @end

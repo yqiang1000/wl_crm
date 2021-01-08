@@ -522,7 +522,7 @@
 #define RETAIL_CHANNEL_DETAIL                   @"/api/retail-channel/detail/%lld"
 #define WORK_PLAN_TARGET_FINDOPERATOR           @"/api/work-plan-target/findByOperator"
 //#define RETAIL_CHANNEL_SUM_ACTUALSHIPMENT       @"/api/retail-channel/sum-actualShipment"
-#define RETAIL_CHANNEL_ITEM_DETAIL              @"/api/attachment/list/RETAIL_CHANNEL_ITEM/%lld"
+#define RETAIL_CHANNEL_ITEM_DETAIL              @"/api/attachment/list/RETAIL_CHANNEL_ITEM_TWO/%lld"
 #define DELETE_WORK_PLAN                        @"/api/%@/remove"
 
 #define NENG_CHENG_ITEM                         @"/api/attachment/list/NENG_CHENG_ITEM/%lld"
