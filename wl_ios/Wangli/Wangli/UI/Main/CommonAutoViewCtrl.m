@@ -230,6 +230,7 @@
             self.attCell.count = 9;
             self.attCell.attachments = rowMo.attachments;
             self.attCell.forbidDelete = self.forbidEdit;
+            if (rowMo.leftContent.length != 0) self.attCell.labTitle.text = rowMo.leftContent;
             [self.attCell refreshView];
         }
         return self.attCell;
