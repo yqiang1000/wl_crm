@@ -344,7 +344,7 @@
     rowMo131.inputType = K_LONG_TEXT;
     rowMo131.rightContent = @"请输入";
     rowMo131.editAble = !self.createDate;
-    rowMo131.nullAble = YES;
+    rowMo131.nullAble = self.createDate ? NO : (self.model.remark.length == 0 ? YES : NO);
     rowMo131.key = @"remarkCompletion";
     rowMo131.strValue = self.model.remarkCompletion;
     [self.arrData addObject:rowMo131];
@@ -1042,7 +1042,7 @@
                 break;
             }
         }
-        if (targetRowMo != nil) {
+        if (targetRowMo != nil && targetRowMo.editAble) {
             targetRowMo.nullAble = result.length == 0 ? YES : NO;
             [self.tableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:index inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
         }
