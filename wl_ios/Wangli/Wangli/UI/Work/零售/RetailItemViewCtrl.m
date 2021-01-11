@@ -110,29 +110,15 @@
 //        }
 //    }
     self.attRowMo.attachments = (NSMutableArray<QiniuFileMo *><QiniuFileMo,Optional> *)self.itemMo.attachments;
-    if (self.itemMo.comparativeSales) {
-        [self.arrData addObject:self.attRowMo];
-    } else {
-        [self.arrData addObject:self.contRowMo];
-    }
+    [self.arrData addObject:self.contRowMo];
+    [self.arrData addObject:self.attRowMo];
 }
 
 #pragma mark - event
 
 - (void)continueTodo:(NSString *)toDo selName:(NSString *)selName indexPath:(NSIndexPath *)indexPath {
-    if ([toDo isEqualToString:@"comparativeSales"]) {
-        CommonRowMo *rowMo = self.arrData[indexPath.row];
-        if (rowMo.defaultValue) {
-            if ([self.arrData containsObject:self.contRowMo]) [self.arrData removeObject:self.contRowMo];
-            if (![self.arrData containsObject:self.attRowMo]) [self.arrData addObject:self.attRowMo];
-        } else {
-            if ([self.arrData containsObject:self.attRowMo]) [self.arrData removeObject:self.attRowMo];
-            if (![self.arrData containsObject:self.contRowMo]) [self.arrData addObject:self.contRowMo];
-        }
-        [self.tableView reloadData];
-    }
     // 是否走访，是，则附件必填
-    else if ([toDo isEqualToString:@"visit"]) {
+    if ([toDo isEqualToString:@"visit"]) {
         self.attRowMo.nullAble = !self.visitRowMo.defaultValue;
         [self.tableView reloadData];
     }

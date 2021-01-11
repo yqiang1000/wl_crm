@@ -75,12 +75,8 @@
         [self.arrData addObject:self.publicRowMo];
         [self.arrData addObject:self.trainRowMo];
         [self.arrData addObject:self.engineerRowMo];
-        
-        if (self.itemMo.comparativeSales) {
-            [self.arrData addObject:self.attRowMo];
-        } else {
-            [self.arrData addObject:self.contRowMo];
-        }
+        [self.arrData addObject:self.contRowMo];
+        [self.arrData addObject:self.attRowMo];
     }
     // 零售
     else if ([dicMo.key isEqualToString:@"retail"]) {
@@ -93,12 +89,8 @@
         [self.arrData addObject:self.compareRowMo];
         [self.arrData addObject:self.publicRowMo];
         [self.arrData addObject:self.trainRowMo];
-        
-        if (self.itemMo.comparativeSales) {
-            [self.arrData addObject:self.attRowMo];
-        } else {
-            [self.arrData addObject:self.contRowMo];
-        }
+        [self.arrData addObject:self.contRowMo];
+        [self.arrData addObject:self.attRowMo];
     }
     // 工程
     else if ([dicMo.key isEqualToString:@"project"]) {
@@ -119,15 +111,9 @@
 #pragma mark - event
 
 - (void)continueTodo:(NSString *)toDo selName:(NSString *)selName indexPath:(NSIndexPath *)indexPath {
-    if ([toDo isEqualToString:@"comparativeSales"]) {
-        CommonRowMo *rowMo = self.arrData[indexPath.row];
-        if (rowMo.defaultValue) {
-            if ([self.arrData containsObject:self.contRowMo]) [self.arrData removeObject:self.contRowMo];
-            if (![self.arrData containsObject:self.attRowMo]) [self.arrData addObject:self.attRowMo];
-        } else {
-            if ([self.arrData containsObject:self.attRowMo]) [self.arrData removeObject:self.attRowMo];
-            if (![self.arrData containsObject:self.contRowMo]) [self.arrData addObject:self.contRowMo];
-        }
+    // 是否走访，是，则附件必填
+    if ([toDo isEqualToString:@"visit"]) {
+        self.attRowMo.nullAble = !self.visitRowMo.defaultValue;
         [self.tableView reloadData];
     } else if ([toDo isEqualToString:@"memberAttribute"]) {
         [self dealWithRowMos];
@@ -216,11 +202,11 @@
     if (!_attRowMo) {
         _attRowMo = [[CommonRowMo alloc] init];
         _attRowMo.rowType = K_FILE_INPUT;
-        _attRowMo.leftContent = @"相关附件";
+        _attRowMo.leftContent = @"上传图片";
         _attRowMo.inputType = K_SHORT_TEXT;
         _attRowMo.key = @"attachments";
         _attRowMo.editAble = self.handleDate;
-        _attRowMo.nullAble = YES;
+        _attRowMo.nullAble = !self.visitRowMo.defaultValue;
     }
     return _attRowMo;
 }
