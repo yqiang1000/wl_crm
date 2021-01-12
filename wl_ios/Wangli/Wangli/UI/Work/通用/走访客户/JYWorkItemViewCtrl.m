@@ -114,7 +114,7 @@
     // 是否走访，是，则附件必填
     if ([toDo isEqualToString:@"visit"]) {
         self.attRowMo.nullAble = !self.visitRowMo.defaultValue;
-        [self.tableView reloadData];
+        [self.tableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:[self.arrData indexOfObject:self.attRowMo] inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
     } else if ([toDo isEqualToString:@"memberAttribute"]) {
         [self dealWithRowMos];
     }
