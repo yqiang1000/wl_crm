@@ -2680,4 +2680,9 @@
                                    success:(void (^)(id responseObject))success
                                    failure:(void (^)(NSError *error))fail;
 
+/** 市场计划工程跟进和未履行工程 page */
+- (void)getEngineeringReportPageByParam:(NSDictionary *)param
+                                success:(void (^)(id responseObject))success
+                                failure:(void (^)(NSError *error))fail;
+
 @end

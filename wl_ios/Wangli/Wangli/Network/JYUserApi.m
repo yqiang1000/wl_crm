@@ -3998,6 +3998,15 @@ static JYUserApi *userApi = nil;
 }
 
 
+/** 市场计划工程跟进和未履行工程 page */
+- (void)getEngineeringReportPageByParam:(NSDictionary *)param
+                                success:(void (^)(id responseObject))success
+                                failure:(void (^)(NSError *error))fail {
+    NSMutableDictionary *params = [NSMutableDictionary new];
+    if (param.count > 0) [params addEntriesFromDictionary:param];
+    [ApiTool postWithUrl:ENGINEERING_REPORT_PAGE andParams:params success:success failure:fail];
+}
+
 
 @end
 

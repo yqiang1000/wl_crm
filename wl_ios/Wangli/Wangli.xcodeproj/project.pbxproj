@@ -201,6 +201,8 @@
 		47B09213250C6D0500D86689 /* ApiTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B0920B250C6D0400D86689 /* ApiTool.m */; };
 		47B09214250C6D0500D86689 /* BaseApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B0920D250C6D0500D86689 /* BaseApi.m */; };
 		47B09215250C6D0500D86689 /* QiNiuUploadHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B0920E250C6D0500D86689 /* QiNiuUploadHelper.m */; };
+		47CD196025AD6FB900127F75 /* ProjectSelectViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 47CD195F25AD6FB900127F75 /* ProjectSelectViewCtrl.m */; };
+		47CD196325AD710A00127F75 /* MarketProjectMo.m in Sources */ = {isa = PBXBuildFile; fileRef = 47CD196225AD710A00127F75 /* MarketProjectMo.m */; };
 		47D0527B250D13E4004125FF /* ReportingProjectItemViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D05276250D13E3004125FF /* ReportingProjectItemViewCtrl.m */; };
 		47D0527C250D13E4004125FF /* MarketWorkPlanViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D05277250D13E4004125FF /* MarketWorkPlanViewCtrl.m */; };
 		47D0527D250D13E4004125FF /* UnfulFilledProjectViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D05279250D13E4004125FF /* UnfulFilledProjectViewCtrl.m */; };
@@ -1229,6 +1231,10 @@
 		47B0920D250C6D0500D86689 /* BaseApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseApi.m; sourceTree = "<group>"; };
 		47B0920E250C6D0500D86689 /* QiNiuUploadHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QiNiuUploadHelper.m; sourceTree = "<group>"; };
 		47B0920F250C6D0500D86689 /* QiNiuUploadHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QiNiuUploadHelper.h; sourceTree = "<group>"; };
+		47CD195E25AD6FB900127F75 /* ProjectSelectViewCtrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProjectSelectViewCtrl.h; sourceTree = "<group>"; };
+		47CD195F25AD6FB900127F75 /* ProjectSelectViewCtrl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProjectSelectViewCtrl.m; sourceTree = "<group>"; };
+		47CD196125AD710A00127F75 /* MarketProjectMo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarketProjectMo.h; sourceTree = "<group>"; };
+		47CD196225AD710A00127F75 /* MarketProjectMo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MarketProjectMo.m; sourceTree = "<group>"; };
 		47D05273250D13E3004125FF /* MarketWorkPlanViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarketWorkPlanViewCtrl.h; sourceTree = "<group>"; };
 		47D05274250D13E3004125FF /* MarketEngineerItemViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarketEngineerItemViewCtrl.h; sourceTree = "<group>"; };
 		47D05275250D13E3004125FF /* UnfulFilledProjectViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnfulFilledProjectViewCtrl.h; sourceTree = "<group>"; };
@@ -3861,6 +3867,10 @@
 				47D05276250D13E3004125FF /* ReportingProjectItemViewCtrl.m */,
 				47D05275250D13E3004125FF /* UnfulFilledProjectViewCtrl.h */,
 				47D05279250D13E4004125FF /* UnfulFilledProjectViewCtrl.m */,
+				47CD195E25AD6FB900127F75 /* ProjectSelectViewCtrl.h */,
+				47CD195F25AD6FB900127F75 /* ProjectSelectViewCtrl.m */,
+				47CD196125AD710A00127F75 /* MarketProjectMo.h */,
+				47CD196225AD710A00127F75 /* MarketProjectMo.m */,
 			);
 			path = "市场";
 			sourceTree = "<group>";
@@ -6300,6 +6310,7 @@
 				47B09211250C6D0500D86689 /* URLConfig.m in Sources */,
 				4753F659247CF7C200440063 /* ChatViewController+video.m in Sources */,
 				47EA9EB2247B6AC500A0C60E /* VisitAnnexCell.m in Sources */,
+				47CD196025AD6FB900127F75 /* ProjectSelectViewCtrl.m in Sources */,
 				47EA9FED247B6AC500A0C60E /* ProduceProductMo.m in Sources */,
 				47EA9E5C247B6AC500A0C60E /* XLCardSwitch.m in Sources */,
 				47EA9E1F247B6AC400A0C60E /* RetailItemCell.m in Sources */,
@@ -6383,6 +6394,7 @@
 				47EA9EA0247B6AC500A0C60E /* PermissionTableView.m in Sources */,
 				47EA9DD4247B6AC400A0C60E /* TrendsSampleCell.m in Sources */,
 				47EA9EC9247B6AC500A0C60E /* RelatedInteligenceCell.m in Sources */,
+				47CD196325AD710A00127F75 /* MarketProjectMo.m in Sources */,
 				47EA9DBA247B6AC400A0C60E /* TrendsReceiptCell.m in Sources */,
 				4753F58A247CF61100440063 /* QMYViewController.m in Sources */,
 				47EA962E247B6A9D00A0C60E /* MyTextView.m in Sources */,
@@ -7154,8 +7166,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Wangli/WangliDebug.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1.5.011;
 				DEVELOPMENT_TEAM = BNVR43G3C9;
 				ENABLE_BITCODE = NO;
@@ -7174,7 +7186,7 @@
 				MARKETING_VERSION = 1.02.024;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jiuyi.Aixu001;
 				PRODUCT_NAME = "王力CRM";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = in_house;
 				SWIFT_OBJC_BRIDGING_HEADER = "Wangli/UI/Customer/Wangli-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "Wangli-Swift.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -7191,8 +7203,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Wangli/WangliRelease.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1.5.011;
 				DEVELOPMENT_TEAM = V8J7E6PBM6;
 				ENABLE_BITCODE = NO;
@@ -7211,7 +7223,7 @@
 				MARKETING_VERSION = 1.02.024;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jiuyi.Wangli001;
 				PRODUCT_NAME = "王力CRM";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = wl_crm_dev;
 				SWIFT_OBJC_BRIDGING_HEADER = "Wangli/UI/Customer/Wangli-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "Wangli-Swift.h";
 				SWIFT_VERSION = 4.0;

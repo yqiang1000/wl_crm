@@ -611,6 +611,8 @@
 #define GET_INFO_YESTERDAY_COMMON               @"/api/workPlan/getInfo/%@"
 
 
+#define ENGINEERING_REPORT_PAGE                 @"/api/engineering-report/page"
+
 @interface URLConfig : NSObject
 
 + (NSString *)domainUrl:(NSString *)url;

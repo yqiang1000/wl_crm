@@ -471,11 +471,12 @@
             [_currentTextField resignFirstResponder];
         }
     });
-    if ([rowMo.key isEqualToString:@"reimbursementCity"]||
-        [rowMo.key isEqualToString:@"city"]||
-        [rowMo.key isEqualToString:@"area"]) {
-        [self continueTodo:rowMo.key selName:@"DefaultInputCellBegin" indexPath:indexPath];
-    }
+//    if ([rowMo.key isEqualToString:@"reimbursementCity"]||
+//        [rowMo.key isEqualToString:@"city"]||
+//        [rowMo.key isEqualToString:@"area"]) {
+//        [self continueTodo:rowMo.key selName:@"DefaultInputCellBegin" indexPath:indexPath];
+//    }
+    [self continueTodo:rowMo.key selName:@"DefaultInputCellBegin" indexPath:indexPath];
 }
 
 - (void)cell:(DefaultInputCell *)cell textFieldDidEndEditing:(UITextField *)textField indexPath:(NSIndexPath *)indexPath {

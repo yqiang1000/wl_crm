@@ -7,8 +7,9 @@
 //
 
 #import "UnfulFilledProjectViewCtrl.h"
+#import "ProjectSelectViewCtrl.h"
 
-@interface UnfulFilledProjectViewCtrl ()
+@interface UnfulFilledProjectViewCtrl () <ProjectSelectViewCtrlDelegate>
 
 @end
 
@@ -72,9 +73,33 @@
     [self.arrData addObject:rowMo12];
 }
 
+
+#pragma mark - ProjectSelectViewCtrlDelegate
+
+- (void)projectSelectViewCtrl:(ProjectSelectViewCtrl *)projectSelectViewCtrl selectedModel:(MarketProjectMo *)model indexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row < self.arrData.count) {
+        CommonRowMo *rowMo = self.arrData[indexPath.row];
+        rowMo.strValue = model.project;
+        rowMo.value = model.project;
+        [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }
+}
+
+- (void)projectSelectViewCtrlDismiss:(ProjectSelectViewCtrl *)projectSelectViewCtrl {
+    
+}
+
+
 #pragma mark - event
 
 - (void)continueTodo:(NSString *)toDo selName:(NSString *)selName indexPath:(NSIndexPath *)indexPath {
+    // 工程
+    if ([toDo isEqualToString:@"engineering"] && [selName isEqualToString:@"DefaultInputCellBegin"]) {
+        ProjectSelectViewCtrl *vc = [[ProjectSelectViewCtrl alloc] init];
+        vc.VcDelegate = self;
+        vc.indexPath = indexPath;
+        [self presentViewController:vc animated:YES completion:nil];
+    }
 }
 
 - (void)createParams:(NSMutableDictionary *)params attachementList:(NSArray *)attachementList {
