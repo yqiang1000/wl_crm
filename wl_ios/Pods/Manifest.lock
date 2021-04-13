@@ -1,5 +1,5 @@
 PODS:
-  - ActionSheetPicker-3.0 (2.5.0)
+  - ActionSheetPicker-3.0 (2.7.1)
   - AFNetworking (3.1.0):
     - AFNetworking/NSURLSession (= 3.1.0)
     - AFNetworking/Reachability (= 3.1.0)
@@ -17,13 +17,13 @@ PODS:
     - AFNetworking/NSURLSession
   - AMap3DMap (6.1.0):
     - AMapFoundation (~> 1.4)
-  - AMapFoundation (1.6.3)
-  - AMapLocation (2.6.5):
-    - AMapFoundation (~> 1.6.3)
+  - AMapFoundation (1.6.6)
+  - AMapLocation (2.6.7):
+    - AMapFoundation (~> 1.6.4)
   - AMapSearch (6.1.1):
     - AMapFoundation (~> 1.4)
   - BFKit (1.5.3)
-  - Bugly (2.5.71)
+  - Bugly (2.5.90)
   - Charts (3.0.5):
     - Charts/Core (= 3.0.5)
   - Charts/Core (3.0.5)
@@ -47,7 +47,7 @@ PODS:
   - SVProgressHUD (2.2.5)
   - Toast (4.0.0)
   - TTGTagCollectionView (1.6.2)
-  - TXIMSDK_iOS (4.9.1)
+  - TXIMSDK_iOS (4.9.6)
   - TXIMSDK_TUIKit_iOS (4.6.100):
     - ISVImageScrollView (= 0.1.2)
     - MMLayout (= 0.2.0)
@@ -73,18 +73,22 @@ DEPENDENCIES:
   - Bugly
   - Charts (~> 3.0.4)
   - FSCalendar (~> 2.7.9)
+  - ISVImageScrollView (~> 0.1.2)
   - JSONModel (~> 1.7.0)
   - Masonry (~> 1.0.2)
   - MBProgressHUD
   - MJRefresh (~> 3.1.15.1)
   - MLLabel (~> 1.10.5)
-  - MMLayout
+  - MMLayout (~> 0.2.0)
   - Qiniu (~> 7.1.0)
-  - ReactiveObjC
+  - ReactiveObjC (~> 3.1.1)
   - SAMKeychain
+  - SDWebImage (~> 5.5.2)
   - SVProgressHUD (~> 2.2.5)
+  - Toast (~> 4.0.0)
   - TTGTagCollectionView (~> 1.6.1)
-  - TXIMSDK_TUIKit_iOS
+  - TXIMSDK_iOS (~> 4.9.1)
+  - TXIMSDK_TUIKit_iOS (~> 4.6.100)
   - TXLiteAVSDK_TRTC (~> 6.8.8002)
   - TZImagePickerController (~> 1.7.9)
   - XZMRefresh
@@ -125,14 +129,14 @@ SPEC REPOS:
     - YYModel
 
 SPEC CHECKSUMS:
-  ActionSheetPicker-3.0: 6d79f6f3b98e2b21d218dd65a39f634ff37a27e5
+  ActionSheetPicker-3.0: 36da254b97a09ff89679ecb8b8510bd3e5bdc773
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   AMap3DMap: 2cf8028884fc66c7e051f5e8818808949eff290d
-  AMapFoundation: 9ed923193b357ebb30a073e9fe255d3c24054d5a
-  AMapLocation: c566d448285cd502c1e313063d9e2460bd4d7100
+  AMapFoundation: 2d012d9aaa7a5c0d387ddb1a8c5f03e1d6df29b8
+  AMapLocation: a46c30d9930d0f3a3bd21139d8f845d10ac3f01d
   AMapSearch: 3dcbf85c403a2a0fe0eda5318caabc272b31f5e1
   BFKit: 9e06ca38a76db83e204b412711610856095d4d67
-  Bugly: fd066c75c4a0eca1440f9b6a84bd37d51bfc85ac
+  Bugly: 88bc32c0acc6fef7b74d610f0319ee7560d6b9fe
   Charts: 45cdc985b764c838b35ee47eb1365d15735f6d1a
   FSCalendar: a04b09f16f811bc92e82f3cf852a15225233b9d5
   HappyDNS: 848ef73e24f2b0e2752064223ce2dc0dd88900ea
@@ -150,13 +154,13 @@ SPEC CHECKSUMS:
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
   TTGTagCollectionView: 46896415336e2a91fb6f408e989a344f4af4d9cd
-  TXIMSDK_iOS: 587e25fa8b42c9f228bb9065084270fa6990190f
+  TXIMSDK_iOS: 397ca154967b60283dcfee451912842f45d7f165
   TXIMSDK_TUIKit_iOS: 7c5a6556929b590e3d2cfb85a865a3c5b28f4d87
   TXLiteAVSDK_TRTC: 5a9e9678a44311fab331e8f077012f31334b9227
   TZImagePickerController: 0a8ff228d287ebdd7d485e8c42a2a932894f1fba
   XZMRefresh: 2c0f1b70d9fe97a1d0286373e29986d44f0a7b1a
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 7b2ae34d7166c93aefe5fed9a343f35c8c639b39
+PODFILE CHECKSUM: b41c303427c1162c620b13cb6fe2b3fc477e3634
 
-COCOAPODS: 1.10.0.beta.2
+COCOAPODS: 1.10.1

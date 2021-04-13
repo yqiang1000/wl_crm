@@ -28,7 +28,7 @@
 #import "Utils.h"
 #import "SwitchUrlUtil.h"
 
-#import <AFNetworking/AFNetworking-umbrella.h>
+#import <AFNetworking/AFNetworking.h>
 #import "UIView+Toast.h"
 #import "MLLinkLabel.h"
 #import "TheUserDefine.h"

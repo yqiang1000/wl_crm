@@ -26,7 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString <Optional> *projectUserPhone;  //null,
 @property (nonatomic, copy) NSString <Optional> *projectUserId;  //null,
 @property (nonatomic, copy) NSString <Optional> *project;  //"项目二",
-@property (nonatomic, copy) NSString <Optional> *manager;  //null,
+@property (nonatomic, copy) NSDictionary <Optional> *manager;  //null,
 @property (nonatomic, copy) NSString <Optional> *projectBrand;  //"品牌",
 @property (nonatomic, copy) NSString <Optional> *status;  //null,
 @property (nonatomic, copy) NSString <Optional> *contactName;  //null,

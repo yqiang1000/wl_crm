@@ -7,7 +7,8 @@
 //
 
 #import "AddressPickerView.h"
-#import <ActionSheetPicker_3_0/ActionSheetCustomPicker.h>
+#import <ActionSheetCustomPicker.h>
+//#import <ActionSheetPicker-3.0/ActionSheetCustomPicker.h>
 #import "AreaMo.h"
 
 typedef void(^ItemClickBlock)(NSArray *arrResult);

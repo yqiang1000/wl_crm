@@ -45,9 +45,9 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     self.phoneView.txtField.text = [[NSUserDefaults standardUserDefaults] objectForKey:USER_OACODE];
-//    self.phoneView.txtField.text = @"A202354";
-//    self.passView.txtField.text = @"admin123";// @"XC001940"; //@"WLM16040601";
-//    self.btnLogin.enabled = YES;
+    self.phoneView.txtField.text = @"guanliyuan";
+    self.passView.txtField.text = @"admin123";// @"XC001940"; //@"WLM16040601";
+    self.btnLogin.enabled = YES;
 }
 
 - (void)dealloc {

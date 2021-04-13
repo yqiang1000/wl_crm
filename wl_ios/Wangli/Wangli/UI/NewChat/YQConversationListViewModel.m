@@ -10,6 +10,7 @@
 #import <TIMMessage.h>
 #import <TIMMessage+DataProvider.h>
 #import "JYIMUtils.h"
+#import "TIMMessage+DataProvider.h"
 
 @implementation YQConversationListViewModel
 
@@ -50,7 +51,7 @@
     TUIConversationCellData *cellData = [self cellDataOf:conv.getReceiver];
     if ([conv.getReceiver containsString:@"_helper"]) {
         JYDictItemMo *dicMo = [JYIMUtils getIMHelperMoById:conv.getReceiver];
-        cellData.avatarUrl = [NSURL URLWithString:dicMo.value2];
+        cellData.avatarUrl = dicMo.value2;
         cellData.title = dicMo.value;
     }
     return str;

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		06087F2DE6BD8E558953B070 /* Pods_Wangli.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2102B86B958F53BC834E405C /* Pods_Wangli.framework */; };
+		3CA522D4EE9731898182A384 /* Pods_Wangli.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEB11BE10FCE1C372118CD5A /* Pods_Wangli.framework */; };
 		47062980247D7DF100A56E04 /* NSUserDefaults+YQCategorys.m in Sources */ = {isa = PBXBuildFile; fileRef = 47062978247D7DF100A56E04 /* NSUserDefaults+YQCategorys.m */; };
 		47062981247D7DF100A56E04 /* NSString+YQCategorys.m in Sources */ = {isa = PBXBuildFile; fileRef = 4706297C247D7DF100A56E04 /* NSString+YQCategorys.m */; };
 		47062982247D7DF100A56E04 /* UIFont+YQCategorys.m in Sources */ = {isa = PBXBuildFile; fileRef = 4706297E247D7DF100A56E04 /* UIFont+YQCategorys.m */; };
@@ -834,7 +834,6 @@
 
 /* Begin PBXFileReference section */
 		1B9D55ACE7E1B60890C65703 /* Pods-Wangli.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wangli.debug.xcconfig"; path = "Target Support Files/Pods-Wangli/Pods-Wangli.debug.xcconfig"; sourceTree = "<group>"; };
-		2102B86B958F53BC834E405C /* Pods_Wangli.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wangli.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47062977247D7DF000A56E04 /* UIFont+YQCategorys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+YQCategorys.h"; sourceTree = "<group>"; };
 		47062978247D7DF100A56E04 /* NSUserDefaults+YQCategorys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+YQCategorys.m"; sourceTree = "<group>"; };
 		47062979247D7DF100A56E04 /* YQCategorys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQCategorys.h; sourceTree = "<group>"; };
@@ -2448,6 +2447,7 @@
 		47EAA0E3247B75C900A0C60E /* Custom360DevelopViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Custom360DevelopViewCtrl.h; sourceTree = "<group>"; };
 		47EAA0E6247B787100A0C60E /* SwitftTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitftTest.swift; sourceTree = "<group>"; };
 		67C27638A0BB0C809C6FBDF5 /* Pods-Wangli.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wangli.release.xcconfig"; path = "Target Support Files/Pods-Wangli/Pods-Wangli.release.xcconfig"; sourceTree = "<group>"; };
+		EEB11BE10FCE1C372118CD5A /* Pods_Wangli.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wangli.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2458,7 +2458,7 @@
 				47EA961F247B6A3500A0C60E /* iflyMSC.framework in Frameworks */,
 				47EA9E9C247B6AC500A0C60E /* lame.framework in Frameworks */,
 				47EA9620247B6A3500A0C60E /* JhtVerificationCodeView.framework in Frameworks */,
-				06087F2DE6BD8E558953B070 /* Pods_Wangli.framework in Frameworks */,
+				3CA522D4EE9731898182A384 /* Pods_Wangli.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2493,7 +2493,7 @@
 			isa = PBXGroup;
 			children = (
 				4706298A247D8D3000A56E04 /* AFNetworking.framework */,
-				2102B86B958F53BC834E405C /* Pods_Wangli.framework */,
+				EEB11BE10FCE1C372118CD5A /* Pods_Wangli.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -5984,8 +5984,8 @@
 				47EA958F247B676100A0C60E /* Frameworks */,
 				47EA9590247B676100A0C60E /* Resources */,
 				47710BCC247F84F600475D18 /* Run Script */,
-				69B9CBC58BA1EB3231853BFF /* [CP] Embed Pods Frameworks */,
-				030B9C310D3381F112CB31C5 /* [CP] Copy Pods Resources */,
+				400F75BAEF57BBA7F73A9606 /* [CP] Embed Pods Frameworks */,
+				C6DB54A1C4BDBD21B8BB4FC0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -6117,21 +6117,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		030B9C310D3381F112CB31C5 /* [CP] Copy Pods Resources */ = {
+		400F75BAEF57BBA7F73A9606 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Wangli/Pods-Wangli-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Wangli/Pods-Wangli-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Wangli/Pods-Wangli-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Wangli/Pods-Wangli-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Wangli/Pods-Wangli-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Wangli/Pods-Wangli-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		47710BCC247F84F600475D18 /* Run Script */ = {
@@ -6153,21 +6153,21 @@
 			shellScript = "
 ";
 		};
-		69B9CBC58BA1EB3231853BFF /* [CP] Embed Pods Frameworks */ = {
+		C6DB54A1C4BDBD21B8BB4FC0 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Wangli/Pods-Wangli-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Wangli/Pods-Wangli-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Wangli/Pods-Wangli-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Wangli/Pods-Wangli-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Wangli/Pods-Wangli-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Wangli/Pods-Wangli-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CD4655584BE2819C2C647A0E /* [CP] Check Pods Manifest.lock */ = {
@@ -7166,10 +7166,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Wangli/WangliDebug.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1.5.011;
-				DEVELOPMENT_TEAM = BNVR43G3C9;
+				DEVELOPMENT_TEAM = 9UY42B4327;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -7184,9 +7184,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.02.024;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jiuyi.Aixu001;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiuyi.Huafeng0;
 				PRODUCT_NAME = "王力CRM";
-				PROVISIONING_PROFILE_SPECIFIER = in_house;
+				PROVISIONING_PROFILE_SPECIFIER = Huafeng_dev;
 				SWIFT_OBJC_BRIDGING_HEADER = "Wangli/UI/Customer/Wangli-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "Wangli-Swift.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -7206,7 +7206,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1.5.011;
-				DEVELOPMENT_TEAM = V8J7E6PBM6;
+				DEVELOPMENT_TEAM = 9UY42B4327;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -7221,9 +7221,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.02.024;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jiuyi.Wangli001;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiuyi.Huafeng0;
 				PRODUCT_NAME = "王力CRM";
-				PROVISIONING_PROFILE_SPECIFIER = wl_crm_dev;
+				PROVISIONING_PROFILE_SPECIFIER = Huafeng_dev;
 				SWIFT_OBJC_BRIDGING_HEADER = "Wangli/UI/Customer/Wangli-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "Wangli-Swift.h";
 				SWIFT_VERSION = 4.0;

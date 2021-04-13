@@ -7,7 +7,7 @@
 //
 
 #import "ApiTool.h"
-#import <AFNetworking/AFNetworking-umbrella.h>
+#import <AFNetworking/AFNetworking.h>
 #import "URLConfig.h"
 #import <SAMKeychain/SAMKeychain.h>
 

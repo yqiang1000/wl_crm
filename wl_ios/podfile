@@ -21,12 +21,15 @@ target 'Wangli' do
 
     ####################### 腾讯云需要 #######################
     pod 'MBProgressHUD'
-    pod 'MMLayout'
-#    pod 'SDWebImage', '~> 5.0'
+    pod 'MMLayout', '~> 0.2.0'
+    pod 'SDWebImage', '~> 5.5.2'
+    pod 'Toast', '~> 4.0.0'
     pod 'AFNetworking', '~> 3.1.0', :subspecs => ['Reachability', 'Serialization', 'Security', 'NSURLSession']
 
-    pod 'ReactiveObjC'
-    pod 'TXIMSDK_TUIKit_iOS'
+    pod 'ReactiveObjC', '~> 3.1.1' #ok
+    pod 'TXIMSDK_iOS', '~> 4.9.1'
+    pod 'ISVImageScrollView', '~> 0.1.2' #ok
+    pod 'TXIMSDK_TUIKit_iOS', '~> 4.6.100' #ok
     pod 'TXLiteAVSDK_TRTC', '~> 6.8.8002' #最新的6.9.8341版本提示不支持bitcode
     ####################### 腾讯云需要 #######################
     pod 'YYModel'

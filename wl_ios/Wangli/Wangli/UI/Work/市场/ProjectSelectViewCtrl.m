@@ -75,12 +75,14 @@
                            @"option":@"LIKE_ANYWHERE",
                            @"values":@[self.brandKey]}];
     }
-    if (self.brandKey.length > 0) {
+    if (self.teleKey.length > 0) {
         [rules addObject:@{@"field":@"contactName-contactPhone",
                            @"option":@"LIKE_ANYWHERE",
                            @"values":@[self.teleKey]}];
     }
-    
+    if (rules.count > 0) {
+        [param setObject:rules forKey:@"rules"];
+    }
     [[JYUserApi sharedInstance] getEngineeringReportPageByParam:param success:^(id responseObject) {
         [Utils dismissHUD];
         [self tableViewEndRefresh];
