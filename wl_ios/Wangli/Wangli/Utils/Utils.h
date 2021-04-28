@@ -201,4 +201,8 @@ typedef void(^AddressBookDictBlock)(NSMutableDictionary *addressBookDict,NSMutab
 
 // 跳转到隐私设置页面
 + (void)goToSettingPage:(NSString *)tost;
+
+
++ (UIImage *)imageByScalingToSize:(CGSize)targetSize source:(UIImage *)source;
+
 @end

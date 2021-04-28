@@ -7,7 +7,6 @@
 //
 
 #import "VPImageCropperViewCtrl.h"
-#import <BFKit/BFKit.h>
 
 #define SCALE_FRAME_Y 100.0f
 #define BOUNDCE_DURATION 0.3f
@@ -97,7 +96,7 @@
         float rate1 = SCREEN_WIDTH / width;
         float rate2 = SCREEN_HEIGHT / height;
         float rate = rate1 < rate2 ? rate1 : rate2;
-        self.originalImage = [self.oldImage imageByScalingToSize:CGSizeMake(_originalImage.size.width*rate, _originalImage.size.height*rate)];
+        self.originalImage = [Utils imageByScalingToSize:CGSizeMake(_originalImage.size.width*rate, _originalImage.size.height*rate) source:self.oldImage];
     }
 
     // scale to fit the screen

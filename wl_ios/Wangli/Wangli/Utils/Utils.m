@@ -1154,4 +1154,35 @@
     [[Utils topViewController] presentViewController:alert animated:YES completion:nil];
 }
 
+
++ (UIImage *)imageByScalingToSize:(CGSize)targetSize source:(UIImage *)source
+{
+    UIImage *sourceImage = source;
+    UIImage *newImage = nil;
+    
+    CGFloat targetWidth = targetSize.width;
+    CGFloat targetHeight = targetSize.height;
+    
+    CGFloat scaledWidth = targetWidth;
+    CGFloat scaledHeight = targetHeight;
+    
+    CGPoint thumbnailPoint = CGPointMake(0.0,0.0);
+    
+    UIGraphicsBeginImageContext(targetSize);
+    
+    CGRect thumbnailRect = CGRectZero;
+    thumbnailRect.origin = thumbnailPoint;
+    thumbnailRect.size.width  = scaledWidth;
+    thumbnailRect.size.height = scaledHeight;
+    
+    [sourceImage drawInRect:thumbnailRect];
+    
+    newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    if(newImage == nil) NSLog(@"Could not scale image");
+    
+    return newImage ;
+}
+
 @end
