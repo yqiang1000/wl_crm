@@ -209,12 +209,17 @@
 //    if ([toDo isEqualToString:@"placeArrival"]) {
 //        [self getBxbzForCRM:indexPath];
 //    }
-    if ([toDo isEqualToString:@"cityTrafficInvoiceAmount"]) {
-        [self toCountJiaoTongNum];
+    
+    // 结束编辑才触发
+    if ([selName isEqualToString:@"DefaultInputCellEnd"]) {
+        if ([toDo isEqualToString:@"cityTrafficInvoiceAmount"]) {
+            [self toCountJiaoTongNum];
+        }
+        if ([toDo isEqualToString:@"stayInvoiceAmount"]) {
+            [self toCountZhuSuNum];
+        }
     }
-    if ([toDo isEqualToString:@"stayInvoiceAmount"]) {
-        [self toCountZhuSuNum];
-    }
+    
     if ([toDo isEqualToString:@"commit"]) {
         CommonRowMo *rowMo = self.arrData[indexPath.row];
         if (rowMo.defaultValue) {

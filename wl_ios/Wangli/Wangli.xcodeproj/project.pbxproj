@@ -7168,7 +7168,7 @@
 				CODE_SIGN_ENTITLEMENTS = Wangli/WangliDebug.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Distribution: Wonly Security Technology Co., Ltd. (V8J7E6PBM6)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1.5.021;
+				CURRENT_PROJECT_VERSION = 1.5.023;
 				DEVELOPMENT_TEAM = V8J7E6PBM6;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -7205,7 +7205,7 @@
 				CODE_SIGN_ENTITLEMENTS = Wangli/WangliRelease.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Distribution: Wonly Security Technology Co., Ltd. (V8J7E6PBM6)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1.5.021;
+				CURRENT_PROJECT_VERSION = 1.5.023;
 				DEVELOPMENT_TEAM = V8J7E6PBM6;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
